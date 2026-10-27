@@ -310,8 +310,8 @@
 
 :root,
 [data-brand="jewel-shop"] {
-  --accent-foreground: var(--neutral-900);
-  --accent: var(--neutral-100);
+  --accent-foreground: var(--slate-900);
+  --accent: var(--slate-100);
   --alert-default-background: var(--card);
   --alert-default-border: var(--border);
   --alert-default-description: var(--muted-foreground);
@@ -362,7 +362,7 @@
   --body-font-weight: 400;
   --body-font: 400 0.875rem/1.5 Nunito, sans-serif;
   --body-line-height: 1.5;
-  --border: var(--neutral-200);
+  --border: var(--slate-200);
   --button-default-background-hover: color-mix(in oklab, var(--primary) 80%, transparent);
   --button-default-background: var(--primary);
   --button-default-foreground: var(--primary-foreground);
@@ -385,7 +385,7 @@
   --card-container-foreground: var(--card-foreground);
   --card-description-foreground: var(--muted-foreground);
   --card-footer-background: color-mix(in oklab, var(--muted) 50%, transparent);
-  --card-foreground: var(--neutral-950);
+  --card-foreground: var(--slate-950);
   --card-radius: var(--container-radius);
   --card-shadow: var(--xs-shadow);
   --card: var(--white);
@@ -416,7 +416,7 @@
   --duration-slow: 300ms;
   --enter-ease: cubic-bezier(0, 0, 0.2, 1);
   --exit-ease: cubic-bezier(0.4, 0, 1, 1);
-  --foreground: var(--neutral-950);
+  --foreground: var(--slate-950);
   --info-foreground: var(--white);
   --info: var(--blue-700);
   --input-field-background: color-mix(in oklab, var(--background) 0%, transparent);
@@ -424,7 +424,7 @@
   --input-field-foreground: var(--foreground);
   --input-field-placeholder: var(--muted-foreground);
   --input-radius: var(--control-radius);
-  --input: var(--neutral-200);
+  --input: var(--slate-200);
   --label-text-foreground: var(--foreground);
   --layer-dialog: 60;
   --layer-dropdown: 50;
@@ -432,11 +432,11 @@
   --layer-toast: 70;
   --layer-tooltip: 80;
   --motion-fast: 150ms var(--standard-ease);
-  --muted-foreground: var(--neutral-600);
-  --muted: var(--neutral-100);
+  --muted-foreground: var(--slate-600);
+  --muted: var(--slate-100);
   --overlay-shadow: var(--lg-shadow);
   --pill-radius: var(--sm-radius);
-  --popover-foreground: var(--neutral-950);
+  --popover-foreground: var(--slate-950);
   --popover: var(--white);
   --primary-foreground: var(--white);
   --primary: var(--emerald-700);
@@ -445,8 +445,8 @@
   --radio-group-item-checked: var(--primary);
   --ring: var(--emerald-600);
   --sans-font: Nunito, sans-serif;
-  --secondary-foreground: var(--neutral-900);
-  --secondary: var(--neutral-100);
+  --secondary-foreground: var(--slate-900);
+  --secondary: var(--slate-100);
   --select-content-background: var(--popover);
   --select-content-border: var(--border);
   --select-content-foreground: var(--popover-foreground);
@@ -498,8 +498,8 @@
 
 .dark,
 [data-brand="jewel-shop"].dark {
-  --accent-foreground: var(--neutral-50);
-  --accent: var(--neutral-800);
+  --accent-foreground: var(--slate-50);
+  --accent: var(--slate-800);
   --alert-default-background: var(--card);
   --alert-default-border: var(--border);
   --alert-default-description: var(--muted-foreground);
@@ -526,7 +526,7 @@
   --alert-warning-description: var(--muted-foreground);
   --alert-warning-foreground: var(--card-foreground);
   --alert-warning-icon: var(--warning);
-  --background: var(--neutral-950);
+  --background: var(--slate-950);
   --badge-default-background: var(--primary);
   --badge-default-foreground: var(--primary-foreground);
   --badge-destructive-background: color-mix(in oklab, var(--destructive) 20%, transparent);
@@ -573,10 +573,10 @@
   --card-container-foreground: var(--card-foreground);
   --card-description-foreground: var(--muted-foreground);
   --card-footer-background: color-mix(in oklab, var(--muted) 50%, transparent);
-  --card-foreground: var(--neutral-50);
+  --card-foreground: var(--slate-50);
   --card-radius: var(--container-radius);
   --card-shadow: 0px 1px 2px 0px oklch(0 0 0 / 0.5), inset 0px 1px 0px 0px oklch(1 0 0 / 0.06);
-  --card: var(--neutral-900);
+  --card: var(--slate-900);
   --checkbox-box-background: color-mix(in oklab, var(--input) 30%, transparent);
   --checkbox-box-border: var(--input);
   --checkbox-box-checked-background: var(--primary);
@@ -604,7 +604,7 @@
   --duration-slow: 300ms;
   --enter-ease: cubic-bezier(0, 0, 0.2, 1);
   --exit-ease: cubic-bezier(0.4, 0, 1, 1);
-  --foreground: var(--neutral-50);
+  --foreground: var(--slate-50);
   --info-foreground: var(--blue-950);
   --info: var(--blue-400);
   --input-field-background: color-mix(in oklab, var(--input) 30%, transparent);
@@ -620,12 +620,12 @@
   --layer-toast: 70;
   --layer-tooltip: 80;
   --motion-fast: 150ms var(--standard-ease);
-  --muted-foreground: var(--neutral-400);
-  --muted: var(--neutral-800);
+  --muted-foreground: var(--slate-400);
+  --muted: var(--slate-800);
   --overlay-shadow: 0px 10px 24px -4px oklch(0 0 0 / 0.6), 0px 4px 8px -4px oklch(0 0 0 / 0.5), inset 0px 1px 0px 0px oklch(1 0 0 / 0.08);
   --pill-radius: var(--sm-radius);
-  --popover-foreground: var(--neutral-50);
-  --popover: var(--neutral-900);
+  --popover-foreground: var(--slate-50);
+  --popover: var(--slate-900);
   --primary-foreground: var(--emerald-950);
   --primary: var(--emerald-400);
   --radio-group-item-background: color-mix(in oklab, var(--input) 30%, transparent);
@@ -633,8 +633,8 @@
   --radio-group-item-checked: var(--primary);
   --ring: var(--emerald-500);
   --sans-font: Nunito, sans-serif;
-  --secondary-foreground: var(--neutral-50);
-  --secondary: var(--neutral-800);
+  --secondary-foreground: var(--slate-50);
+  --secondary: var(--slate-800);
   --select-content-background: var(--popover);
   --select-content-border: var(--border);
   --select-content-foreground: var(--popover-foreground);
