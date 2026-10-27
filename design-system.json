@@ -43,5 +43,27 @@
       "src/components/label/label.tsx"
     ],
     "allowFilesNote": "Vendored shadcn/ui sources are accepted as-is; generated components are checked."
+  },
+  "brief": {
+    "product": "An online shop for handmade jewelry",
+    "feel": "Elegant and personal",
+    "kind": "e-commerce",
+    "palette": "emerald-neutral",
+    "corners": "slight",
+    "font": "Nunito",
+    "components": [
+      "checkbox",
+      "radio-group",
+      "select",
+      "alert",
+      "toast",
+      "tabs",
+      "dialog",
+      "separator",
+      "textarea",
+      "switch",
+      "tooltip"
+    ],
+    "answeredAt": "2026-10-27T18:18:11.869Z"
   }
 }
