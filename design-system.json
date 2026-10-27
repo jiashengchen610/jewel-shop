@@ -1,0 +1,47 @@
+{
+  "name": "Jewel Shop",
+  "context": "e-commerce",
+  "naming": "shadcn",
+  "componentBase": "radix",
+  "defaultBrand": "jewel-shop",
+  "brands": [
+    {
+      "id": "jewel-shop",
+      "name": "jewel-shop"
+    }
+  ],
+  "layers": [
+    {
+      "id": "primitives",
+      "name": "Primitives",
+      "files": [
+        "tokens/primitives.tokens.json"
+      ]
+    },
+    {
+      "id": "semantic",
+      "name": "Semantic",
+      "files": [
+        "tokens/base.tokens.json",
+        "brands/{brand}/tokens.json"
+      ]
+    },
+    {
+      "id": "components",
+      "name": "Components",
+      "files": [
+        "tokens/components/*.tokens.json"
+      ]
+    }
+  ],
+  "hardcoded": {
+    "allowFiles": [
+      "src/components/button/button.tsx",
+      "src/components/badge/badge.tsx",
+      "src/components/card/card.tsx",
+      "src/components/input/input.tsx",
+      "src/components/label/label.tsx"
+    ],
+    "allowFilesNote": "Vendored shadcn/ui sources are accepted as-is; generated components are checked."
+  }
+}
