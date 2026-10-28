@@ -1,7 +1,7 @@
 ---
 version: "alpha"
 name: jewel-shop
-description: "An online shop for handmade jewelry. Each piece is made by hand, so the store should feel like a quiet, well-lit display case with a maker standing behind it: elegant, unhurried and personal."
+description: "A mobile budgeting app for young professionals. It should feel like a friend who is good with money: upbeat, easy to read at a glance, and never judging how you spend."
 colors:
   red-50: "#fef2f2"
   red-100: "#ffe2e2"
@@ -292,80 +292,80 @@ colors:
   white: "#ffffff"
   black: "#000000"
   background: "#ffffff"
-  foreground: "#0a0a0a"
+  foreground: "#020618"
   card: "#ffffff"
-  card-foreground: "#0a0a0a"
+  card-foreground: "#020618"
   popover: "#ffffff"
-  popover-foreground: "#0a0a0a"
-  primary: "#007857"
+  popover-foreground: "#020618"
+  primary: "#155dfc"
   primary-foreground: "#ffffff"
-  secondary: "#f5f5f5"
-  secondary-foreground: "#171717"
-  muted: "#f5f5f5"
-  muted-foreground: "#525252"
-  accent: "#f5f5f5"
-  accent-foreground: "#171717"
+  secondary: "#f1f5f9"
+  secondary-foreground: "#0f172b"
+  muted: "#f1f5f9"
+  muted-foreground: "#45556c"
+  accent: "#f1f5f9"
+  accent-foreground: "#0f172b"
   destructive: "#bf000f"
-  border: "#e5e5e5"
-  input: "#e5e5e5"
-  ring: "#009669"
+  border: "#e2e8f0"
+  input: "#e2e8f0"
+  ring: "#3280ff"
   success: "#00813a"
   success-foreground: "#ffffff"
   warning: "#fabc00"
   warning-foreground: "#461901"
   info: "#1447e6"
   info-foreground: "#ffffff"
-  chart-1: "#009669"
-  chart-2: "#e12afb"
-  chart-3: "#9f0712"
-  chart-4: "#6e11b0"
-  chart-5: "#ec5600"
-  chart-6: "#c2005c"
-  chart-7: "#1447e6"
-  chart-8: "#b55200"
-  chart-seq-1: "#a4f4cf"
-  chart-seq-2: "#5ee9b5"
-  chart-seq-3: "#00d294"
-  chart-seq-4: "#00b981"
-  chart-seq-5: "#009669"
-  chart-seq-6: "#007857"
-  chart-seq-7: "#005f46"
-  chart-div-1: "#c2005c"
-  chart-div-2: "#f6339a"
-  chart-div-3: "#fda5d5"
-  chart-div-4: "#e5e5e5"
-  chart-div-5: "#5ee9b5"
-  chart-div-6: "#00b981"
-  chart-div-7: "#007857"
+  chart-1: "#155dfc"
+  chart-2: "#024a70"
+  chart-3: "#7d87ff"
+  chart-4: "#0069a2"
+  chart-5: "#432dd7"
+  chart-6: "#0084c7"
+  chart-7: "#312c85"
+  chart-8: "#005f5a"
+  chart-seq-1: "#bedbff"
+  chart-seq-2: "#91c5ff"
+  chart-seq-3: "#56a2ff"
+  chart-seq-4: "#3280ff"
+  chart-seq-5: "#155dfc"
+  chart-seq-6: "#1447e6"
+  chart-seq-7: "#193cb8"
+  chart-div-1: "#a26200"
+  chart-div-2: "#eab300"
+  chart-div-3: "#ffe02f"
+  chart-div-4: "#e2e8f0"
+  chart-div-5: "#91c5ff"
+  chart-div-6: "#3280ff"
+  chart-div-7: "#1447e6"
   alert-default-background: "#ffffff"
-  alert-default-foreground: "#0a0a0a"
-  alert-default-border: "#e5e5e5"
-  alert-default-icon: "#0a0a0a"
-  alert-default-description: "#525252"
+  alert-default-foreground: "#020618"
+  alert-default-border: "#e2e8f0"
+  alert-default-icon: "#020618"
+  alert-default-description: "#45556c"
   alert-destructive-background: "#ffffff"
   alert-destructive-foreground: "#bf000f"
   alert-destructive-border: "#bf000f"
   alert-destructive-icon: "#bf000f"
   alert-destructive-description: "#bf000f"
   alert-success-background: "#ffffff"
-  alert-success-foreground: "#0a0a0a"
+  alert-success-foreground: "#020618"
   alert-success-border: "#00813a"
   alert-success-icon: "#00813a"
-  alert-success-description: "#525252"
+  alert-success-description: "#45556c"
   alert-warning-background: "#ffffff"
-  alert-warning-foreground: "#0a0a0a"
+  alert-warning-foreground: "#020618"
   alert-warning-border: "#fabc00"
   alert-warning-icon: "#fabc00"
-  alert-warning-description: "#525252"
+  alert-warning-description: "#45556c"
   alert-info-background: "#ffffff"
-  alert-info-foreground: "#0a0a0a"
+  alert-info-foreground: "#020618"
   alert-info-border: "#1447e6"
   alert-info-icon: "#1447e6"
-  alert-info-description: "#525252"
-  badge-default-background: "#007857"
+  alert-info-description: "#45556c"
+  badge-default-background: "#155dfc"
   badge-default-foreground: "#ffffff"
-  badge-secondary-background: "#f5f5f5"
-  badge-secondary-foreground: "#171717"
+  badge-secondary-background: "#f1f5f9"
+  badge-secondary-foreground: "#0f172b"
   badge-destructive-background: "oklch(0.505 0.206 27.5 / 0.1)"
   badge-destructive-foreground: "#bf000f"
   badge-success-background: "#00813a"
@@ -374,95 +374,150 @@ colors:
   badge-warning-foreground: "#461901"
   badge-info-background: "#1447e6"
   badge-info-foreground: "#ffffff"
-  badge-outline-foreground: "#0a0a0a"
-  badge-outline-border: "#e5e5e5"
-  badge-ghost-foreground: "#525252"
-  badge-ghost-background-hover: "#f5f5f5"
-  badge-link-foreground: "#007857"
-  button-default-background: "#007857"
+  badge-outline-foreground: "#020618"
+  badge-outline-border: "#e2e8f0"
+  badge-ghost-foreground: "#45556c"
+  badge-ghost-background-hover: "#f1f5f9"
+  badge-link-foreground: "#155dfc"
+  button-default-background: "#155dfc"
   button-default-foreground: "#ffffff"
-  button-default-background-hover: "oklch(0.508 0.106 165.6 / 0.8)"
-  button-secondary-background: "#f5f5f5"
-  button-secondary-foreground: "#171717"
-  button-secondary-background-hover: "#f5f5f5"
+  button-default-background-hover: "oklch(0.546 0.245 262.9 / 0.8)"
+  button-secondary-background: "#f1f5f9"
+  button-secondary-foreground: "#0f172b"
+  button-secondary-background-hover: "#f1f5f9"
   button-outline-background: "#ffffff"
-  button-outline-foreground: "#0a0a0a"
-  button-outline-border: "#e5e5e5"
-  button-outline-background-hover: "#f5f5f5"
-  button-ghost-foreground: "#0a0a0a"
-  button-ghost-background-hover: "#f5f5f5"
+  button-outline-foreground: "#020618"
+  button-outline-border: "#e2e8f0"
+  button-outline-background-hover: "#f1f5f9"
+  button-ghost-foreground: "#020618"
+  button-ghost-background-hover: "#f1f5f9"
   button-destructive-background: "oklch(0.505 0.206 27.5 / 0.1)"
   button-destructive-foreground: "#bf000f"
   button-destructive-background-hover: "oklch(0.505 0.206 27.5 / 0.2)"
-  button-link-foreground: "#007857"
+  button-link-foreground: "#155dfc"
   card-container-background: "#ffffff"
-  card-container-foreground: "#0a0a0a"
-  card-container-border: "oklch(0.145 0 0 / 0.1)"
-  card-description-foreground: "#525252"
-  card-footer-background: "oklch(0.97 0 0 / 0.5)"
+  card-container-foreground: "#020618"
+  card-container-border: "oklch(0.129 0.042 264.7 / 0.1)"
+  card-description-foreground: "#45556c"
+  card-footer-background: "oklch(0.968 0.007 247.9 / 0.5)"
   checkbox-box-background: "oklch(1 0 0 / 0)"
-  checkbox-box-border: "#e5e5e5"
-  checkbox-box-checked-background: "#007857"
+  checkbox-box-border: "#e2e8f0"
+  checkbox-box-checked-background: "#155dfc"
   checkbox-box-checked-foreground: "#ffffff"
-  checkbox-box-checked-border: "#007857"
-  dialog-overlay: "oklch(0.145 0 0 / 0.5)"
+  checkbox-box-checked-border: "#155dfc"
+  dialog-overlay: "oklch(0.129 0.042 264.7 / 0.5)"
   dialog-content-background: "#ffffff"
-  dialog-content-foreground: "#0a0a0a"
-  dialog-content-border: "#e5e5e5"
-  dialog-description-foreground: "#525252"
+  dialog-content-foreground: "#020618"
+  dialog-content-border: "#e2e8f0"
+  dialog-description-foreground: "#45556c"
   input-field-background: "oklch(1 0 0 / 0)"
-  input-field-foreground: "#0a0a0a"
-  input-field-border: "#e5e5e5"
-  input-field-placeholder: "#525252"
-  label-text-foreground: "#0a0a0a"
+  input-field-foreground: "#020618"
+  input-field-border: "#e2e8f0"
+  input-field-placeholder: "#45556c"
+  label-text-foreground: "#020618"
   radio-group-item-background: "oklch(1 0 0 / 0)"
-  radio-group-item-border: "#e5e5e5"
-  radio-group-item-checked: "#007857"
+  radio-group-item-border: "#e2e8f0"
+  radio-group-item-checked: "#155dfc"
   select-trigger-background: "oklch(1 0 0 / 0)"
-  select-trigger-foreground: "#0a0a0a"
-  select-trigger-border: "#e5e5e5"
-  select-trigger-placeholder: "#525252"
+  select-trigger-foreground: "#020618"
+  select-trigger-border: "#e2e8f0"
+  select-trigger-placeholder: "#45556c"
   select-content-background: "#ffffff"
-  select-content-foreground: "#0a0a0a"
-  select-content-border: "#e5e5e5"
-  select-item-highlight-background: "#f5f5f5"
-  select-item-highlight-foreground: "#171717"
-  select-item-label: "#525252"
-  separator-line: "#e5e5e5"
-  switch-track-on: "#007857"
-  switch-track-off: "#e5e5e5"
+  select-content-foreground: "#020618"
+  select-content-border: "#e2e8f0"
+  select-item-highlight-background: "#f1f5f9"
+  select-item-highlight-foreground: "#0f172b"
+  select-item-label: "#45556c"
+  separator-line: "#e2e8f0"
+  switch-track-on: "#155dfc"
+  switch-track-off: "#e2e8f0"
   switch-thumb-on: "#ffffff"
   switch-thumb-off: "#ffffff"
-  tabs-list-background: "#f5f5f5"
-  tabs-list-foreground: "#525252"
+  tabs-list-background: "#f1f5f9"
+  tabs-list-foreground: "#45556c"
   tabs-trigger-active-background: "#ffffff"
-  tabs-trigger-active-foreground: "#0a0a0a"
+  tabs-trigger-active-foreground: "#020618"
   textarea-field-background: "oklch(1 0 0 / 0)"
-  textarea-field-foreground: "#0a0a0a"
-  textarea-field-border: "#e5e5e5"
-  textarea-field-placeholder: "#525252"
+  textarea-field-foreground: "#020618"
+  textarea-field-border: "#e2e8f0"
+  textarea-field-placeholder: "#45556c"
   toast-default-background: "#ffffff"
-  toast-default-foreground: "#0a0a0a"
-  toast-default-border: "#e5e5e5"
-  toast-default-description: "#525252"
+  toast-default-foreground: "#020618"
+  toast-default-border: "#e2e8f0"
+  toast-default-description: "#45556c"
   toast-destructive-background: "#bf000f"
   toast-destructive-foreground: "#ffffff"
   toast-destructive-border: "#bf000f"
   toast-destructive-description: "#ffffff"
-  tooltip-background: "#0a0a0a"
+  tooltip-background: "#020618"
   tooltip-foreground: "#ffffff"
 typography:
   display:
-    fontFamily: Fraunces
+    fontFamily: Nunito
     fontSize: 2rem
     fontWeight: 600
     lineHeight: 1.15
     letterSpacing: -0.02em
-  body:
-    fontFamily: Fraunces
+  heading-lg:
+    fontFamily: Nunito
+    fontSize: 1.5rem
+    fontWeight: 600
+    lineHeight: 1.25
+    letterSpacing: -0.01em
+  heading-md:
+    fontFamily: Nunito
+    fontSize: 1.125rem
+    fontWeight: 600
+    lineHeight: 1.35
+    letterSpacing: 0em
+  heading-sm:
+    fontFamily: Nunito
+    fontSize: 1rem
+    fontWeight: 500
+    lineHeight: 1.375
+    letterSpacing: 0em
+  heading-xs:
+    fontFamily: Nunito
+    fontSize: 0.875rem
+    fontWeight: 500
+    lineHeight: 1.375
+    letterSpacing: 0em
+  body-lg:
+    fontFamily: Nunito
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: 0em
+  body-md:
+    fontFamily: Nunito
     fontSize: 0.875rem
     fontWeight: 400
     lineHeight: 1.5
+    letterSpacing: 0em
+  body-sm:
+    fontFamily: Nunito
+    fontSize: 0.75rem
+    fontWeight: 400
+    lineHeight: 1.35
+    letterSpacing: 0em
+  label-md:
+    fontFamily: Nunito
+    fontSize: 0.875rem
+    fontWeight: 500
+    lineHeight: 1.25
+    letterSpacing: 0em
+  label-sm:
+    fontFamily: Nunito
+    fontSize: 0.75rem
+    fontWeight: 500
+    lineHeight: 1.35
+    letterSpacing: 0em
+  code-md:
+    fontFamily: JetBrains Mono
+    fontSize: 0.8125rem
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: 0em
 rounded:
   none: 0px
   xs: 0.125rem
@@ -474,63 +529,74 @@ rounded:
   3xl: 1.5rem
   4xl: 2rem
   full: 9999px
-  control: 0px
-  container: 0px
-  pill: 0px
-  small: 0px
-  alert: 0px
-  badge: 0px
-  button: 0px
-  card: 0px
-  checkbox: 0px
-  dialog: 0px
-  input: 0px
-  select: 0px
-  tabs: 0px
-  textarea: 0px
-  toast: 0px
-  tooltip: 0px
+  control: 9999px
+  container: 1rem
+  pill: 9999px
+  small: 0.375rem
+  alert: 1rem
+  badge: 9999px
+  button: 9999px
+  card: 1rem
+  checkbox: 0.375rem
+  dialog: 1rem
+  dialog-close: 6px
+  input: 9999px
+  select: 9999px
+  select-content: 9999px
+  select-item: 9994px
+  tabs: 9999px
+  tabs-trigger: 9995px
+  textarea: 9999px
+  toast: 1rem
+  toast-action: 9999px
+  toast-close: 7px
+  tooltip: 0.375rem
 ---
 
 # jewel-shop
 
 ## Overview
 
-- The jewelry is the color. The interface stays calm and neutral so photos of the pieces carry the page.
-- Elegant means restraint: generous white space, few elements per view, one clear action.
-- Personal means warmth and detail: the maker's voice, the story of a piece, care in small moments (packaging notes, gift messages, order updates).
-- Never loud: no flashing sale banners, countdown timers, or crowded promo strips.
+- Friendly, not preachy: the app shows where money goes and what is left; it does not scold.
+- Glanceable: the most important number on each screen (left to spend, this month's total) is big and comes first.
+- Calm by default: color marks actions and real status, not every number.
+- Built for one hand on a phone: big tap targets, main actions within thumb reach.
 
 ## Colors
 
-- primary (deep emerald): the main action, such as Add to bag or Check out. One per view. Emerald also works as a quiet signature in links and focus rings.
-- background, card: white in light mode, near-black in dark mode. Product photos sit on these, never on tinted surfaces.
-- muted / muted-foreground: secondary surfaces and supporting text such as materials, sizes and shipping notes.
-- secondary, accent: soft neutral fills for secondary buttons, selected filters and hovered rows.
-- destructive: removing items for good, cancelling orders and errors only.
-- success, warning, info: status only (order confirmed, low stock, shipping notices), never for actions. Success is a green close to the emerald primary, so always pair it with an icon and text, and never place a success message next to a primary button.
+- primary (bright blue): the main action on a screen, such as Add expense or Save budget. One per screen. Also used for links, the selected tab and focus rings.
+- background, card: white in light mode, deep slate in dark mode. Cards group a budget, an account or a list of transactions.
+- muted / muted-foreground: secondary surfaces and supporting text such as dates, categories and notes.
+- secondary, accent: soft slate fills for secondary buttons, chips and selected filters.
+- destructive: deleting things for good and errors only. Never use it to show overspending or a negative balance.
+- warning: a gentle heads-up, such as a budget almost used up. Use it sparingly and always with words that say what to do.
+- success: goals reached and bills paid. Pair it with an icon and text.
+- info: neutral notices. Info is a blue close to the primary, so always pair it with an icon and text, and never use it for something tappable.
+- Charts use the chart colors in their order: blue first, then the other series colors. Spending over a limit is shown with a label or a marker, not by turning the chart red.
 
 ## Typography
 
-- Nunito for everything. Its soft, rounded shapes give the personal, handmade warmth; keep it elegant through weight and space, not decoration.
-- Display style (semibold, large, tight line height) for page titles and product names on the product page.
-- Body style for descriptions, prices in lists and form text. Product stories may use a slightly larger body size with comfortable line height.
-- Prices use the regular body weight; do not make them bold or colored.
-- No all-caps headings and no decorative letter-spacing.
+- Nunito for everything. Its rounded shapes carry the friendly feel; hierarchy comes from size and weight.
+- Display style for the one big number on a screen (left to spend, balance) and for screen titles.
+- Heading styles for section and card titles; body styles for lists, descriptions and fields. On phones, prefer the larger body size for reading text.
+- Amounts use tabular figures so columns line up. Positive and negative amounts differ by sign and label, not only by color.
+- No all-caps headings.
 
 ## Layout
 
-- Product imagery leads: large, consistent aspect ratios, plenty of space around each piece.
-- Product grids stay airy: at most 4 columns on desktop, 2 on mobile.
-- On a product page: photos, name, price, one primary action, then the story, materials and care.
-- Keep checkout plain and focused: no promotions or distractions inside it.
+- Mobile first: one column, generous spacing, a bottom tab bar for the main sections.
+- Tap targets at least 44 by 44 points; the main action sits low on the screen, in thumb reach.
+- Each screen opens with its key number, then the details (categories, transactions).
+- Keep forms short: adding an expense should take a few taps.
 
 ## Components
 
-- Buttons: primary for the single main action; outline or ghost for everything else (Save for later, View details).
-- Badges: for quiet facts such as Handmade, One of a kind or Made to order. Neutral by default; status colors only for real status (Low stock).
-- Toasts: short and warm confirmations (Added to your bag). No toasts for errors that need action; use an inline alert.
-- Dialogs: only for decisions that need focus, such as removing a saved address.
+- Buttons: primary for the single main action; outline or ghost for the rest (Edit, See all).
+- Badges: categories and small facts (Recurring, Shared). Neutral by default; status colors only for real status (Paid, Almost used up).
+- Toasts: short confirmations with an undo where it helps (Expense added. Undo).
+- Alerts: inline, for things that need attention, written as a suggestion, not a warning.
+- Dialogs: only for decisions that need focus, such as deleting a budget.
+- Switches for settings that apply at once; checkboxes for choices in a form.
 
 ## Do's and Don'ts
 
@@ -540,14 +606,15 @@ rounded:
 - Don't put an all-caps label above every heading.
 - Don't number sections (01, 02, 03) unless the content is a real sequence.
 - Don't accent a single word in a headline with a different color or weight.
-- Do let photos and white space do the work.
-- Do show care in small details: gift options, packaging, a note from the maker.
-- Don't use urgency tricks (timers, "only 2 left!" in red, pop-ups on arrival).
-- Don't add gradients, glitter or gold-look effects to suggest luxury; restraint reads as quality.
-- Don't use emerald for decoration on every surface; keep it for actions and small signature touches.
+- Do celebrate progress in small ways: a goal reached, a month under budget.
+- Do make it easy to fix mistakes: undo, edit, move a transaction.
+- Don't paint overspending red or use alarm icons for normal spending.
+- Don't show more than one key number in display size per screen.
+- Don't hide important amounts behind color alone.
 
 ## Shape and depth
 
-- Corners are slight: controls and badges use the small radius, cards and dialogs the medium radius, small marks the smallest. Never pill-shaped buttons.
-- Product images are never rounded more than the card that holds them.
-- Prefer thin borders and space over shadows. Use a soft shadow only for things that float: dialogs, popovers, toasts.
+- Corners are pill-shaped for controls: buttons, inputs, chips and badges are fully rounded. This is a big part of the friendly feel.
+- Cards, sheets and dialogs use the large container radius, not full pills.
+- Parts inside a rounded container (tabs in a tab bar, options in a menu) follow the container's corners minus the gap.
+- Light shadows only: a faint one for cards, a stronger one for things that float (sheets, dialogs, toasts).
