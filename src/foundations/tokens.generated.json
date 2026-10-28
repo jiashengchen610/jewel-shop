@@ -6795,6 +6795,62 @@
           }
         },
         {
+          "name": "nunito-font",
+          "path": "font/nunito",
+          "group": "font",
+          "type": "fontFamily",
+          "layer": "primitives",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": [
+                "Nunito",
+                "sans-serif"
+              ],
+              "css": "Nunito, sans-serif",
+              "resolved": "Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": [
+                "Nunito",
+                "sans-serif"
+              ],
+              "css": "Nunito, sans-serif",
+              "resolved": "Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "jetbrains-mono-font",
+          "path": "font/jetbrains-mono",
+          "group": "font",
+          "type": "fontFamily",
+          "layer": "primitives",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": [
+                "JetBrains Mono",
+                "monospace"
+              ],
+              "css": "'JetBrains Mono', monospace",
+              "resolved": "'JetBrains Mono', monospace",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": [
+                "JetBrains Mono",
+                "monospace"
+              ],
+              "css": "'JetBrains Mono', monospace",
+              "resolved": "'JetBrains Mono', monospace",
+              "alpha": 1
+            }
+          }
+        },
+        {
           "name": "control-radius",
           "path": "radius/control",
           "group": "radius",
@@ -6802,19 +6858,19 @@
           "description": "Buttons, inputs and other controls",
           "layer": "semantic",
           "refs": [
-            "radius/none"
+            "radius/full"
           ],
           "values": {
             "light": {
-              "raw": "{radius.none}",
-              "css": "var(--none-radius)",
-              "resolved": "0px",
+              "raw": "{radius.full}",
+              "css": "var(--full-radius)",
+              "resolved": "9999px",
               "alpha": 1
             },
             "dark": {
-              "raw": "{radius.none}",
-              "css": "var(--none-radius)",
-              "resolved": "0px",
+              "raw": "{radius.full}",
+              "css": "var(--full-radius)",
+              "resolved": "9999px",
               "alpha": 1
             }
           }
@@ -6827,19 +6883,19 @@
           "description": "Cards, panels, dialogs",
           "layer": "semantic",
           "refs": [
-            "radius/none"
+            "radius/2xl"
           ],
           "values": {
             "light": {
-              "raw": "{radius.none}",
-              "css": "var(--none-radius)",
-              "resolved": "0px",
+              "raw": "{radius.2xl}",
+              "css": "var(--2xl-radius)",
+              "resolved": "1rem",
               "alpha": 1
             },
             "dark": {
-              "raw": "{radius.none}",
-              "css": "var(--none-radius)",
-              "resolved": "0px",
+              "raw": "{radius.2xl}",
+              "css": "var(--2xl-radius)",
+              "resolved": "1rem",
               "alpha": 1
             }
           }
@@ -6852,19 +6908,19 @@
           "description": "Badges and tags",
           "layer": "semantic",
           "refs": [
-            "radius/none"
+            "radius/full"
           ],
           "values": {
             "light": {
-              "raw": "{radius.none}",
-              "css": "var(--none-radius)",
-              "resolved": "0px",
+              "raw": "{radius.full}",
+              "css": "var(--full-radius)",
+              "resolved": "9999px",
               "alpha": 1
             },
             "dark": {
-              "raw": "{radius.none}",
-              "css": "var(--none-radius)",
-              "resolved": "0px",
+              "raw": "{radius.full}",
+              "css": "var(--full-radius)",
+              "resolved": "9999px",
               "alpha": 1
             }
           }
@@ -6877,19 +6933,42 @@
           "description": "Checkboxes, tooltips and other small marks",
           "layer": "semantic",
           "refs": [
-            "radius/none"
+            "radius/md"
           ],
           "values": {
             "light": {
-              "raw": "{radius.none}",
-              "css": "var(--none-radius)",
-              "resolved": "0px",
+              "raw": "{radius.md}",
+              "css": "var(--md-radius)",
+              "resolved": "0.375rem",
               "alpha": 1
             },
             "dark": {
-              "raw": "{radius.none}",
-              "css": "var(--none-radius)",
-              "resolved": "0px",
+              "raw": "{radius.md}",
+              "css": "var(--md-radius)",
+              "resolved": "0.375rem",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "fit-inside-radius",
+          "path": "radius/fit-inside",
+          "group": "radius",
+          "type": "number",
+          "description": "1: parts inside a rounded container (tabs in the tab bar, options in a menu, close buttons in a corner) take its corners minus the gap, so the space between stays even. 0: they keep their own corners.",
+          "layer": "semantic",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": 1,
+              "css": "1",
+              "resolved": "1",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": 1,
+              "css": "1",
+              "resolved": "1",
               "alpha": 1
             }
           }
@@ -6899,25 +6978,147 @@
           "path": "font/sans",
           "group": "font",
           "type": "fontFamily",
+          "description": "Tailwind's font-sans: the page's default font",
           "layer": "semantic",
-          "refs": [],
+          "refs": [
+            "font/body"
+          ],
           "values": {
             "light": {
-              "raw": [
-                "Fraunces",
-                "serif"
-              ],
-              "css": "Fraunces, serif",
-              "resolved": "Fraunces, serif",
+              "raw": "{font.body}",
+              "css": "var(--body-font)",
+              "resolved": "Nunito, sans-serif",
               "alpha": 1
             },
             "dark": {
-              "raw": [
-                "Fraunces",
-                "serif"
-              ],
-              "css": "Fraunces, serif",
-              "resolved": "Fraunces, serif",
+              "raw": "{font.body}",
+              "css": "var(--body-font)",
+              "resolved": "Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "body-font",
+          "path": "font/body",
+          "group": "font",
+          "type": "fontFamily",
+          "description": "Running text, fields and lists",
+          "layer": "semantic",
+          "refs": [
+            "font/nunito"
+          ],
+          "values": {
+            "light": {
+              "raw": "{font.nunito}",
+              "css": "var(--nunito-font)",
+              "resolved": "Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{font.nunito}",
+              "css": "var(--nunito-font)",
+              "resolved": "Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "heading-font",
+          "path": "font/heading",
+          "group": "font",
+          "type": "fontFamily",
+          "description": "Headings and titles: the same as body until another font is picked",
+          "layer": "semantic",
+          "refs": [
+            "font/body"
+          ],
+          "values": {
+            "light": {
+              "raw": "{font.body}",
+              "css": "var(--body-font)",
+              "resolved": "Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{font.body}",
+              "css": "var(--body-font)",
+              "resolved": "Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "label-font",
+          "path": "font/label",
+          "group": "font",
+          "type": "fontFamily",
+          "description": "Buttons, tabs, badges and field labels: follows body or heading",
+          "layer": "semantic",
+          "refs": [
+            "font/body"
+          ],
+          "values": {
+            "light": {
+              "raw": "{font.body}",
+              "css": "var(--body-font)",
+              "resolved": "Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{font.body}",
+              "css": "var(--body-font)",
+              "resolved": "Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "code-font",
+          "path": "font/code",
+          "group": "font",
+          "type": "fontFamily",
+          "description": "Code",
+          "layer": "semantic",
+          "refs": [
+            "font/jetbrains-mono"
+          ],
+          "values": {
+            "light": {
+              "raw": "{font.jetbrains-mono}",
+              "css": "var(--jetbrains-mono-font)",
+              "resolved": "'JetBrains Mono', monospace",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{font.jetbrains-mono}",
+              "css": "var(--jetbrains-mono-font)",
+              "resolved": "'JetBrains Mono', monospace",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "mono-font",
+          "path": "font/mono",
+          "group": "font",
+          "type": "fontFamily",
+          "description": "Tailwind's font-mono",
+          "layer": "semantic",
+          "refs": [
+            "font/code"
+          ],
+          "values": {
+            "light": {
+              "raw": "{font.code}",
+              "css": "var(--code-font)",
+              "resolved": "'JetBrains Mono', monospace",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{font.code}",
+              "css": "var(--code-font)",
+              "resolved": "'JetBrains Mono', monospace",
               "alpha": 1
             }
           }
@@ -6927,15 +7128,13 @@
           "path": "typography/display",
           "group": "typography",
           "type": "typography",
+          "description": "Big numbers and page titles",
           "layer": "semantic",
           "refs": [],
           "values": {
             "light": {
               "raw": {
-                "fontFamily": [
-                  "Fraunces",
-                  "serif"
-                ],
+                "fontFamily": "{font.heading}",
                 "fontSize": {
                   "value": 2,
                   "unit": "rem"
@@ -6947,16 +7146,13 @@
                   "unit": "em"
                 }
               },
-              "css": "600 2rem/1.15 Fraunces, serif",
-              "resolved": "600 2rem/1.15 Fraunces, serif",
+              "css": "600 2rem/1.15 var(--heading-font)",
+              "resolved": "600 2rem/1.15 Nunito, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": {
-                "fontFamily": [
-                  "Fraunces",
-                  "serif"
-                ],
+                "fontFamily": "{font.heading}",
                 "fontSize": {
                   "value": 2,
                   "unit": "rem"
@@ -6968,52 +7164,478 @@
                   "unit": "em"
                 }
               },
-              "css": "600 2rem/1.15 Fraunces, serif",
-              "resolved": "600 2rem/1.15 Fraunces, serif",
+              "css": "600 2rem/1.15 var(--heading-font)",
+              "resolved": "600 2rem/1.15 Nunito, sans-serif",
               "alpha": 1
             }
           }
         },
         {
-          "name": "body-font",
-          "path": "typography/body",
+          "name": "heading-lg-font",
+          "path": "typography/heading/lg",
           "group": "typography",
           "type": "typography",
+          "description": "Section titles",
           "layer": "semantic",
           "refs": [],
           "values": {
             "light": {
               "raw": {
-                "fontFamily": [
-                  "Fraunces",
-                  "serif"
-                ],
+                "fontFamily": "{font.heading}",
                 "fontSize": {
-                  "value": 0.875,
+                  "value": 1.5,
                   "unit": "rem"
                 },
-                "fontWeight": 400,
-                "lineHeight": 1.5
+                "fontWeight": 600,
+                "lineHeight": 1.25,
+                "letterSpacing": {
+                  "value": -0.01,
+                  "unit": "em"
+                }
               },
-              "css": "400 0.875rem/1.5 Fraunces, serif",
-              "resolved": "400 0.875rem/1.5 Fraunces, serif",
+              "css": "600 1.5rem/1.25 var(--heading-font)",
+              "resolved": "600 1.5rem/1.25 Nunito, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": {
-                "fontFamily": [
-                  "Fraunces",
-                  "serif"
-                ],
+                "fontFamily": "{font.heading}",
+                "fontSize": {
+                  "value": 1.5,
+                  "unit": "rem"
+                },
+                "fontWeight": 600,
+                "lineHeight": 1.25,
+                "letterSpacing": {
+                  "value": -0.01,
+                  "unit": "em"
+                }
+              },
+              "css": "600 1.5rem/1.25 var(--heading-font)",
+              "resolved": "600 1.5rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "heading-md-font",
+          "path": "typography/heading/md",
+          "group": "typography",
+          "type": "typography",
+          "description": "Dialog titles",
+          "layer": "semantic",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": {
+                "fontFamily": "{font.heading}",
+                "fontSize": {
+                  "value": 1.125,
+                  "unit": "rem"
+                },
+                "fontWeight": 600,
+                "lineHeight": 1.35,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "600 1.125rem/1.35 var(--heading-font)",
+              "resolved": "600 1.125rem/1.35 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": {
+                "fontFamily": "{font.heading}",
+                "fontSize": {
+                  "value": 1.125,
+                  "unit": "rem"
+                },
+                "fontWeight": 600,
+                "lineHeight": 1.35,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "600 1.125rem/1.35 var(--heading-font)",
+              "resolved": "600 1.125rem/1.35 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "heading-sm-font",
+          "path": "typography/heading/sm",
+          "group": "typography",
+          "type": "typography",
+          "description": "Card titles",
+          "layer": "semantic",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": {
+                "fontFamily": "{font.heading}",
+                "fontSize": {
+                  "value": 1,
+                  "unit": "rem"
+                },
+                "fontWeight": 500,
+                "lineHeight": 1.375,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "500 1rem/1.375 var(--heading-font)",
+              "resolved": "500 1rem/1.375 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": {
+                "fontFamily": "{font.heading}",
+                "fontSize": {
+                  "value": 1,
+                  "unit": "rem"
+                },
+                "fontWeight": 500,
+                "lineHeight": 1.375,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "500 1rem/1.375 var(--heading-font)",
+              "resolved": "500 1rem/1.375 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "heading-xs-font",
+          "path": "typography/heading/xs",
+          "group": "typography",
+          "type": "typography",
+          "description": "Small card titles",
+          "layer": "semantic",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": {
+                "fontFamily": "{font.heading}",
+                "fontSize": {
+                  "value": 0.875,
+                  "unit": "rem"
+                },
+                "fontWeight": 500,
+                "lineHeight": 1.375,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "500 0.875rem/1.375 var(--heading-font)",
+              "resolved": "500 0.875rem/1.375 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": {
+                "fontFamily": "{font.heading}",
+                "fontSize": {
+                  "value": 0.875,
+                  "unit": "rem"
+                },
+                "fontWeight": 500,
+                "lineHeight": 1.375,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "500 0.875rem/1.375 var(--heading-font)",
+              "resolved": "500 0.875rem/1.375 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "body-lg-font",
+          "path": "typography/body/lg",
+          "group": "typography",
+          "type": "typography",
+          "description": "Longer reading text",
+          "layer": "semantic",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": {
+                "fontFamily": "{font.body}",
+                "fontSize": {
+                  "value": 1,
+                  "unit": "rem"
+                },
+                "fontWeight": 400,
+                "lineHeight": 1.5,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "400 1rem/1.5 var(--body-font)",
+              "resolved": "400 1rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": {
+                "fontFamily": "{font.body}",
+                "fontSize": {
+                  "value": 1,
+                  "unit": "rem"
+                },
+                "fontWeight": 400,
+                "lineHeight": 1.5,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "400 1rem/1.5 var(--body-font)",
+              "resolved": "400 1rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "body-md-font",
+          "path": "typography/body/md",
+          "group": "typography",
+          "type": "typography",
+          "description": "Most text: descriptions, fields, lists",
+          "layer": "semantic",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": {
+                "fontFamily": "{font.body}",
                 "fontSize": {
                   "value": 0.875,
                   "unit": "rem"
                 },
                 "fontWeight": 400,
-                "lineHeight": 1.5
+                "lineHeight": 1.5,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
               },
-              "css": "400 0.875rem/1.5 Fraunces, serif",
-              "resolved": "400 0.875rem/1.5 Fraunces, serif",
+              "css": "400 0.875rem/1.5 var(--body-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": {
+                "fontFamily": "{font.body}",
+                "fontSize": {
+                  "value": 0.875,
+                  "unit": "rem"
+                },
+                "fontWeight": 400,
+                "lineHeight": 1.5,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "400 0.875rem/1.5 var(--body-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "body-sm-font",
+          "path": "typography/body/sm",
+          "group": "typography",
+          "type": "typography",
+          "description": "Small print and tooltips",
+          "layer": "semantic",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": {
+                "fontFamily": "{font.body}",
+                "fontSize": {
+                  "value": 0.75,
+                  "unit": "rem"
+                },
+                "fontWeight": 400,
+                "lineHeight": 1.35,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "400 0.75rem/1.35 var(--body-font)",
+              "resolved": "400 0.75rem/1.35 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": {
+                "fontFamily": "{font.body}",
+                "fontSize": {
+                  "value": 0.75,
+                  "unit": "rem"
+                },
+                "fontWeight": 400,
+                "lineHeight": 1.35,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "400 0.75rem/1.35 var(--body-font)",
+              "resolved": "400 0.75rem/1.35 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "label-md-font",
+          "path": "typography/label/md",
+          "group": "typography",
+          "type": "typography",
+          "description": "Buttons, tabs and field labels",
+          "layer": "semantic",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": {
+                "fontFamily": "{font.label}",
+                "fontSize": {
+                  "value": 0.875,
+                  "unit": "rem"
+                },
+                "fontWeight": 500,
+                "lineHeight": 1.25,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "500 0.875rem/1.25 var(--label-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": {
+                "fontFamily": "{font.label}",
+                "fontSize": {
+                  "value": 0.875,
+                  "unit": "rem"
+                },
+                "fontWeight": 500,
+                "lineHeight": 1.25,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "500 0.875rem/1.25 var(--label-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "label-sm-font",
+          "path": "typography/label/sm",
+          "group": "typography",
+          "type": "typography",
+          "description": "Badges and small buttons",
+          "layer": "semantic",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": {
+                "fontFamily": "{font.label}",
+                "fontSize": {
+                  "value": 0.75,
+                  "unit": "rem"
+                },
+                "fontWeight": 500,
+                "lineHeight": 1.35,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "500 0.75rem/1.35 var(--label-font)",
+              "resolved": "500 0.75rem/1.35 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": {
+                "fontFamily": "{font.label}",
+                "fontSize": {
+                  "value": 0.75,
+                  "unit": "rem"
+                },
+                "fontWeight": 500,
+                "lineHeight": 1.35,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "500 0.75rem/1.35 var(--label-font)",
+              "resolved": "500 0.75rem/1.35 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "code-md-font",
+          "path": "typography/code/md",
+          "group": "typography",
+          "type": "typography",
+          "description": "Code",
+          "layer": "semantic",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": {
+                "fontFamily": "{font.code}",
+                "fontSize": {
+                  "value": 0.8125,
+                  "unit": "rem"
+                },
+                "fontWeight": 400,
+                "lineHeight": 1.5,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "400 0.8125rem/1.5 var(--code-font)",
+              "resolved": "400 0.8125rem/1.5 'JetBrains Mono', monospace",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": {
+                "fontFamily": "{font.code}",
+                "fontSize": {
+                  "value": 0.8125,
+                  "unit": "rem"
+                },
+                "fontWeight": 400,
+                "lineHeight": 1.5,
+                "letterSpacing": {
+                  "value": 0,
+                  "unit": "em"
+                }
+              },
+              "css": "400 0.8125rem/1.5 var(--code-font)",
+              "resolved": "400 0.8125rem/1.5 'JetBrains Mono', monospace",
               "alpha": 1
             }
           }
@@ -7535,7 +8157,7 @@
           "layer": "semantic",
           "refs": [
             "color/white",
-            "color/neutral/950"
+            "color/slate/950"
           ],
           "values": {
             "light": {
@@ -7545,9 +8167,9 @@
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.950}",
-              "css": "var(--neutral-950)",
-              "resolved": "oklch(0.145 0 none)",
+              "raw": "{color.slate.950}",
+              "css": "var(--slate-950)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             }
           }
@@ -7559,20 +8181,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/neutral/950",
-            "color/neutral/50"
+            "color/slate/950",
+            "color/slate/50"
           ],
           "values": {
             "light": {
-              "raw": "{color.neutral.950}",
-              "css": "var(--neutral-950)",
-              "resolved": "oklch(0.145 0 none)",
+              "raw": "{color.slate.950}",
+              "css": "var(--slate-950)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.50}",
-              "css": "var(--neutral-50)",
-              "resolved": "oklch(0.985 0 none)",
+              "raw": "{color.slate.50}",
+              "css": "var(--slate-50)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -7585,7 +8207,7 @@
           "layer": "semantic",
           "refs": [
             "color/white",
-            "color/neutral/900"
+            "color/slate/900"
           ],
           "values": {
             "light": {
@@ -7595,9 +8217,9 @@
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.900}",
-              "css": "var(--neutral-900)",
-              "resolved": "oklch(0.205 0 none)",
+              "raw": "{color.slate.900}",
+              "css": "var(--slate-900)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             }
           }
@@ -7609,20 +8231,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/neutral/950",
-            "color/neutral/50"
+            "color/slate/950",
+            "color/slate/50"
           ],
           "values": {
             "light": {
-              "raw": "{color.neutral.950}",
-              "css": "var(--neutral-950)",
-              "resolved": "oklch(0.145 0 none)",
+              "raw": "{color.slate.950}",
+              "css": "var(--slate-950)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.50}",
-              "css": "var(--neutral-50)",
-              "resolved": "oklch(0.985 0 none)",
+              "raw": "{color.slate.50}",
+              "css": "var(--slate-50)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -7635,7 +8257,7 @@
           "layer": "semantic",
           "refs": [
             "color/white",
-            "color/neutral/900"
+            "color/slate/900"
           ],
           "values": {
             "light": {
@@ -7645,9 +8267,9 @@
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.900}",
-              "css": "var(--neutral-900)",
-              "resolved": "oklch(0.205 0 none)",
+              "raw": "{color.slate.900}",
+              "css": "var(--slate-900)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             }
           }
@@ -7659,20 +8281,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/neutral/950",
-            "color/neutral/50"
+            "color/slate/950",
+            "color/slate/50"
           ],
           "values": {
             "light": {
-              "raw": "{color.neutral.950}",
-              "css": "var(--neutral-950)",
-              "resolved": "oklch(0.145 0 none)",
+              "raw": "{color.slate.950}",
+              "css": "var(--slate-950)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.50}",
-              "css": "var(--neutral-50)",
-              "resolved": "oklch(0.985 0 none)",
+              "raw": "{color.slate.50}",
+              "css": "var(--slate-50)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -7684,20 +8306,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/emerald/700",
-            "color/emerald/400"
+            "color/blue/600",
+            "color/blue/400"
           ],
           "values": {
             "light": {
-              "raw": "{color.emerald.700}",
-              "css": "var(--emerald-700)",
-              "resolved": "oklch(0.508 0.118 165.612)",
+              "raw": "{color.blue.600}",
+              "css": "var(--blue-600)",
+              "resolved": "oklch(0.546 0.245 262.881)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.emerald.400}",
-              "css": "var(--emerald-400)",
-              "resolved": "oklch(0.765 0.177 163.223)",
+              "raw": "{color.blue.400}",
+              "css": "var(--blue-400)",
+              "resolved": "oklch(0.707 0.165 254.624)",
               "alpha": 1
             }
           }
@@ -7710,7 +8332,7 @@
           "layer": "semantic",
           "refs": [
             "color/white",
-            "color/emerald/950"
+            "color/blue/950"
           ],
           "values": {
             "light": {
@@ -7720,9 +8342,9 @@
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.emerald.950}",
-              "css": "var(--emerald-950)",
-              "resolved": "oklch(0.262 0.051 172.552)",
+              "raw": "{color.blue.950}",
+              "css": "var(--blue-950)",
+              "resolved": "oklch(0.282 0.091 267.935)",
               "alpha": 1
             }
           }
@@ -7734,20 +8356,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/neutral/100",
-            "color/neutral/800"
+            "color/slate/100",
+            "color/slate/800"
           ],
           "values": {
             "light": {
-              "raw": "{color.neutral.100}",
-              "css": "var(--neutral-100)",
-              "resolved": "oklch(0.97 0 none)",
+              "raw": "{color.slate.100}",
+              "css": "var(--slate-100)",
+              "resolved": "oklch(0.968 0.007 247.896)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.800}",
-              "css": "var(--neutral-800)",
-              "resolved": "oklch(0.269 0 none)",
+              "raw": "{color.slate.800}",
+              "css": "var(--slate-800)",
+              "resolved": "oklch(0.279 0.041 260.031)",
               "alpha": 1
             }
           }
@@ -7759,20 +8381,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/neutral/900",
-            "color/neutral/50"
+            "color/slate/900",
+            "color/slate/50"
           ],
           "values": {
             "light": {
-              "raw": "{color.neutral.900}",
-              "css": "var(--neutral-900)",
-              "resolved": "oklch(0.205 0 none)",
+              "raw": "{color.slate.900}",
+              "css": "var(--slate-900)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.50}",
-              "css": "var(--neutral-50)",
-              "resolved": "oklch(0.985 0 none)",
+              "raw": "{color.slate.50}",
+              "css": "var(--slate-50)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -7784,20 +8406,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/neutral/100",
-            "color/neutral/800"
+            "color/slate/100",
+            "color/slate/800"
           ],
           "values": {
             "light": {
-              "raw": "{color.neutral.100}",
-              "css": "var(--neutral-100)",
-              "resolved": "oklch(0.97 0 none)",
+              "raw": "{color.slate.100}",
+              "css": "var(--slate-100)",
+              "resolved": "oklch(0.968 0.007 247.896)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.800}",
-              "css": "var(--neutral-800)",
-              "resolved": "oklch(0.269 0 none)",
+              "raw": "{color.slate.800}",
+              "css": "var(--slate-800)",
+              "resolved": "oklch(0.279 0.041 260.031)",
               "alpha": 1
             }
           }
@@ -7809,20 +8431,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/neutral/600",
-            "color/neutral/400"
+            "color/slate/600",
+            "color/slate/400"
           ],
           "values": {
             "light": {
-              "raw": "{color.neutral.600}",
-              "css": "var(--neutral-600)",
-              "resolved": "oklch(0.439 0 none)",
+              "raw": "{color.slate.600}",
+              "css": "var(--slate-600)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.400}",
-              "css": "var(--neutral-400)",
-              "resolved": "oklch(0.708 0 none)",
+              "raw": "{color.slate.400}",
+              "css": "var(--slate-400)",
+              "resolved": "oklch(0.704 0.04 256.788)",
               "alpha": 1
             }
           }
@@ -7834,20 +8456,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/neutral/100",
-            "color/neutral/800"
+            "color/slate/100",
+            "color/slate/800"
           ],
           "values": {
             "light": {
-              "raw": "{color.neutral.100}",
-              "css": "var(--neutral-100)",
-              "resolved": "oklch(0.97 0 none)",
+              "raw": "{color.slate.100}",
+              "css": "var(--slate-100)",
+              "resolved": "oklch(0.968 0.007 247.896)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.800}",
-              "css": "var(--neutral-800)",
-              "resolved": "oklch(0.269 0 none)",
+              "raw": "{color.slate.800}",
+              "css": "var(--slate-800)",
+              "resolved": "oklch(0.279 0.041 260.031)",
               "alpha": 1
             }
           }
@@ -7859,20 +8481,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/neutral/900",
-            "color/neutral/50"
+            "color/slate/900",
+            "color/slate/50"
           ],
           "values": {
             "light": {
-              "raw": "{color.neutral.900}",
-              "css": "var(--neutral-900)",
-              "resolved": "oklch(0.205 0 none)",
+              "raw": "{color.slate.900}",
+              "css": "var(--slate-900)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.50}",
-              "css": "var(--neutral-50)",
-              "resolved": "oklch(0.985 0 none)",
+              "raw": "{color.slate.50}",
+              "css": "var(--slate-50)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -7909,14 +8531,14 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/neutral/200",
+            "color/slate/200",
             "color/white"
           ],
           "values": {
             "light": {
-              "raw": "{color.neutral.200}",
-              "css": "var(--neutral-200)",
-              "resolved": "oklch(0.922 0 none)",
+              "raw": "{color.slate.200}",
+              "css": "var(--slate-200)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -7934,14 +8556,14 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/neutral/200",
+            "color/slate/200",
             "color/white"
           ],
           "values": {
             "light": {
-              "raw": "{color.neutral.200}",
-              "css": "var(--neutral-200)",
-              "resolved": "oklch(0.922 0 none)",
+              "raw": "{color.slate.200}",
+              "css": "var(--slate-200)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -7959,20 +8581,19 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/emerald/600",
-            "color/emerald/500"
+            "color/blue/500"
           ],
           "values": {
             "light": {
-              "raw": "{color.emerald.600}",
-              "css": "var(--emerald-600)",
-              "resolved": "oklch(0.596 0.145 163.225)",
+              "raw": "{color.blue.500}",
+              "css": "var(--blue-500)",
+              "resolved": "oklch(0.623 0.214 259.815)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.emerald.500}",
-              "css": "var(--emerald-500)",
-              "resolved": "oklch(0.696 0.17 162.48)",
+              "raw": "{color.blue.500}",
+              "css": "var(--blue-500)",
+              "resolved": "oklch(0.623 0.214 259.815)",
               "alpha": 1
             }
           }
@@ -8133,20 +8754,20 @@
           "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
           "layer": "semantic",
           "refs": [
-            "color/emerald/600",
-            "color/emerald/400"
+            "color/blue/600",
+            "color/blue/400"
           ],
           "values": {
             "light": {
-              "raw": "{color.emerald.600}",
-              "css": "var(--emerald-600)",
-              "resolved": "oklch(0.596 0.145 163.225)",
+              "raw": "{color.blue.600}",
+              "css": "var(--blue-600)",
+              "resolved": "oklch(0.546 0.245 262.881)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.emerald.400}",
-              "css": "var(--emerald-400)",
-              "resolved": "oklch(0.765 0.177 163.223)",
+              "raw": "{color.blue.400}",
+              "css": "var(--blue-400)",
+              "resolved": "oklch(0.707 0.165 254.624)",
               "alpha": 1
             }
           }
@@ -8159,19 +8780,20 @@
           "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
           "layer": "semantic",
           "refs": [
-            "color/fuchsia/500"
+            "color/sky/900",
+            "color/sky/100"
           ],
           "values": {
             "light": {
-              "raw": "{color.fuchsia.500}",
-              "css": "var(--fuchsia-500)",
-              "resolved": "oklch(0.667 0.295 322.15)",
+              "raw": "{color.sky.900}",
+              "css": "var(--sky-900)",
+              "resolved": "oklch(0.391 0.09 240.876)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.fuchsia.500}",
-              "css": "var(--fuchsia-500)",
-              "resolved": "oklch(0.667 0.295 322.15)",
+              "raw": "{color.sky.100}",
+              "css": "var(--sky-100)",
+              "resolved": "oklch(0.951 0.026 236.824)",
               "alpha": 1
             }
           }
@@ -8184,20 +8806,20 @@
           "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
           "layer": "semantic",
           "refs": [
-            "color/red/800",
-            "color/red/500"
+            "color/indigo/400",
+            "color/indigo/500"
           ],
           "values": {
             "light": {
-              "raw": "{color.red.800}",
-              "css": "var(--red-800)",
-              "resolved": "oklch(0.444 0.177 26.899)",
+              "raw": "{color.indigo.400}",
+              "css": "var(--indigo-400)",
+              "resolved": "oklch(0.673 0.182 276.935)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.red.500}",
-              "css": "var(--red-500)",
-              "resolved": "oklch(0.637 0.237 25.331)",
+              "raw": "{color.indigo.500}",
+              "css": "var(--indigo-500)",
+              "resolved": "oklch(0.585 0.233 277.117)",
               "alpha": 1
             }
           }
@@ -8210,20 +8832,20 @@
           "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
           "layer": "semantic",
           "refs": [
-            "color/purple/800",
-            "color/purple/200"
+            "color/sky/700",
+            "color/sky/300"
           ],
           "values": {
             "light": {
-              "raw": "{color.purple.800}",
-              "css": "var(--purple-800)",
-              "resolved": "oklch(0.438 0.218 303.724)",
+              "raw": "{color.sky.700}",
+              "css": "var(--sky-700)",
+              "resolved": "oklch(0.5 0.134 242.749)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.purple.200}",
-              "css": "var(--purple-200)",
-              "resolved": "oklch(0.902 0.063 306.703)",
+              "raw": "{color.sky.300}",
+              "css": "var(--sky-300)",
+              "resolved": "oklch(0.828 0.111 230.318)",
               "alpha": 1
             }
           }
@@ -8236,20 +8858,20 @@
           "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
           "layer": "semantic",
           "refs": [
-            "color/orange/600",
-            "color/orange/400"
+            "color/indigo/700",
+            "color/indigo/300"
           ],
           "values": {
             "light": {
-              "raw": "{color.orange.600}",
-              "css": "var(--orange-600)",
-              "resolved": "oklch(0.646 0.222 41.116)",
+              "raw": "{color.indigo.700}",
+              "css": "var(--indigo-700)",
+              "resolved": "oklch(0.457 0.24 277.023)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.orange.400}",
-              "css": "var(--orange-400)",
-              "resolved": "oklch(0.75 0.183 55.934)",
+              "raw": "{color.indigo.300}",
+              "css": "var(--indigo-300)",
+              "resolved": "oklch(0.785 0.115 274.713)",
               "alpha": 1
             }
           }
@@ -8262,20 +8884,19 @@
           "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
           "layer": "semantic",
           "refs": [
-            "color/pink/700",
-            "color/pink/300"
+            "color/sky/600"
           ],
           "values": {
             "light": {
-              "raw": "{color.pink.700}",
-              "css": "var(--pink-700)",
-              "resolved": "oklch(0.525 0.223 3.958)",
+              "raw": "{color.sky.600}",
+              "css": "var(--sky-600)",
+              "resolved": "oklch(0.588 0.158 241.966)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.pink.300}",
-              "css": "var(--pink-300)",
-              "resolved": "oklch(0.823 0.12 346.018)",
+              "raw": "{color.sky.600}",
+              "css": "var(--sky-600)",
+              "resolved": "oklch(0.588 0.158 241.966)",
               "alpha": 1
             }
           }
@@ -8286,6 +8907,187 @@
           "group": "color",
           "type": "color",
           "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
+          "layer": "semantic",
+          "refs": [
+            "color/indigo/900",
+            "color/indigo/600"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.indigo.900}",
+              "css": "var(--indigo-900)",
+              "resolved": "oklch(0.359 0.144 278.697)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.indigo.600}",
+              "css": "var(--indigo-600)",
+              "resolved": "oklch(0.511 0.262 276.966)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-8",
+          "path": "color/chart/8",
+          "group": "color",
+          "type": "color",
+          "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
+          "layer": "semantic",
+          "refs": [
+            "color/teal/800",
+            "color/teal/300"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.teal.800}",
+              "css": "var(--teal-800)",
+              "resolved": "oklch(0.437 0.078 188.216)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.teal.300}",
+              "css": "var(--teal-300)",
+              "resolved": "oklch(0.855 0.138 181.071)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-1",
+          "path": "color/chart/seq/1",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
+          "layer": "semantic",
+          "refs": [
+            "color/blue/200",
+            "color/blue/800"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.blue.200}",
+              "css": "var(--blue-200)",
+              "resolved": "oklch(0.882 0.059 254.128)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.blue.800}",
+              "css": "var(--blue-800)",
+              "resolved": "oklch(0.424 0.199 265.638)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-2",
+          "path": "color/chart/seq/2",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
+          "layer": "semantic",
+          "refs": [
+            "color/blue/300",
+            "color/blue/700"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.blue.300}",
+              "css": "var(--blue-300)",
+              "resolved": "oklch(0.809 0.105 251.813)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.blue.700}",
+              "css": "var(--blue-700)",
+              "resolved": "oklch(0.488 0.243 264.376)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-3",
+          "path": "color/chart/seq/3",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
+          "layer": "semantic",
+          "refs": [
+            "color/blue/400",
+            "color/blue/600"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.blue.400}",
+              "css": "var(--blue-400)",
+              "resolved": "oklch(0.707 0.165 254.624)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.blue.600}",
+              "css": "var(--blue-600)",
+              "resolved": "oklch(0.546 0.245 262.881)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-4",
+          "path": "color/chart/seq/4",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
+          "layer": "semantic",
+          "refs": [
+            "color/blue/500"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.blue.500}",
+              "css": "var(--blue-500)",
+              "resolved": "oklch(0.623 0.214 259.815)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.blue.500}",
+              "css": "var(--blue-500)",
+              "resolved": "oklch(0.623 0.214 259.815)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-5",
+          "path": "color/chart/seq/5",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
+          "layer": "semantic",
+          "refs": [
+            "color/blue/600",
+            "color/blue/400"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.blue.600}",
+              "css": "var(--blue-600)",
+              "resolved": "oklch(0.546 0.245 262.881)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.blue.400}",
+              "css": "var(--blue-400)",
+              "resolved": "oklch(0.707 0.165 254.624)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-6",
+          "path": "color/chart/seq/6",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
           "layer": "semantic",
           "refs": [
             "color/blue/700",
@@ -8307,187 +9109,6 @@
           }
         },
         {
-          "name": "chart-8",
-          "path": "color/chart/8",
-          "group": "color",
-          "type": "color",
-          "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
-          "layer": "semantic",
-          "refs": [
-            "color/amber/700",
-            "color/amber/300"
-          ],
-          "values": {
-            "light": {
-              "raw": "{color.amber.700}",
-              "css": "var(--amber-700)",
-              "resolved": "oklch(0.555 0.163 48.998)",
-              "alpha": 1
-            },
-            "dark": {
-              "raw": "{color.amber.300}",
-              "css": "var(--amber-300)",
-              "resolved": "oklch(0.879 0.169 91.605)",
-              "alpha": 1
-            }
-          }
-        },
-        {
-          "name": "chart-seq-1",
-          "path": "color/chart/seq/1",
-          "group": "color",
-          "type": "color",
-          "description": "Chart sequential step (low to high values) in one hue",
-          "layer": "semantic",
-          "refs": [
-            "color/emerald/200",
-            "color/emerald/800"
-          ],
-          "values": {
-            "light": {
-              "raw": "{color.emerald.200}",
-              "css": "var(--emerald-200)",
-              "resolved": "oklch(0.905 0.093 164.15)",
-              "alpha": 1
-            },
-            "dark": {
-              "raw": "{color.emerald.800}",
-              "css": "var(--emerald-800)",
-              "resolved": "oklch(0.432 0.095 166.913)",
-              "alpha": 1
-            }
-          }
-        },
-        {
-          "name": "chart-seq-2",
-          "path": "color/chart/seq/2",
-          "group": "color",
-          "type": "color",
-          "description": "Chart sequential step (low to high values) in one hue",
-          "layer": "semantic",
-          "refs": [
-            "color/emerald/300",
-            "color/emerald/700"
-          ],
-          "values": {
-            "light": {
-              "raw": "{color.emerald.300}",
-              "css": "var(--emerald-300)",
-              "resolved": "oklch(0.845 0.143 164.978)",
-              "alpha": 1
-            },
-            "dark": {
-              "raw": "{color.emerald.700}",
-              "css": "var(--emerald-700)",
-              "resolved": "oklch(0.508 0.118 165.612)",
-              "alpha": 1
-            }
-          }
-        },
-        {
-          "name": "chart-seq-3",
-          "path": "color/chart/seq/3",
-          "group": "color",
-          "type": "color",
-          "description": "Chart sequential step (low to high values) in one hue",
-          "layer": "semantic",
-          "refs": [
-            "color/emerald/400",
-            "color/emerald/600"
-          ],
-          "values": {
-            "light": {
-              "raw": "{color.emerald.400}",
-              "css": "var(--emerald-400)",
-              "resolved": "oklch(0.765 0.177 163.223)",
-              "alpha": 1
-            },
-            "dark": {
-              "raw": "{color.emerald.600}",
-              "css": "var(--emerald-600)",
-              "resolved": "oklch(0.596 0.145 163.225)",
-              "alpha": 1
-            }
-          }
-        },
-        {
-          "name": "chart-seq-4",
-          "path": "color/chart/seq/4",
-          "group": "color",
-          "type": "color",
-          "description": "Chart sequential step (low to high values) in one hue",
-          "layer": "semantic",
-          "refs": [
-            "color/emerald/500"
-          ],
-          "values": {
-            "light": {
-              "raw": "{color.emerald.500}",
-              "css": "var(--emerald-500)",
-              "resolved": "oklch(0.696 0.17 162.48)",
-              "alpha": 1
-            },
-            "dark": {
-              "raw": "{color.emerald.500}",
-              "css": "var(--emerald-500)",
-              "resolved": "oklch(0.696 0.17 162.48)",
-              "alpha": 1
-            }
-          }
-        },
-        {
-          "name": "chart-seq-5",
-          "path": "color/chart/seq/5",
-          "group": "color",
-          "type": "color",
-          "description": "Chart sequential step (low to high values) in one hue",
-          "layer": "semantic",
-          "refs": [
-            "color/emerald/600",
-            "color/emerald/400"
-          ],
-          "values": {
-            "light": {
-              "raw": "{color.emerald.600}",
-              "css": "var(--emerald-600)",
-              "resolved": "oklch(0.596 0.145 163.225)",
-              "alpha": 1
-            },
-            "dark": {
-              "raw": "{color.emerald.400}",
-              "css": "var(--emerald-400)",
-              "resolved": "oklch(0.765 0.177 163.223)",
-              "alpha": 1
-            }
-          }
-        },
-        {
-          "name": "chart-seq-6",
-          "path": "color/chart/seq/6",
-          "group": "color",
-          "type": "color",
-          "description": "Chart sequential step (low to high values) in one hue",
-          "layer": "semantic",
-          "refs": [
-            "color/emerald/700",
-            "color/emerald/300"
-          ],
-          "values": {
-            "light": {
-              "raw": "{color.emerald.700}",
-              "css": "var(--emerald-700)",
-              "resolved": "oklch(0.508 0.118 165.612)",
-              "alpha": 1
-            },
-            "dark": {
-              "raw": "{color.emerald.300}",
-              "css": "var(--emerald-300)",
-              "resolved": "oklch(0.845 0.143 164.978)",
-              "alpha": 1
-            }
-          }
-        },
-        {
           "name": "chart-seq-7",
           "path": "color/chart/seq/7",
           "group": "color",
@@ -8495,20 +9116,20 @@
           "description": "Chart sequential step (low to high values) in one hue",
           "layer": "semantic",
           "refs": [
-            "color/emerald/800",
-            "color/emerald/200"
+            "color/blue/800",
+            "color/blue/200"
           ],
           "values": {
             "light": {
-              "raw": "{color.emerald.800}",
-              "css": "var(--emerald-800)",
-              "resolved": "oklch(0.432 0.095 166.913)",
+              "raw": "{color.blue.800}",
+              "css": "var(--blue-800)",
+              "resolved": "oklch(0.424 0.199 265.638)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.emerald.200}",
-              "css": "var(--emerald-200)",
-              "resolved": "oklch(0.905 0.093 164.15)",
+              "raw": "{color.blue.200}",
+              "css": "var(--blue-200)",
+              "resolved": "oklch(0.882 0.059 254.128)",
               "alpha": 1
             }
           }
@@ -8521,20 +9142,20 @@
           "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
           "layer": "semantic",
           "refs": [
-            "color/pink/700",
-            "color/pink/300"
+            "color/yellow/700",
+            "color/yellow/300"
           ],
           "values": {
             "light": {
-              "raw": "{color.pink.700}",
-              "css": "var(--pink-700)",
-              "resolved": "oklch(0.525 0.223 3.958)",
+              "raw": "{color.yellow.700}",
+              "css": "var(--yellow-700)",
+              "resolved": "oklch(0.554 0.135 66.442)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.pink.300}",
-              "css": "var(--pink-300)",
-              "resolved": "oklch(0.823 0.12 346.018)",
+              "raw": "{color.yellow.300}",
+              "css": "var(--yellow-300)",
+              "resolved": "oklch(0.905 0.182 98.111)",
               "alpha": 1
             }
           }
@@ -8547,19 +9168,19 @@
           "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
           "layer": "semantic",
           "refs": [
-            "color/pink/500"
+            "color/yellow/500"
           ],
           "values": {
             "light": {
-              "raw": "{color.pink.500}",
-              "css": "var(--pink-500)",
-              "resolved": "oklch(0.656 0.241 354.308)",
+              "raw": "{color.yellow.500}",
+              "css": "var(--yellow-500)",
+              "resolved": "oklch(0.795 0.184 86.047)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.pink.500}",
-              "css": "var(--pink-500)",
-              "resolved": "oklch(0.656 0.241 354.308)",
+              "raw": "{color.yellow.500}",
+              "css": "var(--yellow-500)",
+              "resolved": "oklch(0.795 0.184 86.047)",
               "alpha": 1
             }
           }
@@ -8572,20 +9193,20 @@
           "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
           "layer": "semantic",
           "refs": [
-            "color/pink/300",
-            "color/pink/700"
+            "color/yellow/300",
+            "color/yellow/700"
           ],
           "values": {
             "light": {
-              "raw": "{color.pink.300}",
-              "css": "var(--pink-300)",
-              "resolved": "oklch(0.823 0.12 346.018)",
+              "raw": "{color.yellow.300}",
+              "css": "var(--yellow-300)",
+              "resolved": "oklch(0.905 0.182 98.111)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.pink.700}",
-              "css": "var(--pink-700)",
-              "resolved": "oklch(0.525 0.223 3.958)",
+              "raw": "{color.yellow.700}",
+              "css": "var(--yellow-700)",
+              "resolved": "oklch(0.554 0.135 66.442)",
               "alpha": 1
             }
           }
@@ -8598,20 +9219,20 @@
           "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
           "layer": "semantic",
           "refs": [
-            "color/neutral/200",
-            "color/neutral/800"
+            "color/slate/200",
+            "color/slate/800"
           ],
           "values": {
             "light": {
-              "raw": "{color.neutral.200}",
-              "css": "var(--neutral-200)",
-              "resolved": "oklch(0.922 0 none)",
+              "raw": "{color.slate.200}",
+              "css": "var(--slate-200)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.neutral.800}",
-              "css": "var(--neutral-800)",
-              "resolved": "oklch(0.269 0 none)",
+              "raw": "{color.slate.800}",
+              "css": "var(--slate-800)",
+              "resolved": "oklch(0.279 0.041 260.031)",
               "alpha": 1
             }
           }
@@ -8624,20 +9245,20 @@
           "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
           "layer": "semantic",
           "refs": [
-            "color/emerald/300",
-            "color/emerald/700"
+            "color/blue/300",
+            "color/blue/700"
           ],
           "values": {
             "light": {
-              "raw": "{color.emerald.300}",
-              "css": "var(--emerald-300)",
-              "resolved": "oklch(0.845 0.143 164.978)",
+              "raw": "{color.blue.300}",
+              "css": "var(--blue-300)",
+              "resolved": "oklch(0.809 0.105 251.813)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.emerald.700}",
-              "css": "var(--emerald-700)",
-              "resolved": "oklch(0.508 0.118 165.612)",
+              "raw": "{color.blue.700}",
+              "css": "var(--blue-700)",
+              "resolved": "oklch(0.488 0.243 264.376)",
               "alpha": 1
             }
           }
@@ -8650,19 +9271,19 @@
           "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
           "layer": "semantic",
           "refs": [
-            "color/emerald/500"
+            "color/blue/500"
           ],
           "values": {
             "light": {
-              "raw": "{color.emerald.500}",
-              "css": "var(--emerald-500)",
-              "resolved": "oklch(0.696 0.17 162.48)",
+              "raw": "{color.blue.500}",
+              "css": "var(--blue-500)",
+              "resolved": "oklch(0.623 0.214 259.815)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.emerald.500}",
-              "css": "var(--emerald-500)",
-              "resolved": "oklch(0.696 0.17 162.48)",
+              "raw": "{color.blue.500}",
+              "css": "var(--blue-500)",
+              "resolved": "oklch(0.623 0.214 259.815)",
               "alpha": 1
             }
           }
@@ -8675,20 +9296,20 @@
           "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
           "layer": "semantic",
           "refs": [
-            "color/emerald/700",
-            "color/emerald/300"
+            "color/blue/700",
+            "color/blue/300"
           ],
           "values": {
             "light": {
-              "raw": "{color.emerald.700}",
-              "css": "var(--emerald-700)",
-              "resolved": "oklch(0.508 0.118 165.612)",
+              "raw": "{color.blue.700}",
+              "css": "var(--blue-700)",
+              "resolved": "oklch(0.488 0.243 264.376)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.emerald.300}",
-              "css": "var(--emerald-300)",
-              "resolved": "oklch(0.845 0.143 164.978)",
+              "raw": "{color.blue.300}",
+              "css": "var(--blue-300)",
+              "resolved": "oklch(0.809 0.105 251.813)",
               "alpha": 1
             }
           }
@@ -8706,13 +9327,13 @@
             "light": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0px",
+              "resolved": "1rem",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0px",
+              "resolved": "1rem",
               "alpha": 1
             }
           }
@@ -8724,19 +9345,19 @@
           "type": "color",
           "layer": "components",
           "refs": [
-            "color/card"
+            "color/background"
           ],
           "values": {
             "light": {
-              "raw": "{color.card}",
-              "css": "var(--card)",
+              "raw": "{color.background}",
+              "css": "var(--background)",
               "resolved": "oklch(1 0 0)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.card}",
-              "css": "var(--card)",
-              "resolved": "oklch(0.205 0 none)",
+              "raw": "{color.background}",
+              "css": "var(--background)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             }
           }
@@ -8754,13 +9375,13 @@
             "light": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -8778,7 +9399,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -8802,13 +9423,13 @@
             "light": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -8826,13 +9447,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
               "alpha": 1
             }
           }
@@ -8856,7 +9477,7 @@
             "dark": {
               "raw": "{color.card}",
               "css": "var(--card)",
-              "resolved": "oklch(0.205 0 none)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             }
           }
@@ -8976,7 +9597,7 @@
             "dark": {
               "raw": "{color.card}",
               "css": "var(--card)",
-              "resolved": "oklch(0.205 0 none)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             }
           }
@@ -8994,13 +9615,13 @@
             "light": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -9066,13 +9687,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
               "alpha": 1
             }
           }
@@ -9096,7 +9717,7 @@
             "dark": {
               "raw": "{color.card}",
               "css": "var(--card)",
-              "resolved": "oklch(0.205 0 none)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             }
           }
@@ -9114,13 +9735,13 @@
             "light": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -9186,13 +9807,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
               "alpha": 1
             }
           }
@@ -9216,7 +9837,7 @@
             "dark": {
               "raw": "{color.card}",
               "css": "var(--card)",
-              "resolved": "oklch(0.205 0 none)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             }
           }
@@ -9234,13 +9855,13 @@
             "light": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -9306,13 +9927,63 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "alert-title-font",
+          "path": "alert/title/font",
+          "group": "alert",
+          "type": "typography",
+          "description": "Alert title",
+          "layer": "components",
+          "refs": [
+            "typography/label/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "alert-description-font",
+          "path": "alert/description/font",
+          "group": "alert",
+          "type": "typography",
+          "description": "Alert text",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
               "alpha": 1
             }
           }
@@ -9330,13 +10001,13 @@
             "light": {
               "raw": "{radius.pill}",
               "css": "var(--pill-radius)",
-              "resolved": "0px",
+              "resolved": "9999px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.pill}",
               "css": "var(--pill-radius)",
-              "resolved": "0px",
+              "resolved": "9999px",
               "alpha": 1
             }
           }
@@ -9354,13 +10025,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.508 0.118 165.612)",
+              "resolved": "oklch(0.546 0.245 262.881)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.765 0.177 163.223)",
+              "resolved": "oklch(0.707 0.165 254.624)",
               "alpha": 1
             }
           }
@@ -9384,7 +10055,7 @@
             "dark": {
               "raw": "{color.primary-foreground}",
               "css": "var(--primary-foreground)",
-              "resolved": "oklch(0.262 0.051 172.552)",
+              "resolved": "oklch(0.282 0.091 267.935)",
               "alpha": 1
             }
           }
@@ -9402,13 +10073,13 @@
             "light": {
               "raw": "{color.secondary}",
               "css": "var(--secondary)",
-              "resolved": "oklch(0.97 0 none)",
+              "resolved": "oklch(0.968 0.007 247.896)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.secondary}",
               "css": "var(--secondary)",
-              "resolved": "oklch(0.269 0 none)",
+              "resolved": "oklch(0.279 0.041 260.031)",
               "alpha": 1
             }
           }
@@ -9426,13 +10097,13 @@
             "light": {
               "raw": "{color.secondary-foreground}",
               "css": "var(--secondary-foreground)",
-              "resolved": "oklch(0.205 0 none)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.secondary-foreground}",
               "css": "var(--secondary-foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -9642,13 +10313,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -9666,7 +10337,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -9690,13 +10361,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
               "alpha": 1
             }
           }
@@ -9714,13 +10385,13 @@
             "light": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.97 0 none)",
+              "resolved": "oklch(0.968 0.007 247.896)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.269 0 none)",
+              "resolved": "oklch(0.279 0.041 260.031)",
               "alpha": 1
             }
           }
@@ -9738,13 +10409,38 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.508 0.118 165.612)",
+              "resolved": "oklch(0.546 0.245 262.881)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.765 0.177 163.223)",
+              "resolved": "oklch(0.707 0.165 254.624)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "badge-text-font",
+          "path": "badge/text/font",
+          "group": "badge",
+          "type": "typography",
+          "description": "Badge text",
+          "layer": "components",
+          "refs": [
+            "typography/label/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.sm}",
+              "css": "var(--label-sm-font)",
+              "resolved": "500 0.75rem/1.35 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.sm}",
+              "css": "var(--label-sm-font)",
+              "resolved": "500 0.75rem/1.35 Nunito, sans-serif",
               "alpha": 1
             }
           }
@@ -9762,13 +10458,13 @@
             "light": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0px",
+              "resolved": "9999px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0px",
+              "resolved": "9999px",
               "alpha": 1
             }
           }
@@ -9786,13 +10482,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.508 0.118 165.612)",
+              "resolved": "oklch(0.546 0.245 262.881)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.765 0.177 163.223)",
+              "resolved": "oklch(0.707 0.165 254.624)",
               "alpha": 1
             }
           }
@@ -9816,7 +10512,7 @@
             "dark": {
               "raw": "{color.primary-foreground}",
               "css": "var(--primary-foreground)",
-              "resolved": "oklch(0.262 0.051 172.552)",
+              "resolved": "oklch(0.282 0.091 267.935)",
               "alpha": 1
             }
           }
@@ -9834,13 +10530,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "color-mix(in oklab, var(--primary) 80%, transparent)",
-              "resolved": "oklch(0.508 0.106 165.6 / 0.8)",
+              "resolved": "oklch(0.546 0.245 262.9 / 0.8)",
               "alpha": 0.8
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "color-mix(in oklab, var(--primary) 80%, transparent)",
-              "resolved": "oklch(0.765 0.165 163.2 / 0.8)",
+              "resolved": "oklch(0.707 0.156 254.6 / 0.8)",
               "alpha": 0.8
             }
           }
@@ -9858,13 +10554,13 @@
             "light": {
               "raw": "{color.secondary}",
               "css": "var(--secondary)",
-              "resolved": "oklch(0.97 0 none)",
+              "resolved": "oklch(0.968 0.007 247.896)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.secondary}",
               "css": "var(--secondary)",
-              "resolved": "oklch(0.269 0 none)",
+              "resolved": "oklch(0.279 0.041 260.031)",
               "alpha": 1
             }
           }
@@ -9882,13 +10578,13 @@
             "light": {
               "raw": "{color.secondary-foreground}",
               "css": "var(--secondary-foreground)",
-              "resolved": "oklch(0.205 0 none)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.secondary-foreground}",
               "css": "var(--secondary-foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -9906,13 +10602,13 @@
             "light": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.97 0 none)",
+              "resolved": "oklch(0.968 0.007 247.896)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.269 0 none)",
+              "resolved": "oklch(0.279 0.041 260.031)",
               "alpha": 1
             }
           }
@@ -9936,7 +10632,7 @@
             "dark": {
               "raw": "{color.background}",
               "css": "var(--background)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             }
           }
@@ -9954,13 +10650,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -9978,7 +10674,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -10002,13 +10698,13 @@
             "light": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.97 0 none)",
+              "resolved": "oklch(0.968 0.007 247.896)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.269 0 none)",
+              "resolved": "oklch(0.279 0.041 260.031)",
               "alpha": 1
             }
           }
@@ -10026,13 +10722,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -10050,13 +10746,13 @@
             "light": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.97 0 none)",
+              "resolved": "oklch(0.968 0.007 247.896)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.269 0 none)",
+              "resolved": "oklch(0.279 0.041 260.031)",
               "alpha": 1
             }
           }
@@ -10146,13 +10842,63 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.508 0.118 165.612)",
+              "resolved": "oklch(0.546 0.245 262.881)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.765 0.177 163.223)",
+              "resolved": "oklch(0.707 0.165 254.624)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "button-label-font",
+          "path": "button/label/font",
+          "group": "button",
+          "type": "typography",
+          "description": "Button text",
+          "layer": "components",
+          "refs": [
+            "typography/label/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "button-label-small-font",
+          "path": "button/label-small/font",
+          "group": "button",
+          "type": "typography",
+          "description": "Button text in the small sizes",
+          "layer": "components",
+          "refs": [
+            "typography/label/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.sm}",
+              "css": "var(--label-sm-font)",
+              "resolved": "500 0.75rem/1.35 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.sm}",
+              "css": "var(--label-sm-font)",
+              "resolved": "500 0.75rem/1.35 Nunito, sans-serif",
               "alpha": 1
             }
           }
@@ -10170,13 +10916,13 @@
             "light": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0px",
+              "resolved": "1rem",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0px",
+              "resolved": "1rem",
               "alpha": 1
             }
           }
@@ -10200,7 +10946,7 @@
             "dark": {
               "raw": "{color.card}",
               "css": "var(--card)",
-              "resolved": "oklch(0.205 0 none)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             }
           }
@@ -10218,13 +10964,13 @@
             "light": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -10242,14 +10988,39 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "color-mix(in oklab, var(--foreground) 10%, transparent)",
-              "resolved": "oklch(0.145 0 0 / 0.1)",
+              "resolved": "oklch(0.129 0.042 264.7 / 0.1)",
               "alpha": 0.1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "color-mix(in oklab, var(--foreground) 10%, transparent)",
-              "resolved": "oklch(0.985 0 0 / 0.1)",
+              "resolved": "oklch(0.984 0.003 247.9 / 0.1)",
               "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "card-container-font",
+          "path": "card/container/font",
+          "group": "card",
+          "type": "typography",
+          "description": "Text in the card",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
             }
           }
         },
@@ -10266,13 +11037,38 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "card-description-font",
+          "path": "card/description/font",
+          "group": "card",
+          "type": "typography",
+          "description": "Card description",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
               "alpha": 1
             }
           }
@@ -10290,14 +11086,64 @@
             "light": {
               "raw": "{color.muted}",
               "css": "color-mix(in oklab, var(--muted) 50%, transparent)",
-              "resolved": "oklch(0.97 0 0 / 0.5)",
+              "resolved": "oklch(0.968 0.007 247.9 / 0.5)",
               "alpha": 0.5
             },
             "dark": {
               "raw": "{color.muted}",
               "css": "color-mix(in oklab, var(--muted) 50%, transparent)",
-              "resolved": "oklch(0.269 0 0 / 0.5)",
+              "resolved": "oklch(0.279 0.041 260 / 0.5)",
               "alpha": 0.5
+            }
+          }
+        },
+        {
+          "name": "card-title-font",
+          "path": "card/title/font",
+          "group": "card",
+          "type": "typography",
+          "description": "Card title",
+          "layer": "components",
+          "refs": [
+            "typography/heading/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.heading.sm}",
+              "css": "var(--heading-sm-font)",
+              "resolved": "500 1rem/1.375 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.heading.sm}",
+              "css": "var(--heading-sm-font)",
+              "resolved": "500 1rem/1.375 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "card-title-small-font",
+          "path": "card/title-small/font",
+          "group": "card",
+          "type": "typography",
+          "description": "Card title in the small card",
+          "layer": "components",
+          "refs": [
+            "typography/heading/xs"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.heading.xs}",
+              "css": "var(--heading-xs-font)",
+              "resolved": "500 0.875rem/1.375 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.heading.xs}",
+              "css": "var(--heading-xs-font)",
+              "resolved": "500 0.875rem/1.375 Nunito, sans-serif",
+              "alpha": 1
             }
           }
         },
@@ -10314,13 +11160,13 @@
             "light": {
               "raw": "{radius.small}",
               "css": "var(--small-radius)",
-              "resolved": "0px",
+              "resolved": "0.375rem",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.small}",
               "css": "var(--small-radius)",
-              "resolved": "0px",
+              "resolved": "0.375rem",
               "alpha": 1
             }
           }
@@ -10363,7 +11209,7 @@
             "light": {
               "raw": "{color.input}",
               "css": "var(--input)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -10387,13 +11233,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.508 0.118 165.612)",
+              "resolved": "oklch(0.546 0.245 262.881)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.765 0.177 163.223)",
+              "resolved": "oklch(0.707 0.165 254.624)",
               "alpha": 1
             }
           }
@@ -10417,7 +11263,7 @@
             "dark": {
               "raw": "{color.primary-foreground}",
               "css": "var(--primary-foreground)",
-              "resolved": "oklch(0.262 0.051 172.552)",
+              "resolved": "oklch(0.282 0.091 267.935)",
               "alpha": 1
             }
           }
@@ -10435,13 +11281,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.508 0.118 165.612)",
+              "resolved": "oklch(0.546 0.245 262.881)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.765 0.177 163.223)",
+              "resolved": "oklch(0.707 0.165 254.624)",
               "alpha": 1
             }
           }
@@ -10459,13 +11305,13 @@
             "light": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0px",
+              "resolved": "1rem",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0px",
+              "resolved": "1rem",
               "alpha": 1
             }
           }
@@ -10508,13 +11354,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "color-mix(in oklab, var(--foreground) 50%, transparent)",
-              "resolved": "oklch(0.145 0 0 / 0.5)",
+              "resolved": "oklch(0.129 0.042 264.7 / 0.5)",
               "alpha": 0.5
             },
             "dark": {
               "raw": "{color.background}",
               "css": "color-mix(in oklab, var(--background) 80%, transparent)",
-              "resolved": "oklch(0.145 0 0 / 0.8)",
+              "resolved": "oklch(0.129 0.042 264.7 / 0.8)",
               "alpha": 0.8
             }
           }
@@ -10538,7 +11384,7 @@
             "dark": {
               "raw": "{color.background}",
               "css": "var(--background)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             }
           }
@@ -10556,13 +11402,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -10580,7 +11426,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -10604,13 +11450,89 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "dialog-description-font",
+          "path": "dialog/description/font",
+          "group": "dialog",
+          "type": "typography",
+          "description": "Dialog text",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "dialog-title-font",
+          "path": "dialog/title/font",
+          "group": "dialog",
+          "type": "typography",
+          "description": "Dialog title",
+          "layer": "components",
+          "refs": [
+            "typography/heading/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.heading.md}",
+              "css": "var(--heading-md-font)",
+              "resolved": "600 1.125rem/1.35 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.heading.md}",
+              "css": "var(--heading-md-font)",
+              "resolved": "600 1.125rem/1.35 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "dialog-close-radius",
+          "path": "dialog/close/radius",
+          "group": "dialog",
+          "type": "dimension",
+          "description": "The close button in the corner",
+          "layer": "components",
+          "refs": [
+            "radius/small",
+            "dialog/radius"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.small}",
+              "css": "max(var(--small-radius), calc(var(--dialog-radius) - var(--spacing) * 4 - 1px))",
+              "resolved": "6px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.small}",
+              "css": "max(var(--small-radius), calc(var(--dialog-radius) - var(--spacing) * 4 - 1px))",
+              "resolved": "6px",
               "alpha": 1
             }
           }
@@ -10628,13 +11550,13 @@
             "light": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0px",
+              "resolved": "9999px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0px",
+              "resolved": "9999px",
               "alpha": 1
             }
           }
@@ -10677,13 +11599,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -10701,7 +11623,7 @@
             "light": {
               "raw": "{color.input}",
               "css": "var(--input)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -10725,13 +11647,63 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "input-field-font",
+          "path": "input/field/font",
+          "group": "input",
+          "type": "typography",
+          "description": "What people type (16px on phones, so iOS does not zoom)",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "input-file-font",
+          "path": "input/file/font",
+          "group": "input",
+          "type": "typography",
+          "description": "The file button's text",
+          "layer": "components",
+          "refs": [
+            "typography/label/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
               "alpha": 1
             }
           }
@@ -10749,13 +11721,38 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "label-text-font",
+          "path": "label/text/font",
+          "group": "label",
+          "type": "typography",
+          "description": "Label text",
+          "layer": "components",
+          "refs": [
+            "typography/label/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
               "alpha": 1
             }
           }
@@ -10798,7 +11795,7 @@
             "light": {
               "raw": "{color.input}",
               "css": "var(--input)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -10822,13 +11819,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.508 0.118 165.612)",
+              "resolved": "oklch(0.546 0.245 262.881)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.765 0.177 163.223)",
+              "resolved": "oklch(0.707 0.165 254.624)",
               "alpha": 1
             }
           }
@@ -10846,13 +11843,13 @@
             "light": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0px",
+              "resolved": "9999px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0px",
+              "resolved": "9999px",
               "alpha": 1
             }
           }
@@ -10919,13 +11916,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -10943,7 +11940,7 @@
             "light": {
               "raw": "{color.input}",
               "css": "var(--input)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -10967,13 +11964,38 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "select-trigger-font",
+          "path": "select/trigger/font",
+          "group": "select",
+          "type": "typography",
+          "description": "The chosen value",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
               "alpha": 1
             }
           }
@@ -10997,7 +12019,7 @@
             "dark": {
               "raw": "{color.popover}",
               "css": "var(--popover)",
-              "resolved": "oklch(0.205 0 none)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             }
           }
@@ -11015,13 +12037,13 @@
             "light": {
               "raw": "{color.popover-foreground}",
               "css": "var(--popover-foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.popover-foreground}",
               "css": "var(--popover-foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -11039,7 +12061,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -11047,6 +12069,31 @@
               "css": "var(--border)",
               "resolved": "oklch(1 0 0 / 0.1)",
               "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "select-content-radius",
+          "path": "select/content/radius",
+          "group": "select",
+          "type": "dimension",
+          "description": "The open list",
+          "layer": "components",
+          "refs": [
+            "select/radius"
+          ],
+          "values": {
+            "light": {
+              "raw": "{select.radius}",
+              "css": "var(--select-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{select.radius}",
+              "css": "var(--select-radius)",
+              "resolved": "9999px",
+              "alpha": 1
             }
           }
         },
@@ -11063,13 +12110,13 @@
             "light": {
               "raw": "{color.accent}",
               "css": "var(--accent)",
-              "resolved": "oklch(0.97 0 none)",
+              "resolved": "oklch(0.968 0.007 247.896)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.accent}",
               "css": "var(--accent)",
-              "resolved": "oklch(0.269 0 none)",
+              "resolved": "oklch(0.279 0.041 260.031)",
               "alpha": 1
             }
           }
@@ -11087,13 +12134,13 @@
             "light": {
               "raw": "{color.accent-foreground}",
               "css": "var(--accent-foreground)",
-              "resolved": "oklch(0.205 0 none)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.accent-foreground}",
               "css": "var(--accent-foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -11111,13 +12158,89 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "select-item-font",
+          "path": "select/item/font",
+          "group": "select",
+          "type": "typography",
+          "description": "Options in the list",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "select-item-radius",
+          "path": "select/item/radius",
+          "group": "select",
+          "type": "dimension",
+          "description": "Option corners: inside the list they fit its corners",
+          "layer": "components",
+          "refs": [
+            "radius/control",
+            "select/content/radius"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.control}",
+              "css": "max(0px, calc(var(--select-content-radius) - var(--spacing) * 1 - 1px))",
+              "resolved": "9994px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.control}",
+              "css": "max(0px, calc(var(--select-content-radius) - var(--spacing) * 1 - 1px))",
+              "resolved": "9994px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "select-group-label-font",
+          "path": "select/group-label/font",
+          "group": "select",
+          "type": "typography",
+          "description": "Group names in the list",
+          "layer": "components",
+          "refs": [
+            "typography/body/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Nunito, sans-serif",
               "alpha": 1
             }
           }
@@ -11135,7 +12258,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -11159,13 +12282,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.508 0.118 165.612)",
+              "resolved": "oklch(0.546 0.245 262.881)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.765 0.177 163.223)",
+              "resolved": "oklch(0.707 0.165 254.624)",
               "alpha": 1
             }
           }
@@ -11183,7 +12306,7 @@
             "light": {
               "raw": "{color.input}",
               "css": "var(--input)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -11213,7 +12336,7 @@
             "dark": {
               "raw": "{color.primary-foreground}",
               "css": "var(--primary-foreground)",
-              "resolved": "oklch(0.262 0.051 172.552)",
+              "resolved": "oklch(0.282 0.091 267.935)",
               "alpha": 1
             }
           }
@@ -11238,7 +12361,7 @@
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -11256,13 +12379,13 @@
             "light": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0px",
+              "resolved": "9999px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0px",
+              "resolved": "9999px",
               "alpha": 1
             }
           }
@@ -11280,13 +12403,13 @@
             "light": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.97 0 none)",
+              "resolved": "oklch(0.968 0.007 247.896)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.269 0 none)",
+              "resolved": "oklch(0.279 0.041 260.031)",
               "alpha": 1
             }
           }
@@ -11304,13 +12427,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
               "alpha": 1
             }
           }
@@ -11353,13 +12476,64 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "tabs-trigger-font",
+          "path": "tabs/trigger/font",
+          "group": "tabs",
+          "type": "typography",
+          "description": "Tab names",
+          "layer": "components",
+          "refs": [
+            "typography/label/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "tabs-trigger-radius",
+          "path": "tabs/trigger/radius",
+          "group": "tabs",
+          "type": "dimension",
+          "description": "Tab corners: inside the tab bar they fit its corners",
+          "layer": "components",
+          "refs": [
+            "radius/control",
+            "tabs/radius"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.control}",
+              "css": "max(0px, calc(var(--tabs-radius) - var(--spacing) * 1))",
+              "resolved": "9995px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.control}",
+              "css": "max(0px, calc(var(--tabs-radius) - var(--spacing) * 1))",
+              "resolved": "9995px",
               "alpha": 1
             }
           }
@@ -11377,13 +12551,13 @@
             "light": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0px",
+              "resolved": "9999px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0px",
+              "resolved": "9999px",
               "alpha": 1
             }
           }
@@ -11426,13 +12600,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -11450,7 +12624,7 @@
             "light": {
               "raw": "{color.input}",
               "css": "var(--input)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -11474,13 +12648,38 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "textarea-field-font",
+          "path": "textarea/field/font",
+          "group": "textarea",
+          "type": "typography",
+          "description": "What people type (16px on phones, so iOS does not zoom)",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
               "alpha": 1
             }
           }
@@ -11498,13 +12697,13 @@
             "light": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0px",
+              "resolved": "1rem",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0px",
+              "resolved": "1rem",
               "alpha": 1
             }
           }
@@ -11552,7 +12751,7 @@
             "dark": {
               "raw": "{color.popover}",
               "css": "var(--popover)",
-              "resolved": "oklch(0.205 0 none)",
+              "resolved": "oklch(0.208 0.042 265.755)",
               "alpha": 1
             }
           }
@@ -11570,13 +12769,13 @@
             "light": {
               "raw": "{color.popover-foreground}",
               "css": "var(--popover-foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.popover-foreground}",
               "css": "var(--popover-foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -11594,7 +12793,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.922 0 none)",
+              "resolved": "oklch(0.929 0.013 255.508)",
               "alpha": 1
             },
             "dark": {
@@ -11618,13 +12817,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.439 0 none)",
+              "resolved": "oklch(0.446 0.043 257.281)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.708 0 none)",
+              "resolved": "oklch(0.704 0.04 256.788)",
               "alpha": 1
             }
           }
@@ -11672,7 +12871,7 @@
             "dark": {
               "raw": "{color.background}",
               "css": "var(--background)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             }
           }
@@ -11720,7 +12919,133 @@
             "dark": {
               "raw": "{color.background}",
               "css": "var(--background)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "toast-title-font",
+          "path": "toast/title/font",
+          "group": "toast",
+          "type": "typography",
+          "description": "Toast title",
+          "layer": "components",
+          "refs": [
+            "typography/label/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "toast-description-font",
+          "path": "toast/description/font",
+          "group": "toast",
+          "type": "typography",
+          "description": "Toast text",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "toast-action-font",
+          "path": "toast/action/font",
+          "group": "toast",
+          "type": "typography",
+          "description": "Toast action button",
+          "layer": "components",
+          "refs": [
+            "typography/label/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "toast-action-radius",
+          "path": "toast/action/radius",
+          "group": "toast",
+          "type": "dimension",
+          "description": "The action button, a control like any other",
+          "layer": "components",
+          "refs": [
+            "radius/control"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.control}",
+              "css": "var(--control-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.control}",
+              "css": "var(--control-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "toast-close-radius",
+          "path": "toast/close/radius",
+          "group": "toast",
+          "type": "dimension",
+          "description": "The close button in the corner",
+          "layer": "components",
+          "refs": [
+            "radius/small",
+            "toast/radius"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.small}",
+              "css": "max(var(--small-radius), calc(var(--toast-radius) - var(--spacing) * 2 - 1px))",
+              "resolved": "7px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.small}",
+              "css": "max(var(--small-radius), calc(var(--toast-radius) - var(--spacing) * 2 - 1px))",
+              "resolved": "7px",
               "alpha": 1
             }
           }
@@ -11738,13 +13063,13 @@
             "light": {
               "raw": "{radius.small}",
               "css": "var(--small-radius)",
-              "resolved": "0px",
+              "resolved": "0.375rem",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.small}",
               "css": "var(--small-radius)",
-              "resolved": "0px",
+              "resolved": "0.375rem",
               "alpha": 1
             }
           }
@@ -11762,13 +13087,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.985 0 none)",
+              "resolved": "oklch(0.984 0.003 247.858)",
               "alpha": 1
             }
           }
@@ -11792,7 +13117,32 @@
             "dark": {
               "raw": "{color.background}",
               "css": "var(--background)",
-              "resolved": "oklch(0.145 0 none)",
+              "resolved": "oklch(0.129 0.042 264.695)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "tooltip-text-font",
+          "path": "tooltip/text/font",
+          "group": "tooltip",
+          "type": "typography",
+          "description": "Tooltip text",
+          "layer": "components",
+          "refs": [
+            "typography/body/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Nunito, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Nunito, sans-serif",
               "alpha": 1
             }
           }
@@ -11803,7 +13153,7 @@
           "mode": "light",
           "bg": "background",
           "fg": "foreground",
-          "ratio": 19.79,
+          "ratio": 20.17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -11812,7 +13162,7 @@
           "mode": "dark",
           "bg": "background",
           "fg": "foreground",
-          "ratio": 18.96,
+          "ratio": 19.27,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -11821,7 +13171,7 @@
           "mode": "light",
           "bg": "card",
           "fg": "card-foreground",
-          "ratio": 19.79,
+          "ratio": 20.17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -11830,7 +13180,7 @@
           "mode": "dark",
           "bg": "card",
           "fg": "card-foreground",
-          "ratio": 17.16,
+          "ratio": 17.05,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -11839,7 +13189,7 @@
           "mode": "light",
           "bg": "popover",
           "fg": "popover-foreground",
-          "ratio": 19.79,
+          "ratio": 20.17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -11848,7 +13198,7 @@
           "mode": "dark",
           "bg": "popover",
           "fg": "popover-foreground",
-          "ratio": 17.16,
+          "ratio": 17.05,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -11857,7 +13207,7 @@
           "mode": "light",
           "bg": "primary",
           "fg": "primary-foreground",
-          "ratio": 5.48,
+          "ratio": 5.26,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -11866,7 +13216,7 @@
           "mode": "dark",
           "bg": "primary",
           "fg": "primary-foreground",
-          "ratio": 7.7,
+          "ratio": 5.64,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -11875,7 +13225,7 @@
           "mode": "light",
           "bg": "secondary",
           "fg": "secondary-foreground",
-          "ratio": 16.42,
+          "ratio": 16.28,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -11884,7 +13234,7 @@
           "mode": "dark",
           "bg": "secondary",
           "fg": "secondary-foreground",
-          "ratio": 14.48,
+          "ratio": 14,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -11893,583 +13243,583 @@
           "mode": "light",
           "bg": "muted",
           "fg": "muted-foreground",
-          "ratio": 7.15,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "muted",
-          "fg": "muted-foreground",
-          "ratio": 5.83,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "accent",
-          "fg": "accent-foreground",
-          "ratio": 16.42,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "accent",
-          "fg": "accent-foreground",
-          "ratio": 14.48,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "success",
-          "fg": "success-foreground",
-          "ratio": 5.01,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "success",
-          "fg": "success-foreground",
-          "ratio": 8.4,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "warning",
-          "fg": "warning-foreground",
-          "ratio": 8.72,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "warning",
-          "fg": "warning-foreground",
-          "ratio": 8.72,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "info",
-          "fg": "info-foreground",
-          "ratio": 6.82,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "info",
-          "fg": "info-foreground",
-          "ratio": 5.64,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "alert-default-background",
-          "fg": "alert-default-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "alert-default-background",
-          "fg": "alert-default-foreground",
-          "ratio": 17.16,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "alert-destructive-background",
-          "fg": "alert-destructive-foreground",
-          "ratio": 6.54,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "alert-destructive-background",
-          "fg": "alert-destructive-foreground",
-          "ratio": 6.25,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "alert-success-background",
-          "fg": "alert-success-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "alert-success-background",
-          "fg": "alert-success-foreground",
-          "ratio": 17.16,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "alert-warning-background",
-          "fg": "alert-warning-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "alert-warning-background",
-          "fg": "alert-warning-foreground",
-          "ratio": 17.16,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "alert-info-background",
-          "fg": "alert-info-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "alert-info-background",
-          "fg": "alert-info-foreground",
-          "ratio": 17.16,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "badge-default-background",
-          "fg": "badge-default-foreground",
-          "ratio": 5.48,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "badge-default-background",
-          "fg": "badge-default-foreground",
-          "ratio": 7.7,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "badge-secondary-background",
-          "fg": "badge-secondary-foreground",
-          "ratio": 16.42,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "badge-secondary-background",
-          "fg": "badge-secondary-foreground",
-          "ratio": 14.48,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "badge-destructive-background",
-          "fg": "badge-destructive-foreground",
-          "ratio": 5.45,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "badge-destructive-background",
-          "fg": "badge-destructive-foreground",
-          "ratio": 5.35,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "badge-success-background",
-          "fg": "badge-success-foreground",
-          "ratio": 5.01,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "badge-success-background",
-          "fg": "badge-success-foreground",
-          "ratio": 8.4,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "badge-warning-background",
-          "fg": "badge-warning-foreground",
-          "ratio": 8.72,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "badge-warning-background",
-          "fg": "badge-warning-foreground",
-          "ratio": 8.72,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "badge-info-background",
-          "fg": "badge-info-foreground",
-          "ratio": 6.82,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "badge-info-background",
-          "fg": "badge-info-foreground",
-          "ratio": 5.64,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "button-default-background",
-          "fg": "button-default-foreground",
-          "ratio": 5.48,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "button-default-background",
-          "fg": "button-default-foreground",
-          "ratio": 7.7,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "button-secondary-background",
-          "fg": "button-secondary-foreground",
-          "ratio": 16.42,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "button-secondary-background",
-          "fg": "button-secondary-foreground",
-          "ratio": 14.48,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "button-outline-background",
-          "fg": "button-outline-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "button-outline-background",
-          "fg": "button-outline-foreground",
-          "ratio": 18.96,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "button-destructive-background",
-          "fg": "button-destructive-foreground",
-          "ratio": 5.45,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "button-destructive-background",
-          "fg": "button-destructive-foreground",
-          "ratio": 5.35,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "card-container-background",
-          "fg": "card-container-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "card-container-background",
-          "fg": "card-container-foreground",
-          "ratio": 17.16,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "checkbox-box-checked-background",
-          "fg": "checkbox-box-checked-foreground",
-          "ratio": 5.48,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "checkbox-box-checked-background",
-          "fg": "checkbox-box-checked-foreground",
-          "ratio": 7.7,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "dialog-content-background",
-          "fg": "dialog-content-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "dialog-content-background",
-          "fg": "dialog-content-foreground",
-          "ratio": 18.96,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "input-field-background",
-          "fg": "input-field-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "input-field-background",
-          "fg": "input-field-foreground",
-          "ratio": 17.49,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "select-trigger-background",
-          "fg": "select-trigger-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "select-trigger-background",
-          "fg": "select-trigger-foreground",
-          "ratio": 17.49,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "select-content-background",
-          "fg": "select-content-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "select-content-background",
-          "fg": "select-content-foreground",
-          "ratio": 17.16,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "select-item-highlight-background",
-          "fg": "select-item-highlight-foreground",
-          "ratio": 16.42,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "select-item-highlight-background",
-          "fg": "select-item-highlight-foreground",
-          "ratio": 14.48,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "tabs-list-background",
-          "fg": "tabs-list-foreground",
-          "ratio": 7.15,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "tabs-list-background",
-          "fg": "tabs-list-foreground",
-          "ratio": 5.83,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "tabs-trigger-active-background",
-          "fg": "tabs-trigger-active-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "tabs-trigger-active-background",
-          "fg": "tabs-trigger-active-foreground",
-          "ratio": 17.49,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "textarea-field-background",
-          "fg": "textarea-field-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "textarea-field-background",
-          "fg": "textarea-field-foreground",
-          "ratio": 17.49,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "toast-default-background",
-          "fg": "toast-default-foreground",
-          "ratio": 19.79,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "toast-default-background",
-          "fg": "toast-default-foreground",
-          "ratio": 17.16,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "toast-destructive-background",
-          "fg": "toast-destructive-foreground",
-          "ratio": 6.54,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "toast-destructive-background",
-          "fg": "toast-destructive-foreground",
           "ratio": 6.9,
           "min": 4.5,
           "pass": true,
           "accepted": false
         },
         {
+          "mode": "dark",
+          "bg": "muted",
+          "fg": "muted-foreground",
+          "ratio": 5.58,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "accent",
+          "fg": "accent-foreground",
+          "ratio": 16.28,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "accent",
+          "fg": "accent-foreground",
+          "ratio": 14,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "success",
+          "fg": "success-foreground",
+          "ratio": 5.01,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "success",
+          "fg": "success-foreground",
+          "ratio": 8.4,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "warning",
+          "fg": "warning-foreground",
+          "ratio": 8.72,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "warning",
+          "fg": "warning-foreground",
+          "ratio": 8.72,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "info",
+          "fg": "info-foreground",
+          "ratio": 6.82,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "info",
+          "fg": "info-foreground",
+          "ratio": 5.64,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "alert-default-background",
+          "fg": "alert-default-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "alert-default-background",
+          "fg": "alert-default-foreground",
+          "ratio": 19.27,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "alert-destructive-background",
+          "fg": "alert-destructive-foreground",
+          "ratio": 6.54,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "alert-destructive-background",
+          "fg": "alert-destructive-foreground",
+          "ratio": 6.22,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "alert-success-background",
+          "fg": "alert-success-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "alert-success-background",
+          "fg": "alert-success-foreground",
+          "ratio": 17.05,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "alert-warning-background",
+          "fg": "alert-warning-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "alert-warning-background",
+          "fg": "alert-warning-foreground",
+          "ratio": 17.05,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "alert-info-background",
+          "fg": "alert-info-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "alert-info-background",
+          "fg": "alert-info-foreground",
+          "ratio": 17.05,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "badge-default-background",
+          "fg": "badge-default-foreground",
+          "ratio": 5.26,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "badge-default-background",
+          "fg": "badge-default-foreground",
+          "ratio": 5.64,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "badge-secondary-background",
+          "fg": "badge-secondary-foreground",
+          "ratio": 16.28,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "badge-secondary-background",
+          "fg": "badge-secondary-foreground",
+          "ratio": 14,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "badge-destructive-background",
+          "fg": "badge-destructive-foreground",
+          "ratio": 5.45,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "badge-destructive-background",
+          "fg": "badge-destructive-foreground",
+          "ratio": 5.55,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "badge-success-background",
+          "fg": "badge-success-foreground",
+          "ratio": 5.01,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "badge-success-background",
+          "fg": "badge-success-foreground",
+          "ratio": 8.4,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "badge-warning-background",
+          "fg": "badge-warning-foreground",
+          "ratio": 8.72,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "badge-warning-background",
+          "fg": "badge-warning-foreground",
+          "ratio": 8.72,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "badge-info-background",
+          "fg": "badge-info-foreground",
+          "ratio": 6.82,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "badge-info-background",
+          "fg": "badge-info-foreground",
+          "ratio": 5.64,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "button-default-background",
+          "fg": "button-default-foreground",
+          "ratio": 5.26,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "button-default-background",
+          "fg": "button-default-foreground",
+          "ratio": 5.64,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "button-secondary-background",
+          "fg": "button-secondary-foreground",
+          "ratio": 16.28,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "button-secondary-background",
+          "fg": "button-secondary-foreground",
+          "ratio": 14,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "button-outline-background",
+          "fg": "button-outline-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "button-outline-background",
+          "fg": "button-outline-foreground",
+          "ratio": 19.27,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "button-destructive-background",
+          "fg": "button-destructive-foreground",
+          "ratio": 5.45,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "button-destructive-background",
+          "fg": "button-destructive-foreground",
+          "ratio": 5.55,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "card-container-background",
+          "fg": "card-container-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "card-container-background",
+          "fg": "card-container-foreground",
+          "ratio": 17.05,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "checkbox-box-checked-background",
+          "fg": "checkbox-box-checked-foreground",
+          "ratio": 5.26,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "checkbox-box-checked-background",
+          "fg": "checkbox-box-checked-foreground",
+          "ratio": 5.64,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "dialog-content-background",
+          "fg": "dialog-content-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "dialog-content-background",
+          "fg": "dialog-content-foreground",
+          "ratio": 19.27,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "input-field-background",
+          "fg": "input-field-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "input-field-background",
+          "fg": "input-field-foreground",
+          "ratio": 17.91,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "select-trigger-background",
+          "fg": "select-trigger-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "select-trigger-background",
+          "fg": "select-trigger-foreground",
+          "ratio": 17.91,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "select-content-background",
+          "fg": "select-content-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "select-content-background",
+          "fg": "select-content-foreground",
+          "ratio": 17.05,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "select-item-highlight-background",
+          "fg": "select-item-highlight-foreground",
+          "ratio": 16.28,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "select-item-highlight-background",
+          "fg": "select-item-highlight-foreground",
+          "ratio": 14,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "tabs-list-background",
+          "fg": "tabs-list-foreground",
+          "ratio": 6.9,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "tabs-list-background",
+          "fg": "tabs-list-foreground",
+          "ratio": 5.58,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "tabs-trigger-active-background",
+          "fg": "tabs-trigger-active-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "tabs-trigger-active-background",
+          "fg": "tabs-trigger-active-foreground",
+          "ratio": 17.91,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "textarea-field-background",
+          "fg": "textarea-field-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "textarea-field-background",
+          "fg": "textarea-field-foreground",
+          "ratio": 17.91,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "toast-default-background",
+          "fg": "toast-default-foreground",
+          "ratio": 20.17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "toast-default-background",
+          "fg": "toast-default-foreground",
+          "ratio": 17.05,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "toast-destructive-background",
+          "fg": "toast-destructive-foreground",
+          "ratio": 6.54,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "toast-destructive-background",
+          "fg": "toast-destructive-foreground",
+          "ratio": 7.04,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
           "mode": "light",
           "bg": "tooltip-background",
           "fg": "tooltip-foreground",
-          "ratio": 19.79,
+          "ratio": 20.17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -12478,7 +13828,7 @@
           "mode": "dark",
           "bg": "tooltip-background",
           "fg": "tooltip-foreground",
-          "ratio": 18.96,
+          "ratio": 19.27,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -12487,7 +13837,7 @@
           "mode": "light",
           "bg": "background",
           "fg": "muted-foreground",
-          "ratio": 7.8,
+          "ratio": 7.56,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -12496,7 +13846,7 @@
           "mode": "dark",
           "bg": "background",
           "fg": "muted-foreground",
-          "ratio": 7.63,
+          "ratio": 7.68,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -12505,7 +13855,7 @@
           "mode": "light",
           "bg": "background",
           "fg": "ring",
-          "ratio": 3.77,
+          "ratio": 3.7,
           "min": 3,
           "pass": true,
           "accepted": false
@@ -12514,7 +13864,7 @@
           "mode": "dark",
           "bg": "background",
           "fg": "ring",
-          "ratio": 7.82,
+          "ratio": 5.46,
           "min": 3,
           "pass": true,
           "accepted": false

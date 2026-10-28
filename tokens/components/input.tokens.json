@@ -28,6 +28,18 @@
       },
       "placeholder": {
         "$value": "{color.muted-foreground}"
+      },
+      "font": {
+        "$type": "typography",
+        "$description": "What people type (16px on phones, so iOS does not zoom)",
+        "$value": "{typography.body.md}"
+      }
+    },
+    "file": {
+      "font": {
+        "$type": "typography",
+        "$description": "The file button's text",
+        "$value": "{typography.label.md}"
       }
     }
   }

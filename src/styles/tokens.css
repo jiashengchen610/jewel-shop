@@ -96,6 +96,7 @@
   --indigo-800: oklch(0.398 0.195 277.366);
   --indigo-900: oklch(0.359 0.144 278.697);
   --indigo-950: oklch(0.257 0.09 281.288);
+  --jetbrains-mono-font: 'JetBrains Mono', monospace;
   --lg-radius: 0.5rem;
   --lg-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --lime-100: oklch(0.967 0.067 122.328);
@@ -145,6 +146,7 @@
   --neutral-900: oklch(0.205 0 none);
   --neutral-950: oklch(0.145 0 none);
   --none-radius: 0px;
+  --nunito-font: Nunito, sans-serif;
   --olive-100: oklch(0.966 0.005 106.5);
   --olive-200: oklch(0.93 0.007 106.5);
   --olive-300: oklch(0.88 0.011 106.6);
@@ -310,13 +312,14 @@
 
 :root,
 [data-brand="jewel-shop"] {
-  --accent-foreground: var(--neutral-900);
-  --accent: var(--neutral-100);
-  --alert-default-background: var(--card);
+  --accent-foreground: var(--slate-900);
+  --accent: var(--slate-100);
+  --alert-default-background: var(--background);
   --alert-default-border: var(--border);
   --alert-default-description: var(--muted-foreground);
   --alert-default-foreground: var(--card-foreground);
   --alert-default-icon: var(--card-foreground);
+  --alert-description-font: var(--body-md-font);
   --alert-destructive-background: var(--card);
   --alert-destructive-border: var(--destructive);
   --alert-destructive-description: var(--destructive);
@@ -333,6 +336,7 @@
   --alert-success-description: var(--muted-foreground);
   --alert-success-foreground: var(--card-foreground);
   --alert-success-icon: var(--success);
+  --alert-title-font: var(--label-md-font);
   --alert-warning-background: var(--card);
   --alert-warning-border: var(--warning);
   --alert-warning-description: var(--muted-foreground);
@@ -355,14 +359,29 @@
   --badge-secondary-foreground: var(--secondary-foreground);
   --badge-success-background: var(--success);
   --badge-success-foreground: var(--success-foreground);
+  --badge-text-font: var(--label-sm-font);
   --badge-warning-background: var(--warning);
   --badge-warning-foreground: var(--warning-foreground);
-  --body-font-family: Fraunces, serif;
-  --body-font-size: 0.875rem;
-  --body-font-weight: 400;
-  --body-font: 400 0.875rem/1.5 Fraunces, serif;
-  --body-line-height: 1.5;
-  --border: var(--neutral-200);
+  --body-font: var(--nunito-font);
+  --body-lg-font-family: var(--body-font);
+  --body-lg-font-size: 1rem;
+  --body-lg-font-weight: 400;
+  --body-lg-font: 400 1rem/1.5 var(--body-font);
+  --body-lg-letter-spacing: 0em;
+  --body-lg-line-height: 1.5;
+  --body-md-font-family: var(--body-font);
+  --body-md-font-size: 0.875rem;
+  --body-md-font-weight: 400;
+  --body-md-font: 400 0.875rem/1.5 var(--body-font);
+  --body-md-letter-spacing: 0em;
+  --body-md-line-height: 1.5;
+  --body-sm-font-family: var(--body-font);
+  --body-sm-font-size: 0.75rem;
+  --body-sm-font-weight: 400;
+  --body-sm-font: 400 0.75rem/1.35 var(--body-font);
+  --body-sm-letter-spacing: 0em;
+  --body-sm-line-height: 1.35;
+  --border: var(--slate-200);
   --button-default-background-hover: color-mix(in oklab, var(--primary) 80%, transparent);
   --button-default-background: var(--primary);
   --button-default-foreground: var(--primary-foreground);
@@ -371,6 +390,8 @@
   --button-destructive-foreground: var(--destructive);
   --button-ghost-background-hover: var(--muted);
   --button-ghost-foreground: var(--foreground);
+  --button-label-font: var(--label-md-font);
+  --button-label-small-font: var(--label-sm-font);
   --button-link-foreground: var(--primary);
   --button-outline-background-hover: var(--muted);
   --button-outline-background: var(--background);
@@ -382,55 +403,69 @@
   --button-secondary-foreground: var(--secondary-foreground);
   --card-container-background: var(--card);
   --card-container-border: color-mix(in oklab, var(--foreground) 10%, transparent);
+  --card-container-font: var(--body-md-font);
   --card-container-foreground: var(--card-foreground);
+  --card-description-font: var(--body-md-font);
   --card-description-foreground: var(--muted-foreground);
   --card-footer-background: color-mix(in oklab, var(--muted) 50%, transparent);
-  --card-foreground: var(--neutral-950);
+  --card-foreground: var(--slate-950);
   --card-radius: var(--container-radius);
   --card-shadow: var(--xs-shadow);
+  --card-title-font: var(--heading-sm-font);
+  --card-title-small-font: var(--heading-xs-font);
   --card: var(--white);
-  --chart-1: var(--emerald-600);
-  --chart-2: var(--fuchsia-500);
-  --chart-3: var(--red-800);
-  --chart-4: var(--purple-800);
-  --chart-5: var(--orange-600);
-  --chart-6: var(--pink-700);
-  --chart-7: var(--blue-700);
-  --chart-8: var(--amber-700);
-  --chart-div-1: var(--pink-700);
-  --chart-div-2: var(--pink-500);
-  --chart-div-3: var(--pink-300);
-  --chart-div-4: var(--neutral-200);
-  --chart-div-5: var(--emerald-300);
-  --chart-div-6: var(--emerald-500);
-  --chart-div-7: var(--emerald-700);
-  --chart-seq-1: var(--emerald-200);
-  --chart-seq-2: var(--emerald-300);
-  --chart-seq-3: var(--emerald-400);
-  --chart-seq-4: var(--emerald-500);
-  --chart-seq-5: var(--emerald-600);
-  --chart-seq-6: var(--emerald-700);
-  --chart-seq-7: var(--emerald-800);
+  --chart-1: var(--blue-600);
+  --chart-2: var(--sky-900);
+  --chart-3: var(--indigo-400);
+  --chart-4: var(--sky-700);
+  --chart-5: var(--indigo-700);
+  --chart-6: var(--sky-600);
+  --chart-7: var(--indigo-900);
+  --chart-8: var(--teal-800);
+  --chart-div-1: var(--yellow-700);
+  --chart-div-2: var(--yellow-500);
+  --chart-div-3: var(--yellow-300);
+  --chart-div-4: var(--slate-200);
+  --chart-div-5: var(--blue-300);
+  --chart-div-6: var(--blue-500);
+  --chart-div-7: var(--blue-700);
+  --chart-seq-1: var(--blue-200);
+  --chart-seq-2: var(--blue-300);
+  --chart-seq-3: var(--blue-400);
+  --chart-seq-4: var(--blue-500);
+  --chart-seq-5: var(--blue-600);
+  --chart-seq-6: var(--blue-700);
+  --chart-seq-7: var(--blue-800);
   --checkbox-box-background: color-mix(in oklab, var(--background) 0%, transparent);
   --checkbox-box-border: var(--input);
   --checkbox-box-checked-background: var(--primary);
   --checkbox-box-checked-border: var(--primary);
   --checkbox-box-checked-foreground: var(--primary-foreground);
   --checkbox-radius: var(--small-radius);
-  --container-radius: var(--none-radius);
-  --control-radius: var(--none-radius);
+  --code-font: var(--jetbrains-mono-font);
+  --code-md-font-family: var(--code-font);
+  --code-md-font-size: 0.8125rem;
+  --code-md-font-weight: 400;
+  --code-md-font: 400 0.8125rem/1.5 var(--code-font);
+  --code-md-letter-spacing: 0em;
+  --code-md-line-height: 1.5;
+  --container-radius: var(--2xl-radius);
+  --control-radius: var(--full-radius);
   --destructive: var(--red-700);
+  --dialog-close-radius: max(var(--small-radius), calc(var(--dialog-radius) - var(--spacing) * 4 - 1px));
   --dialog-content-background: var(--background);
   --dialog-content-border: var(--border);
   --dialog-content-foreground: var(--foreground);
+  --dialog-description-font: var(--body-md-font);
   --dialog-description-foreground: var(--muted-foreground);
   --dialog-overlay: color-mix(in oklab, var(--foreground) 50%, transparent);
   --dialog-radius: var(--container-radius);
   --dialog-shadow: var(--overlay-shadow);
-  --display-font-family: Fraunces, serif;
+  --dialog-title-font: var(--heading-md-font);
+  --display-font-family: var(--heading-font);
   --display-font-size: 2rem;
   --display-font-weight: 600;
-  --display-font: 600 2rem/1.15 Fraunces, serif;
+  --display-font: 600 2rem/1.15 var(--heading-font);
   --display-letter-spacing: -0.02em;
   --display-line-height: 1.15;
   --duration-fast: 120ms;
@@ -438,51 +473,99 @@
   --duration-slow: 300ms;
   --enter-ease: cubic-bezier(0, 0, 0.2, 1);
   --exit-ease: cubic-bezier(0.4, 0, 1, 1);
-  --foreground: var(--neutral-950);
+  --fit-inside-radius: 1;
+  --foreground: var(--slate-950);
+  --heading-font: var(--body-font);
+  --heading-lg-font-family: var(--heading-font);
+  --heading-lg-font-size: 1.5rem;
+  --heading-lg-font-weight: 600;
+  --heading-lg-font: 600 1.5rem/1.25 var(--heading-font);
+  --heading-lg-letter-spacing: -0.01em;
+  --heading-lg-line-height: 1.25;
+  --heading-md-font-family: var(--heading-font);
+  --heading-md-font-size: 1.125rem;
+  --heading-md-font-weight: 600;
+  --heading-md-font: 600 1.125rem/1.35 var(--heading-font);
+  --heading-md-letter-spacing: 0em;
+  --heading-md-line-height: 1.35;
+  --heading-sm-font-family: var(--heading-font);
+  --heading-sm-font-size: 1rem;
+  --heading-sm-font-weight: 500;
+  --heading-sm-font: 500 1rem/1.375 var(--heading-font);
+  --heading-sm-letter-spacing: 0em;
+  --heading-sm-line-height: 1.375;
+  --heading-xs-font-family: var(--heading-font);
+  --heading-xs-font-size: 0.875rem;
+  --heading-xs-font-weight: 500;
+  --heading-xs-font: 500 0.875rem/1.375 var(--heading-font);
+  --heading-xs-letter-spacing: 0em;
+  --heading-xs-line-height: 1.375;
   --info-foreground: var(--white);
   --info: var(--blue-700);
   --input-field-background: color-mix(in oklab, var(--background) 0%, transparent);
   --input-field-border: var(--input);
+  --input-field-font: var(--body-md-font);
   --input-field-foreground: var(--foreground);
   --input-field-placeholder: var(--muted-foreground);
+  --input-file-font: var(--label-md-font);
   --input-radius: var(--control-radius);
-  --input: var(--neutral-200);
+  --input: var(--slate-200);
+  --label-font: var(--body-font);
+  --label-md-font-family: var(--label-font);
+  --label-md-font-size: 0.875rem;
+  --label-md-font-weight: 500;
+  --label-md-font: 500 0.875rem/1.25 var(--label-font);
+  --label-md-letter-spacing: 0em;
+  --label-md-line-height: 1.25;
+  --label-sm-font-family: var(--label-font);
+  --label-sm-font-size: 0.75rem;
+  --label-sm-font-weight: 500;
+  --label-sm-font: 500 0.75rem/1.35 var(--label-font);
+  --label-sm-letter-spacing: 0em;
+  --label-sm-line-height: 1.35;
+  --label-text-font: var(--label-md-font);
   --label-text-foreground: var(--foreground);
   --layer-dialog: 60;
   --layer-dropdown: 50;
   --layer-sticky: 10;
   --layer-toast: 70;
   --layer-tooltip: 80;
+  --mono-font: var(--code-font);
   --motion-fast: 150ms var(--standard-ease);
-  --muted-foreground: var(--neutral-600);
-  --muted: var(--neutral-100);
+  --muted-foreground: var(--slate-600);
+  --muted: var(--slate-100);
   --overlay-shadow: var(--lg-shadow);
-  --pill-radius: var(--none-radius);
-  --popover-foreground: var(--neutral-950);
+  --pill-radius: var(--full-radius);
+  --popover-foreground: var(--slate-950);
   --popover: var(--white);
   --primary-foreground: var(--white);
-  --primary: var(--emerald-700);
+  --primary: var(--blue-600);
   --radio-group-item-background: color-mix(in oklab, var(--background) 0%, transparent);
   --radio-group-item-border: var(--input);
   --radio-group-item-checked: var(--primary);
-  --ring: var(--emerald-600);
-  --sans-font: Fraunces, serif;
-  --secondary-foreground: var(--neutral-900);
-  --secondary: var(--neutral-100);
+  --ring: var(--blue-500);
+  --sans-font: var(--body-font);
+  --secondary-foreground: var(--slate-900);
+  --secondary: var(--slate-100);
   --select-content-background: var(--popover);
   --select-content-border: var(--border);
   --select-content-foreground: var(--popover-foreground);
+  --select-content-radius: var(--select-radius);
+  --select-group-label-font: var(--body-sm-font);
+  --select-item-font: var(--body-md-font);
   --select-item-highlight-background: var(--accent);
   --select-item-highlight-foreground: var(--accent-foreground);
   --select-item-label: var(--muted-foreground);
+  --select-item-radius: max(0px, calc(var(--select-content-radius) - var(--spacing) * 1 - 1px));
   --select-radius: var(--control-radius);
   --select-shadow: var(--overlay-shadow);
   --select-trigger-background: color-mix(in oklab, var(--background) 0%, transparent);
   --select-trigger-border: var(--input);
+  --select-trigger-font: var(--body-md-font);
   --select-trigger-foreground: var(--foreground);
   --select-trigger-placeholder: var(--muted-foreground);
   --separator-line: var(--border);
-  --small-radius: var(--none-radius);
+  --small-radius: var(--md-radius);
   --spacing: 0.25rem;
   --standard-ease: cubic-bezier(0.2, 0, 0, 1);
   --success-foreground: var(--white);
@@ -496,37 +579,47 @@
   --tabs-radius: var(--control-radius);
   --tabs-trigger-active-background: var(--background);
   --tabs-trigger-active-foreground: var(--foreground);
+  --tabs-trigger-font: var(--label-md-font);
+  --tabs-trigger-radius: max(0px, calc(var(--tabs-radius) - var(--spacing) * 1));
   --textarea-field-background: color-mix(in oklab, var(--background) 0%, transparent);
   --textarea-field-border: var(--input);
+  --textarea-field-font: var(--body-md-font);
   --textarea-field-foreground: var(--foreground);
   --textarea-field-placeholder: var(--muted-foreground);
   --textarea-radius: var(--control-radius);
+  --toast-action-font: var(--label-md-font);
+  --toast-action-radius: var(--control-radius);
+  --toast-close-radius: max(var(--small-radius), calc(var(--toast-radius) - var(--spacing) * 2 - 1px));
   --toast-default-background: var(--popover);
   --toast-default-border: var(--border);
   --toast-default-description: var(--muted-foreground);
   --toast-default-foreground: var(--popover-foreground);
+  --toast-description-font: var(--body-md-font);
   --toast-destructive-background: var(--destructive);
   --toast-destructive-border: var(--destructive);
   --toast-destructive-description: var(--background);
   --toast-destructive-foreground: var(--background);
   --toast-radius: var(--container-radius);
   --toast-shadow: var(--overlay-shadow);
+  --toast-title-font: var(--label-md-font);
   --tooltip-background: var(--foreground);
   --tooltip-foreground: var(--background);
   --tooltip-radius: var(--small-radius);
+  --tooltip-text-font: var(--body-sm-font);
   --warning-foreground: var(--amber-950);
   --warning: var(--amber-400);
 }
 
 .dark,
 [data-brand="jewel-shop"].dark {
-  --accent-foreground: var(--neutral-50);
-  --accent: var(--neutral-800);
-  --alert-default-background: var(--card);
+  --accent-foreground: var(--slate-50);
+  --accent: var(--slate-800);
+  --alert-default-background: var(--background);
   --alert-default-border: var(--border);
   --alert-default-description: var(--muted-foreground);
   --alert-default-foreground: var(--card-foreground);
   --alert-default-icon: var(--card-foreground);
+  --alert-description-font: var(--body-md-font);
   --alert-destructive-background: var(--card);
   --alert-destructive-border: var(--destructive);
   --alert-destructive-description: var(--destructive);
@@ -543,12 +636,13 @@
   --alert-success-description: var(--muted-foreground);
   --alert-success-foreground: var(--card-foreground);
   --alert-success-icon: var(--success);
+  --alert-title-font: var(--label-md-font);
   --alert-warning-background: var(--card);
   --alert-warning-border: var(--warning);
   --alert-warning-description: var(--muted-foreground);
   --alert-warning-foreground: var(--card-foreground);
   --alert-warning-icon: var(--warning);
-  --background: var(--neutral-950);
+  --background: var(--slate-950);
   --badge-default-background: var(--primary);
   --badge-default-foreground: var(--primary-foreground);
   --badge-destructive-background: color-mix(in oklab, var(--destructive) 20%, transparent);
@@ -565,13 +659,28 @@
   --badge-secondary-foreground: var(--secondary-foreground);
   --badge-success-background: var(--success);
   --badge-success-foreground: var(--success-foreground);
+  --badge-text-font: var(--label-sm-font);
   --badge-warning-background: var(--warning);
   --badge-warning-foreground: var(--warning-foreground);
-  --body-font-family: Fraunces, serif;
-  --body-font-size: 0.875rem;
-  --body-font-weight: 400;
-  --body-font: 400 0.875rem/1.5 Fraunces, serif;
-  --body-line-height: 1.5;
+  --body-font: var(--nunito-font);
+  --body-lg-font-family: var(--body-font);
+  --body-lg-font-size: 1rem;
+  --body-lg-font-weight: 400;
+  --body-lg-font: 400 1rem/1.5 var(--body-font);
+  --body-lg-letter-spacing: 0em;
+  --body-lg-line-height: 1.5;
+  --body-md-font-family: var(--body-font);
+  --body-md-font-size: 0.875rem;
+  --body-md-font-weight: 400;
+  --body-md-font: 400 0.875rem/1.5 var(--body-font);
+  --body-md-letter-spacing: 0em;
+  --body-md-line-height: 1.5;
+  --body-sm-font-family: var(--body-font);
+  --body-sm-font-size: 0.75rem;
+  --body-sm-font-weight: 400;
+  --body-sm-font: 400 0.75rem/1.35 var(--body-font);
+  --body-sm-letter-spacing: 0em;
+  --body-sm-line-height: 1.35;
   --border: color-mix(in oklab, var(--white) 10%, transparent);
   --button-default-background-hover: color-mix(in oklab, var(--primary) 80%, transparent);
   --button-default-background: var(--primary);
@@ -581,6 +690,8 @@
   --button-destructive-foreground: var(--destructive);
   --button-ghost-background-hover: var(--muted);
   --button-ghost-foreground: var(--foreground);
+  --button-label-font: var(--label-md-font);
+  --button-label-small-font: var(--label-sm-font);
   --button-link-foreground: var(--primary);
   --button-outline-background-hover: var(--muted);
   --button-outline-background: var(--background);
@@ -592,55 +703,69 @@
   --button-secondary-foreground: var(--secondary-foreground);
   --card-container-background: var(--card);
   --card-container-border: color-mix(in oklab, var(--foreground) 10%, transparent);
+  --card-container-font: var(--body-md-font);
   --card-container-foreground: var(--card-foreground);
+  --card-description-font: var(--body-md-font);
   --card-description-foreground: var(--muted-foreground);
   --card-footer-background: color-mix(in oklab, var(--muted) 50%, transparent);
-  --card-foreground: var(--neutral-50);
+  --card-foreground: var(--slate-50);
   --card-radius: var(--container-radius);
   --card-shadow: 0px 1px 2px 0px oklch(0 0 0 / 0.5), inset 0px 1px 0px 0px oklch(1 0 0 / 0.06);
-  --card: var(--neutral-900);
-  --chart-1: var(--emerald-400);
-  --chart-2: var(--fuchsia-500);
-  --chart-3: var(--red-500);
-  --chart-4: var(--purple-200);
-  --chart-5: var(--orange-400);
-  --chart-6: var(--pink-300);
-  --chart-7: var(--blue-300);
-  --chart-8: var(--amber-300);
-  --chart-div-1: var(--pink-300);
-  --chart-div-2: var(--pink-500);
-  --chart-div-3: var(--pink-700);
-  --chart-div-4: var(--neutral-800);
-  --chart-div-5: var(--emerald-700);
-  --chart-div-6: var(--emerald-500);
-  --chart-div-7: var(--emerald-300);
-  --chart-seq-1: var(--emerald-800);
-  --chart-seq-2: var(--emerald-700);
-  --chart-seq-3: var(--emerald-600);
-  --chart-seq-4: var(--emerald-500);
-  --chart-seq-5: var(--emerald-400);
-  --chart-seq-6: var(--emerald-300);
-  --chart-seq-7: var(--emerald-200);
+  --card-title-font: var(--heading-sm-font);
+  --card-title-small-font: var(--heading-xs-font);
+  --card: var(--slate-900);
+  --chart-1: var(--blue-400);
+  --chart-2: var(--sky-100);
+  --chart-3: var(--indigo-500);
+  --chart-4: var(--sky-300);
+  --chart-5: var(--indigo-300);
+  --chart-6: var(--sky-600);
+  --chart-7: var(--indigo-600);
+  --chart-8: var(--teal-300);
+  --chart-div-1: var(--yellow-300);
+  --chart-div-2: var(--yellow-500);
+  --chart-div-3: var(--yellow-700);
+  --chart-div-4: var(--slate-800);
+  --chart-div-5: var(--blue-700);
+  --chart-div-6: var(--blue-500);
+  --chart-div-7: var(--blue-300);
+  --chart-seq-1: var(--blue-800);
+  --chart-seq-2: var(--blue-700);
+  --chart-seq-3: var(--blue-600);
+  --chart-seq-4: var(--blue-500);
+  --chart-seq-5: var(--blue-400);
+  --chart-seq-6: var(--blue-300);
+  --chart-seq-7: var(--blue-200);
   --checkbox-box-background: color-mix(in oklab, var(--input) 30%, transparent);
   --checkbox-box-border: var(--input);
   --checkbox-box-checked-background: var(--primary);
   --checkbox-box-checked-border: var(--primary);
   --checkbox-box-checked-foreground: var(--primary-foreground);
   --checkbox-radius: var(--small-radius);
-  --container-radius: var(--none-radius);
-  --control-radius: var(--none-radius);
+  --code-font: var(--jetbrains-mono-font);
+  --code-md-font-family: var(--code-font);
+  --code-md-font-size: 0.8125rem;
+  --code-md-font-weight: 400;
+  --code-md-font: 400 0.8125rem/1.5 var(--code-font);
+  --code-md-letter-spacing: 0em;
+  --code-md-line-height: 1.5;
+  --container-radius: var(--2xl-radius);
+  --control-radius: var(--full-radius);
   --destructive: var(--red-400);
+  --dialog-close-radius: max(var(--small-radius), calc(var(--dialog-radius) - var(--spacing) * 4 - 1px));
   --dialog-content-background: var(--background);
   --dialog-content-border: var(--border);
   --dialog-content-foreground: var(--foreground);
+  --dialog-description-font: var(--body-md-font);
   --dialog-description-foreground: var(--muted-foreground);
   --dialog-overlay: color-mix(in oklab, var(--background) 80%, transparent);
   --dialog-radius: var(--container-radius);
   --dialog-shadow: var(--overlay-shadow);
-  --display-font-family: Fraunces, serif;
+  --dialog-title-font: var(--heading-md-font);
+  --display-font-family: var(--heading-font);
   --display-font-size: 2rem;
   --display-font-weight: 600;
-  --display-font: 600 2rem/1.15 Fraunces, serif;
+  --display-font: 600 2rem/1.15 var(--heading-font);
   --display-letter-spacing: -0.02em;
   --display-line-height: 1.15;
   --duration-fast: 120ms;
@@ -648,51 +773,99 @@
   --duration-slow: 300ms;
   --enter-ease: cubic-bezier(0, 0, 0.2, 1);
   --exit-ease: cubic-bezier(0.4, 0, 1, 1);
-  --foreground: var(--neutral-50);
+  --fit-inside-radius: 1;
+  --foreground: var(--slate-50);
+  --heading-font: var(--body-font);
+  --heading-lg-font-family: var(--heading-font);
+  --heading-lg-font-size: 1.5rem;
+  --heading-lg-font-weight: 600;
+  --heading-lg-font: 600 1.5rem/1.25 var(--heading-font);
+  --heading-lg-letter-spacing: -0.01em;
+  --heading-lg-line-height: 1.25;
+  --heading-md-font-family: var(--heading-font);
+  --heading-md-font-size: 1.125rem;
+  --heading-md-font-weight: 600;
+  --heading-md-font: 600 1.125rem/1.35 var(--heading-font);
+  --heading-md-letter-spacing: 0em;
+  --heading-md-line-height: 1.35;
+  --heading-sm-font-family: var(--heading-font);
+  --heading-sm-font-size: 1rem;
+  --heading-sm-font-weight: 500;
+  --heading-sm-font: 500 1rem/1.375 var(--heading-font);
+  --heading-sm-letter-spacing: 0em;
+  --heading-sm-line-height: 1.375;
+  --heading-xs-font-family: var(--heading-font);
+  --heading-xs-font-size: 0.875rem;
+  --heading-xs-font-weight: 500;
+  --heading-xs-font: 500 0.875rem/1.375 var(--heading-font);
+  --heading-xs-letter-spacing: 0em;
+  --heading-xs-line-height: 1.375;
   --info-foreground: var(--blue-950);
   --info: var(--blue-400);
   --input-field-background: color-mix(in oklab, var(--input) 30%, transparent);
   --input-field-border: var(--input);
+  --input-field-font: var(--body-md-font);
   --input-field-foreground: var(--foreground);
   --input-field-placeholder: var(--muted-foreground);
+  --input-file-font: var(--label-md-font);
   --input-radius: var(--control-radius);
   --input: color-mix(in oklab, var(--white) 15%, transparent);
+  --label-font: var(--body-font);
+  --label-md-font-family: var(--label-font);
+  --label-md-font-size: 0.875rem;
+  --label-md-font-weight: 500;
+  --label-md-font: 500 0.875rem/1.25 var(--label-font);
+  --label-md-letter-spacing: 0em;
+  --label-md-line-height: 1.25;
+  --label-sm-font-family: var(--label-font);
+  --label-sm-font-size: 0.75rem;
+  --label-sm-font-weight: 500;
+  --label-sm-font: 500 0.75rem/1.35 var(--label-font);
+  --label-sm-letter-spacing: 0em;
+  --label-sm-line-height: 1.35;
+  --label-text-font: var(--label-md-font);
   --label-text-foreground: var(--foreground);
   --layer-dialog: 60;
   --layer-dropdown: 50;
   --layer-sticky: 10;
   --layer-toast: 70;
   --layer-tooltip: 80;
+  --mono-font: var(--code-font);
   --motion-fast: 150ms var(--standard-ease);
-  --muted-foreground: var(--neutral-400);
-  --muted: var(--neutral-800);
+  --muted-foreground: var(--slate-400);
+  --muted: var(--slate-800);
   --overlay-shadow: 0px 10px 24px -4px oklch(0 0 0 / 0.6), 0px 4px 8px -4px oklch(0 0 0 / 0.5), inset 0px 1px 0px 0px oklch(1 0 0 / 0.08);
-  --pill-radius: var(--none-radius);
-  --popover-foreground: var(--neutral-50);
-  --popover: var(--neutral-900);
-  --primary-foreground: var(--emerald-950);
-  --primary: var(--emerald-400);
+  --pill-radius: var(--full-radius);
+  --popover-foreground: var(--slate-50);
+  --popover: var(--slate-900);
+  --primary-foreground: var(--blue-950);
+  --primary: var(--blue-400);
   --radio-group-item-background: color-mix(in oklab, var(--input) 30%, transparent);
   --radio-group-item-border: var(--input);
   --radio-group-item-checked: var(--primary);
-  --ring: var(--emerald-500);
-  --sans-font: Fraunces, serif;
-  --secondary-foreground: var(--neutral-50);
-  --secondary: var(--neutral-800);
+  --ring: var(--blue-500);
+  --sans-font: var(--body-font);
+  --secondary-foreground: var(--slate-50);
+  --secondary: var(--slate-800);
   --select-content-background: var(--popover);
   --select-content-border: var(--border);
   --select-content-foreground: var(--popover-foreground);
+  --select-content-radius: var(--select-radius);
+  --select-group-label-font: var(--body-sm-font);
+  --select-item-font: var(--body-md-font);
   --select-item-highlight-background: var(--accent);
   --select-item-highlight-foreground: var(--accent-foreground);
   --select-item-label: var(--muted-foreground);
+  --select-item-radius: max(0px, calc(var(--select-content-radius) - var(--spacing) * 1 - 1px));
   --select-radius: var(--control-radius);
   --select-shadow: var(--overlay-shadow);
   --select-trigger-background: color-mix(in oklab, var(--input) 30%, transparent);
   --select-trigger-border: var(--input);
+  --select-trigger-font: var(--body-md-font);
   --select-trigger-foreground: var(--foreground);
   --select-trigger-placeholder: var(--muted-foreground);
   --separator-line: var(--border);
-  --small-radius: var(--none-radius);
+  --small-radius: var(--md-radius);
   --spacing: 0.25rem;
   --standard-ease: cubic-bezier(0.2, 0, 0, 1);
   --success-foreground: var(--green-950);
@@ -706,24 +879,33 @@
   --tabs-radius: var(--control-radius);
   --tabs-trigger-active-background: color-mix(in oklab, var(--input) 30%, transparent);
   --tabs-trigger-active-foreground: var(--foreground);
+  --tabs-trigger-font: var(--label-md-font);
+  --tabs-trigger-radius: max(0px, calc(var(--tabs-radius) - var(--spacing) * 1));
   --textarea-field-background: color-mix(in oklab, var(--input) 30%, transparent);
   --textarea-field-border: var(--input);
+  --textarea-field-font: var(--body-md-font);
   --textarea-field-foreground: var(--foreground);
   --textarea-field-placeholder: var(--muted-foreground);
   --textarea-radius: var(--control-radius);
+  --toast-action-font: var(--label-md-font);
+  --toast-action-radius: var(--control-radius);
+  --toast-close-radius: max(var(--small-radius), calc(var(--toast-radius) - var(--spacing) * 2 - 1px));
   --toast-default-background: var(--popover);
   --toast-default-border: var(--border);
   --toast-default-description: var(--muted-foreground);
   --toast-default-foreground: var(--popover-foreground);
+  --toast-description-font: var(--body-md-font);
   --toast-destructive-background: var(--destructive);
   --toast-destructive-border: var(--destructive);
   --toast-destructive-description: var(--background);
   --toast-destructive-foreground: var(--background);
   --toast-radius: var(--container-radius);
   --toast-shadow: var(--overlay-shadow);
+  --toast-title-font: var(--label-md-font);
   --tooltip-background: var(--foreground);
   --tooltip-foreground: var(--background);
   --tooltip-radius: var(--small-radius);
+  --tooltip-text-font: var(--body-sm-font);
   --warning-foreground: var(--amber-950);
   --warning: var(--amber-400);
 }
@@ -1180,7 +1362,13 @@
   --ease-enter: var(--enter-ease);
   --ease-exit: var(--exit-ease);
   --ease-standard: var(--standard-ease);
-  --font-heading: var(--sans-font);
+  --font-body: var(--body-font);
+  --font-code: var(--code-font);
+  --font-heading: var(--heading-font);
+  --font-jetbrains-mono: var(--jetbrains-mono-font);
+  --font-label: var(--label-font);
+  --font-mono: var(--mono-font);
+  --font-nunito: var(--nunito-font);
   --font-sans: var(--sans-font);
   --radius-2xl: var(--2xl-radius);
   --radius-3xl: var(--3xl-radius);
@@ -1192,6 +1380,7 @@
   --radius-checkbox: var(--checkbox-radius);
   --radius-container: var(--container-radius);
   --radius-control: var(--control-radius);
+  --radius-dialog-close: var(--dialog-close-radius);
   --radius-dialog: var(--dialog-radius);
   --radius-full: var(--full-radius);
   --radius-input: var(--input-radius);
@@ -1199,11 +1388,16 @@
   --radius-md: var(--md-radius);
   --radius-none: var(--none-radius);
   --radius-pill: var(--pill-radius);
+  --radius-select-content: var(--select-content-radius);
+  --radius-select-item: var(--select-item-radius);
   --radius-select: var(--select-radius);
   --radius-sm: var(--sm-radius);
   --radius-small: var(--small-radius);
+  --radius-tabs-trigger: var(--tabs-trigger-radius);
   --radius-tabs: var(--tabs-radius);
   --radius-textarea: var(--textarea-radius);
+  --radius-toast-action: var(--toast-action-radius);
+  --radius-toast-close: var(--toast-close-radius);
   --radius-toast: var(--toast-radius);
   --radius-tooltip: var(--tooltip-radius);
   --radius-xl: var(--xl-radius);
@@ -1220,20 +1414,176 @@
   --shadow-toast: var(--toast-shadow);
   --shadow-xl: var(--xl-shadow);
   --shadow-xs: var(--xs-shadow);
-  --text-body--line-height: var(--body-line-height);
-  --text-body: var(--body-font-size);
+  --text-body-lg--line-height: var(--body-lg-line-height);
+  --text-body-lg: var(--body-lg-font-size);
+  --text-body-md--line-height: var(--body-md-line-height);
+  --text-body-md: var(--body-md-font-size);
+  --text-body-sm--line-height: var(--body-sm-line-height);
+  --text-body-sm: var(--body-sm-font-size);
+  --text-code-md--line-height: var(--code-md-line-height);
+  --text-code-md: var(--code-md-font-size);
   --text-display--line-height: var(--display-line-height);
   --text-display: var(--display-font-size);
+  --text-heading-lg--line-height: var(--heading-lg-line-height);
+  --text-heading-lg: var(--heading-lg-font-size);
+  --text-heading-md--line-height: var(--heading-md-line-height);
+  --text-heading-md: var(--heading-md-font-size);
+  --text-heading-sm--line-height: var(--heading-sm-line-height);
+  --text-heading-sm: var(--heading-sm-font-size);
+  --text-heading-xs--line-height: var(--heading-xs-line-height);
+  --text-heading-xs: var(--heading-xs-font-size);
+  --text-label-md--line-height: var(--label-md-line-height);
+  --text-label-md: var(--label-md-font-size);
+  --text-label-sm--line-height: var(--label-sm-line-height);
+  --text-label-sm: var(--label-sm-font-size);
+  --tracking-body-lg: var(--body-lg-letter-spacing);
+  --tracking-body-md: var(--body-md-letter-spacing);
+  --tracking-body-sm: var(--body-sm-letter-spacing);
+  --tracking-code-md: var(--code-md-letter-spacing);
   --tracking-display: var(--display-letter-spacing);
+  --tracking-heading-lg: var(--heading-lg-letter-spacing);
+  --tracking-heading-md: var(--heading-md-letter-spacing);
+  --tracking-heading-sm: var(--heading-sm-letter-spacing);
+  --tracking-heading-xs: var(--heading-xs-letter-spacing);
+  --tracking-label-md: var(--label-md-letter-spacing);
+  --tracking-label-sm: var(--label-sm-letter-spacing);
 }
 
 @utility type-display {
   font: var(--display-font);
   letter-spacing: var(--display-letter-spacing);
 }
-@utility type-body {
-  font: var(--body-font);
-  letter-spacing: normal;
+@utility type-heading-lg {
+  font: var(--heading-lg-font);
+  letter-spacing: var(--heading-lg-letter-spacing);
+}
+@utility type-heading-md {
+  font: var(--heading-md-font);
+  letter-spacing: var(--heading-md-letter-spacing);
+}
+@utility type-heading-sm {
+  font: var(--heading-sm-font);
+  letter-spacing: var(--heading-sm-letter-spacing);
+}
+@utility type-heading-xs {
+  font: var(--heading-xs-font);
+  letter-spacing: var(--heading-xs-letter-spacing);
+}
+@utility type-body-lg {
+  font: var(--body-lg-font);
+  letter-spacing: var(--body-lg-letter-spacing);
+}
+@utility type-body-md {
+  font: var(--body-md-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
+@utility type-body-sm {
+  font: var(--body-sm-font);
+  letter-spacing: var(--body-sm-letter-spacing);
+}
+@utility type-label-md {
+  font: var(--label-md-font);
+  letter-spacing: var(--label-md-letter-spacing);
+}
+@utility type-label-sm {
+  font: var(--label-sm-font);
+  letter-spacing: var(--label-sm-letter-spacing);
+}
+@utility type-code-md {
+  font: var(--code-md-font);
+  letter-spacing: var(--code-md-letter-spacing);
+}
+@utility type-alert-title {
+  font: var(--alert-title-font);
+  letter-spacing: var(--label-md-letter-spacing);
+}
+@utility type-alert-description {
+  font: var(--alert-description-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
+@utility type-badge-text {
+  font: var(--badge-text-font);
+  letter-spacing: var(--label-sm-letter-spacing);
+}
+@utility type-button-label {
+  font: var(--button-label-font);
+  letter-spacing: var(--label-md-letter-spacing);
+}
+@utility type-button-label-small {
+  font: var(--button-label-small-font);
+  letter-spacing: var(--label-sm-letter-spacing);
+}
+@utility type-card-container {
+  font: var(--card-container-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
+@utility type-card-description {
+  font: var(--card-description-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
+@utility type-card-title {
+  font: var(--card-title-font);
+  letter-spacing: var(--heading-sm-letter-spacing);
+}
+@utility type-card-title-small {
+  font: var(--card-title-small-font);
+  letter-spacing: var(--heading-xs-letter-spacing);
+}
+@utility type-dialog-description {
+  font: var(--dialog-description-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
+@utility type-dialog-title {
+  font: var(--dialog-title-font);
+  letter-spacing: var(--heading-md-letter-spacing);
+}
+@utility type-input-field {
+  font: var(--input-field-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
+@utility type-input-file {
+  font: var(--input-file-font);
+  letter-spacing: var(--label-md-letter-spacing);
+}
+@utility type-label-text {
+  font: var(--label-text-font);
+  letter-spacing: var(--label-md-letter-spacing);
+}
+@utility type-select-trigger {
+  font: var(--select-trigger-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
+@utility type-select-item {
+  font: var(--select-item-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
+@utility type-select-group-label {
+  font: var(--select-group-label-font);
+  letter-spacing: var(--body-sm-letter-spacing);
+}
+@utility type-tabs-trigger {
+  font: var(--tabs-trigger-font);
+  letter-spacing: var(--label-md-letter-spacing);
+}
+@utility type-textarea-field {
+  font: var(--textarea-field-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
+@utility type-toast-title {
+  font: var(--toast-title-font);
+  letter-spacing: var(--label-md-letter-spacing);
+}
+@utility type-toast-description {
+  font: var(--toast-description-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
+@utility type-toast-action {
+  font: var(--toast-action-font);
+  letter-spacing: var(--label-md-letter-spacing);
+}
+@utility type-tooltip-text {
+  font: var(--tooltip-text-font);
+  letter-spacing: var(--body-sm-letter-spacing);
 }
 
 @media (prefers-reduced-motion: reduce) {

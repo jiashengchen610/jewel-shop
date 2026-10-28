@@ -81,6 +81,13 @@
       "foreground": {
         "$value": "{color.primary}"
       }
+    },
+    "text": {
+      "font": {
+        "$type": "typography",
+        "$description": "Badge text",
+        "$value": "{typography.label.sm}"
+      }
     }
   }
 }

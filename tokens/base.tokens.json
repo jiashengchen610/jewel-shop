@@ -2,39 +2,65 @@
   "radius": {
     "$type": "dimension",
     "control": {
-      "$value": "{radius.none}",
+      "$value": "{radius.full}",
       "$description": "Buttons, inputs and other controls"
     },
     "container": {
-      "$value": "{radius.none}",
+      "$value": "{radius.2xl}",
       "$description": "Cards, panels, dialogs"
     },
     "pill": {
-      "$value": "{radius.none}",
+      "$value": "{radius.full}",
       "$description": "Badges and tags"
     },
     "small": {
-      "$value": "{radius.none}",
+      "$value": "{radius.md}",
       "$description": "Checkboxes, tooltips and other small marks"
+    },
+    "fit-inside": {
+      "$type": "number",
+      "$description": "1: parts inside a rounded container (tabs in the tab bar, options in a menu, close buttons in a corner) take its corners minus the gap, so the space between stays even. 0: they keep their own corners.",
+      "$value": 1
     }
   },
   "font": {
     "$type": "fontFamily",
     "sans": {
-      "$value": [
-        "Fraunces",
-        "serif"
-      ]
+      "$value": "{font.body}",
+      "$type": "fontFamily",
+      "$description": "Tailwind's font-sans: the page's default font"
+    },
+    "body": {
+      "$type": "fontFamily",
+      "$description": "Running text, fields and lists",
+      "$value": "{font.nunito}"
+    },
+    "heading": {
+      "$type": "fontFamily",
+      "$description": "Headings and titles: the same as body until another font is picked",
+      "$value": "{font.body}"
+    },
+    "label": {
+      "$type": "fontFamily",
+      "$description": "Buttons, tabs, badges and field labels: follows body or heading",
+      "$value": "{font.body}"
+    },
+    "code": {
+      "$type": "fontFamily",
+      "$description": "Code",
+      "$value": "{font.jetbrains-mono}"
+    },
+    "mono": {
+      "$type": "fontFamily",
+      "$description": "Tailwind's font-mono",
+      "$value": "{font.code}"
     }
   },
   "typography": {
     "$type": "typography",
     "display": {
       "$value": {
-        "fontFamily": [
-          "Fraunces",
-          "serif"
-        ],
+        "fontFamily": "{font.heading}",
         "fontSize": {
           "value": 2,
           "unit": "rem"
@@ -45,20 +71,186 @@
           "value": -0.02,
           "unit": "em"
         }
+      },
+      "$type": "typography",
+      "$description": "Big numbers and page titles"
+    },
+    "heading": {
+      "lg": {
+        "$type": "typography",
+        "$description": "Section titles",
+        "$value": {
+          "fontFamily": "{font.heading}",
+          "fontSize": {
+            "value": 1.5,
+            "unit": "rem"
+          },
+          "fontWeight": 600,
+          "lineHeight": 1.25,
+          "letterSpacing": {
+            "value": -0.01,
+            "unit": "em"
+          }
+        }
+      },
+      "md": {
+        "$type": "typography",
+        "$description": "Dialog titles",
+        "$value": {
+          "fontFamily": "{font.heading}",
+          "fontSize": {
+            "value": 1.125,
+            "unit": "rem"
+          },
+          "fontWeight": 600,
+          "lineHeight": 1.35,
+          "letterSpacing": {
+            "value": 0,
+            "unit": "em"
+          }
+        }
+      },
+      "sm": {
+        "$type": "typography",
+        "$description": "Card titles",
+        "$value": {
+          "fontFamily": "{font.heading}",
+          "fontSize": {
+            "value": 1,
+            "unit": "rem"
+          },
+          "fontWeight": 500,
+          "lineHeight": 1.375,
+          "letterSpacing": {
+            "value": 0,
+            "unit": "em"
+          }
+        }
+      },
+      "xs": {
+        "$type": "typography",
+        "$description": "Small card titles",
+        "$value": {
+          "fontFamily": "{font.heading}",
+          "fontSize": {
+            "value": 0.875,
+            "unit": "rem"
+          },
+          "fontWeight": 500,
+          "lineHeight": 1.375,
+          "letterSpacing": {
+            "value": 0,
+            "unit": "em"
+          }
+        }
       }
     },
     "body": {
-      "$value": {
-        "fontFamily": [
-          "Fraunces",
-          "serif"
-        ],
-        "fontSize": {
-          "value": 0.875,
-          "unit": "rem"
-        },
-        "fontWeight": 400,
-        "lineHeight": 1.5
+      "lg": {
+        "$type": "typography",
+        "$description": "Longer reading text",
+        "$value": {
+          "fontFamily": "{font.body}",
+          "fontSize": {
+            "value": 1,
+            "unit": "rem"
+          },
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+          "letterSpacing": {
+            "value": 0,
+            "unit": "em"
+          }
+        }
+      },
+      "md": {
+        "$type": "typography",
+        "$description": "Most text: descriptions, fields, lists",
+        "$value": {
+          "fontFamily": "{font.body}",
+          "fontSize": {
+            "value": 0.875,
+            "unit": "rem"
+          },
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+          "letterSpacing": {
+            "value": 0,
+            "unit": "em"
+          }
+        }
+      },
+      "sm": {
+        "$type": "typography",
+        "$description": "Small print and tooltips",
+        "$value": {
+          "fontFamily": "{font.body}",
+          "fontSize": {
+            "value": 0.75,
+            "unit": "rem"
+          },
+          "fontWeight": 400,
+          "lineHeight": 1.35,
+          "letterSpacing": {
+            "value": 0,
+            "unit": "em"
+          }
+        }
+      }
+    },
+    "label": {
+      "md": {
+        "$type": "typography",
+        "$description": "Buttons, tabs and field labels",
+        "$value": {
+          "fontFamily": "{font.label}",
+          "fontSize": {
+            "value": 0.875,
+            "unit": "rem"
+          },
+          "fontWeight": 500,
+          "lineHeight": 1.25,
+          "letterSpacing": {
+            "value": 0,
+            "unit": "em"
+          }
+        }
+      },
+      "sm": {
+        "$type": "typography",
+        "$description": "Badges and small buttons",
+        "$value": {
+          "fontFamily": "{font.label}",
+          "fontSize": {
+            "value": 0.75,
+            "unit": "rem"
+          },
+          "fontWeight": 500,
+          "lineHeight": 1.35,
+          "letterSpacing": {
+            "value": 0,
+            "unit": "em"
+          }
+        }
+      }
+    },
+    "code": {
+      "md": {
+        "$type": "typography",
+        "$description": "Code",
+        "$value": {
+          "fontFamily": "{font.code}",
+          "fontSize": {
+            "value": 0.8125,
+            "unit": "rem"
+          },
+          "fontWeight": 400,
+          "lineHeight": 1.5,
+          "letterSpacing": {
+            "value": 0,
+            "unit": "em"
+          }
+        }
       }
     }
   },

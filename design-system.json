@@ -45,11 +45,11 @@
     "allowFilesNote": "Vendored shadcn/ui sources are accepted as-is; generated components are checked."
   },
   "brief": {
-    "product": "An online shop for handmade jewelry",
-    "feel": "Elegant and personal",
-    "kind": "e-commerce",
-    "palette": "emerald-neutral",
-    "corners": "slight",
+    "product": "A budgeting app for young professionals",
+    "feel": "Friendly, not preachy",
+    "kind": "mobile-app",
+    "palette": "blue-slate",
+    "corners": "pill",
     "font": "Nunito",
     "components": [
       "checkbox",
@@ -64,6 +64,6 @@
       "switch",
       "tooltip"
     ],
-    "answeredAt": "2026-10-28T03:49:11.535Z"
+    "answeredAt": "2026-10-28T17:28:01.311Z"
   }
 }

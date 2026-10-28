@@ -37,6 +37,35 @@
     "description": {
       "foreground": {
         "$value": "{color.muted-foreground}"
+      },
+      "font": {
+        "$type": "typography",
+        "$description": "Dialog text",
+        "$value": "{typography.body.md}"
+      }
+    },
+    "title": {
+      "font": {
+        "$type": "typography",
+        "$description": "Dialog title",
+        "$value": "{typography.heading.md}"
+      }
+    },
+    "close": {
+      "radius": {
+        "$type": "dimension",
+        "$description": "The close button in the corner",
+        "$value": "{radius.small}",
+        "$extensions": {
+          "plinth": {
+            "fit": {
+              "outer": "{dialog.radius}",
+              "spacing": 4,
+              "border": 1,
+              "min": "{radius.small}"
+            }
+          }
+        }
       }
     }
   }

@@ -36,6 +36,49 @@
       "description": {
         "$value": "{color.background}"
       }
+    },
+    "title": {
+      "font": {
+        "$type": "typography",
+        "$description": "Toast title",
+        "$value": "{typography.label.md}"
+      }
+    },
+    "description": {
+      "font": {
+        "$type": "typography",
+        "$description": "Toast text",
+        "$value": "{typography.body.md}"
+      }
+    },
+    "action": {
+      "font": {
+        "$type": "typography",
+        "$description": "Toast action button",
+        "$value": "{typography.label.md}"
+      },
+      "radius": {
+        "$type": "dimension",
+        "$description": "The action button, a control like any other",
+        "$value": "{radius.control}"
+      }
+    },
+    "close": {
+      "radius": {
+        "$type": "dimension",
+        "$description": "The close button in the corner",
+        "$value": "{radius.small}",
+        "$extensions": {
+          "plinth": {
+            "fit": {
+              "outer": "{toast.radius}",
+              "spacing": 2,
+              "border": 1,
+              "min": "{radius.small}"
+            }
+          }
+        }
+      }
     }
   }
 }
