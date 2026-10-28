@@ -22,8 +22,8 @@
     "$type": "fontFamily",
     "sans": {
       "$value": [
-        "Nunito",
-        "sans-serif"
+        "Source Serif 4",
+        "serif"
       ]
     }
   },
@@ -32,8 +32,8 @@
     "display": {
       "$value": {
         "fontFamily": [
-          "Nunito",
-          "sans-serif"
+          "Source Serif 4",
+          "serif"
         ],
         "fontSize": {
           "value": 2,
@@ -50,8 +50,8 @@
     "body": {
       "$value": {
         "fontFamily": [
-          "Nunito",
-          "sans-serif"
+          "Source Serif 4",
+          "serif"
         ],
         "fontSize": {
           "value": 0.875,
