@@ -315,6 +315,28 @@ colors:
   warning-foreground: "#461901"
   info: "#1447e6"
   info-foreground: "#ffffff"
+  chart-1: "#009669"
+  chart-2: "#e12afb"
+  chart-3: "#9f0712"
+  chart-4: "#6e11b0"
+  chart-5: "#ec5600"
+  chart-6: "#c2005c"
+  chart-7: "#1447e6"
+  chart-8: "#b55200"
+  chart-seq-1: "#a4f4cf"
+  chart-seq-2: "#5ee9b5"
+  chart-seq-3: "#00d294"
+  chart-seq-4: "#00b981"
+  chart-seq-5: "#009669"
+  chart-seq-6: "#007857"
+  chart-seq-7: "#005f46"
+  chart-div-1: "#c2005c"
+  chart-div-2: "#f6339a"
+  chart-div-3: "#fda5d5"
+  chart-div-4: "#e5e5e5"
+  chart-div-5: "#5ee9b5"
+  chart-div-6: "#00b981"
+  chart-div-7: "#007857"
   alert-default-background: "#ffffff"
   alert-default-foreground: "#0a0a0a"
   alert-default-border: "#e5e5e5"
@@ -431,13 +453,13 @@ colors:
   tooltip-foreground: "#ffffff"
 typography:
   display:
-    fontFamily: Source Serif 4
+    fontFamily: Fraunces
     fontSize: 2rem
     fontWeight: 600
     lineHeight: 1.15
     letterSpacing: -0.02em
   body:
-    fontFamily: Source Serif 4
+    fontFamily: Fraunces
     fontSize: 0.875rem
     fontWeight: 400
     lineHeight: 1.5
@@ -452,22 +474,22 @@ rounded:
   3xl: 1.5rem
   4xl: 2rem
   full: 9999px
-  control: 0.25rem
-  container: 0.375rem
-  pill: 0.25rem
-  small: 0.125rem
-  alert: 0.375rem
-  badge: 0.25rem
-  button: 0.25rem
-  card: 0.375rem
-  checkbox: 0.125rem
-  dialog: 0.375rem
-  input: 0.25rem
-  select: 0.25rem
-  tabs: 0.25rem
-  textarea: 0.25rem
-  toast: 0.375rem
-  tooltip: 0.125rem
+  control: 0px
+  container: 0px
+  pill: 0px
+  small: 0px
+  alert: 0px
+  badge: 0px
+  button: 0px
+  card: 0px
+  checkbox: 0px
+  dialog: 0px
+  input: 0px
+  select: 0px
+  tabs: 0px
+  textarea: 0px
+  toast: 0px
+  tooltip: 0px
 ---
 
 # jewel-shop
