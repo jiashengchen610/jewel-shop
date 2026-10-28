@@ -15,6 +15,24 @@ This repository is a design system maintained with Plinth. Follow these rules.
 - Components use their component tokens only: utilities such as `bg-button-default-background` defined in
   `tokens/components/<name>.tokens.json`. No hex values, color functions, arbitrary Tailwind values or magic pixel
   values.
+- Text too: every part with text has a text token (`<part>.font`, `$type` typography, pointing at a text style such as
+  `{typography.label.md}`), used as `type-<name>-<part>` (size, weight, line height and font in one class). No
+  `text-sm`, `font-medium`, `leading-*` or `tracking-*` in components; fields add `max-md:text-base` so phones do not
+  zoom. Text styles (`typography.*`) use font roles (`font.heading`, `font.body`, `font.label`, `font.code`), which
+  point at fonts in the palette; change fonts with `set_style`.
+- Glass: a surface over imagery or busy color uses `material-glass` (base token `material.glass`: its color, solid
+  where the browser cannot blur, with a recipe tuned by `set_glass`), text on it the glass's foreground; or the Glass
+  component. Never write `backdrop-filter` or translucent colors by hand: the engine checks glass text over black and
+  white and falls back to solid for `prefers-reduced-transparency`.
+- Charts: the Chart component (Recharts). Series colors come from the chart roles Plinth makes from the palette,
+  passed in the config: `var(--chart-1)` … `var(--chart-8)` for categories (in order: the first ones stay apart best),
+  `var(--chart-seq-1…7)` for low to high, `var(--chart-div-1…7)` around a middle. Never pick series colors by hand;
+  `make_chart_colors` remakes them. Give every chart an `aria-label`, and label series (legend or marks).
+- Corners inside corners: a part that sits inside a rounded container near its corner (tabs in a bar, options in a
+  list, a close button in a corner) gets its own radius token with
+  `"$extensions": { "plinth": { "fit": { "outer": "{<name>.radius}", "spacing": <padding steps>, "border": <px> } } }`
+  and uses `rounded-<name>-<part>`: its corners become the container's minus the gap, so the gap stays even
+  (`radius.fit-inside` switches this for the whole system). Never put the container's own `rounded-<name>` on it.
 - Every component has `<name>.tsx`, `<name>.stories.tsx` and `<name>.spec.md` in `src/components/<name>/`, and its
   tokens in `tokens/components/<name>.tokens.json`. GitHub refuses to deploy a component without its tokens or story,
   or with hardcoded values.

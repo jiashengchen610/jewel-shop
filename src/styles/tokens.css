@@ -357,10 +357,10 @@
   --badge-success-foreground: var(--success-foreground);
   --badge-warning-background: var(--warning);
   --badge-warning-foreground: var(--warning-foreground);
-  --body-font-family: 'Source Serif 4', serif;
+  --body-font-family: Fraunces, serif;
   --body-font-size: 0.875rem;
   --body-font-weight: 400;
-  --body-font: 400 0.875rem/1.5 'Source Serif 4', serif;
+  --body-font: 400 0.875rem/1.5 Fraunces, serif;
   --body-line-height: 1.5;
   --border: var(--neutral-200);
   --button-default-background-hover: color-mix(in oklab, var(--primary) 80%, transparent);
@@ -389,14 +389,36 @@
   --card-radius: var(--container-radius);
   --card-shadow: var(--xs-shadow);
   --card: var(--white);
+  --chart-1: var(--emerald-600);
+  --chart-2: var(--fuchsia-500);
+  --chart-3: var(--red-800);
+  --chart-4: var(--purple-800);
+  --chart-5: var(--orange-600);
+  --chart-6: var(--pink-700);
+  --chart-7: var(--blue-700);
+  --chart-8: var(--amber-700);
+  --chart-div-1: var(--pink-700);
+  --chart-div-2: var(--pink-500);
+  --chart-div-3: var(--pink-300);
+  --chart-div-4: var(--neutral-200);
+  --chart-div-5: var(--emerald-300);
+  --chart-div-6: var(--emerald-500);
+  --chart-div-7: var(--emerald-700);
+  --chart-seq-1: var(--emerald-200);
+  --chart-seq-2: var(--emerald-300);
+  --chart-seq-3: var(--emerald-400);
+  --chart-seq-4: var(--emerald-500);
+  --chart-seq-5: var(--emerald-600);
+  --chart-seq-6: var(--emerald-700);
+  --chart-seq-7: var(--emerald-800);
   --checkbox-box-background: color-mix(in oklab, var(--background) 0%, transparent);
   --checkbox-box-border: var(--input);
   --checkbox-box-checked-background: var(--primary);
   --checkbox-box-checked-border: var(--primary);
   --checkbox-box-checked-foreground: var(--primary-foreground);
   --checkbox-radius: var(--small-radius);
-  --container-radius: var(--md-radius);
-  --control-radius: var(--sm-radius);
+  --container-radius: var(--none-radius);
+  --control-radius: var(--none-radius);
   --destructive: var(--red-700);
   --dialog-content-background: var(--background);
   --dialog-content-border: var(--border);
@@ -405,10 +427,10 @@
   --dialog-overlay: color-mix(in oklab, var(--foreground) 50%, transparent);
   --dialog-radius: var(--container-radius);
   --dialog-shadow: var(--overlay-shadow);
-  --display-font-family: 'Source Serif 4', serif;
+  --display-font-family: Fraunces, serif;
   --display-font-size: 2rem;
   --display-font-weight: 600;
-  --display-font: 600 2rem/1.15 'Source Serif 4', serif;
+  --display-font: 600 2rem/1.15 Fraunces, serif;
   --display-letter-spacing: -0.02em;
   --display-line-height: 1.15;
   --duration-fast: 120ms;
@@ -435,7 +457,7 @@
   --muted-foreground: var(--neutral-600);
   --muted: var(--neutral-100);
   --overlay-shadow: var(--lg-shadow);
-  --pill-radius: var(--sm-radius);
+  --pill-radius: var(--none-radius);
   --popover-foreground: var(--neutral-950);
   --popover: var(--white);
   --primary-foreground: var(--white);
@@ -444,7 +466,7 @@
   --radio-group-item-border: var(--input);
   --radio-group-item-checked: var(--primary);
   --ring: var(--emerald-600);
-  --sans-font: 'Source Serif 4', serif;
+  --sans-font: Fraunces, serif;
   --secondary-foreground: var(--neutral-900);
   --secondary: var(--neutral-100);
   --select-content-background: var(--popover);
@@ -460,7 +482,7 @@
   --select-trigger-foreground: var(--foreground);
   --select-trigger-placeholder: var(--muted-foreground);
   --separator-line: var(--border);
-  --small-radius: var(--xs-radius);
+  --small-radius: var(--none-radius);
   --spacing: 0.25rem;
   --standard-ease: cubic-bezier(0.2, 0, 0, 1);
   --success-foreground: var(--white);
@@ -545,10 +567,10 @@
   --badge-success-foreground: var(--success-foreground);
   --badge-warning-background: var(--warning);
   --badge-warning-foreground: var(--warning-foreground);
-  --body-font-family: 'Source Serif 4', serif;
+  --body-font-family: Fraunces, serif;
   --body-font-size: 0.875rem;
   --body-font-weight: 400;
-  --body-font: 400 0.875rem/1.5 'Source Serif 4', serif;
+  --body-font: 400 0.875rem/1.5 Fraunces, serif;
   --body-line-height: 1.5;
   --border: color-mix(in oklab, var(--white) 10%, transparent);
   --button-default-background-hover: color-mix(in oklab, var(--primary) 80%, transparent);
@@ -577,14 +599,36 @@
   --card-radius: var(--container-radius);
   --card-shadow: 0px 1px 2px 0px oklch(0 0 0 / 0.5), inset 0px 1px 0px 0px oklch(1 0 0 / 0.06);
   --card: var(--neutral-900);
+  --chart-1: var(--emerald-400);
+  --chart-2: var(--fuchsia-500);
+  --chart-3: var(--red-500);
+  --chart-4: var(--purple-200);
+  --chart-5: var(--orange-400);
+  --chart-6: var(--pink-300);
+  --chart-7: var(--blue-300);
+  --chart-8: var(--amber-300);
+  --chart-div-1: var(--pink-300);
+  --chart-div-2: var(--pink-500);
+  --chart-div-3: var(--pink-700);
+  --chart-div-4: var(--neutral-800);
+  --chart-div-5: var(--emerald-700);
+  --chart-div-6: var(--emerald-500);
+  --chart-div-7: var(--emerald-300);
+  --chart-seq-1: var(--emerald-800);
+  --chart-seq-2: var(--emerald-700);
+  --chart-seq-3: var(--emerald-600);
+  --chart-seq-4: var(--emerald-500);
+  --chart-seq-5: var(--emerald-400);
+  --chart-seq-6: var(--emerald-300);
+  --chart-seq-7: var(--emerald-200);
   --checkbox-box-background: color-mix(in oklab, var(--input) 30%, transparent);
   --checkbox-box-border: var(--input);
   --checkbox-box-checked-background: var(--primary);
   --checkbox-box-checked-border: var(--primary);
   --checkbox-box-checked-foreground: var(--primary-foreground);
   --checkbox-radius: var(--small-radius);
-  --container-radius: var(--md-radius);
-  --control-radius: var(--sm-radius);
+  --container-radius: var(--none-radius);
+  --control-radius: var(--none-radius);
   --destructive: var(--red-400);
   --dialog-content-background: var(--background);
   --dialog-content-border: var(--border);
@@ -593,10 +637,10 @@
   --dialog-overlay: color-mix(in oklab, var(--background) 80%, transparent);
   --dialog-radius: var(--container-radius);
   --dialog-shadow: var(--overlay-shadow);
-  --display-font-family: 'Source Serif 4', serif;
+  --display-font-family: Fraunces, serif;
   --display-font-size: 2rem;
   --display-font-weight: 600;
-  --display-font: 600 2rem/1.15 'Source Serif 4', serif;
+  --display-font: 600 2rem/1.15 Fraunces, serif;
   --display-letter-spacing: -0.02em;
   --display-line-height: 1.15;
   --duration-fast: 120ms;
@@ -623,7 +667,7 @@
   --muted-foreground: var(--neutral-400);
   --muted: var(--neutral-800);
   --overlay-shadow: 0px 10px 24px -4px oklch(0 0 0 / 0.6), 0px 4px 8px -4px oklch(0 0 0 / 0.5), inset 0px 1px 0px 0px oklch(1 0 0 / 0.08);
-  --pill-radius: var(--sm-radius);
+  --pill-radius: var(--none-radius);
   --popover-foreground: var(--neutral-50);
   --popover: var(--neutral-900);
   --primary-foreground: var(--emerald-950);
@@ -632,7 +676,7 @@
   --radio-group-item-border: var(--input);
   --radio-group-item-checked: var(--primary);
   --ring: var(--emerald-500);
-  --sans-font: 'Source Serif 4', serif;
+  --sans-font: Fraunces, serif;
   --secondary-foreground: var(--neutral-50);
   --secondary: var(--neutral-800);
   --select-content-background: var(--popover);
@@ -648,7 +692,7 @@
   --select-trigger-foreground: var(--foreground);
   --select-trigger-placeholder: var(--muted-foreground);
   --separator-line: var(--border);
-  --small-radius: var(--xs-radius);
+  --small-radius: var(--none-radius);
   --spacing: 0.25rem;
   --standard-ease: cubic-bezier(0.2, 0, 0, 1);
   --success-foreground: var(--green-950);
@@ -777,6 +821,28 @@
   --color-card-footer-background: var(--card-footer-background);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
+  --color-chart-div-1: var(--chart-div-1);
+  --color-chart-div-2: var(--chart-div-2);
+  --color-chart-div-3: var(--chart-div-3);
+  --color-chart-div-4: var(--chart-div-4);
+  --color-chart-div-5: var(--chart-div-5);
+  --color-chart-div-6: var(--chart-div-6);
+  --color-chart-div-7: var(--chart-div-7);
+  --color-chart-seq-1: var(--chart-seq-1);
+  --color-chart-seq-2: var(--chart-seq-2);
+  --color-chart-seq-3: var(--chart-seq-3);
+  --color-chart-seq-4: var(--chart-seq-4);
+  --color-chart-seq-5: var(--chart-seq-5);
+  --color-chart-seq-6: var(--chart-seq-6);
+  --color-chart-seq-7: var(--chart-seq-7);
   --color-checkbox-box-background: var(--checkbox-box-background);
   --color-checkbox-box-border: var(--checkbox-box-border);
   --color-checkbox-box-checked-background: var(--checkbox-box-checked-background);
@@ -1114,6 +1180,7 @@
   --ease-enter: var(--enter-ease);
   --ease-exit: var(--exit-ease);
   --ease-standard: var(--standard-ease);
+  --font-heading: var(--sans-font);
   --font-sans: var(--sans-font);
   --radius-2xl: var(--2xl-radius);
   --radius-3xl: var(--3xl-radius);
@@ -1158,6 +1225,15 @@
   --text-display--line-height: var(--display-line-height);
   --text-display: var(--display-font-size);
   --tracking-display: var(--display-letter-spacing);
+}
+
+@utility type-display {
+  font: var(--display-font);
+  letter-spacing: var(--display-letter-spacing);
+}
+@utility type-body {
+  font: var(--body-font);
+  letter-spacing: normal;
 }
 
 @media (prefers-reduced-motion: reduce) {

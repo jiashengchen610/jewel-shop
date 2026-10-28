@@ -2,19 +2,19 @@
   "radius": {
     "$type": "dimension",
     "control": {
-      "$value": "{radius.sm}",
+      "$value": "{radius.none}",
       "$description": "Buttons, inputs and other controls"
     },
     "container": {
-      "$value": "{radius.md}",
+      "$value": "{radius.none}",
       "$description": "Cards, panels, dialogs"
     },
     "pill": {
-      "$value": "{radius.sm}",
+      "$value": "{radius.none}",
       "$description": "Badges and tags"
     },
     "small": {
-      "$value": "{radius.xs}",
+      "$value": "{radius.none}",
       "$description": "Checkboxes, tooltips and other small marks"
     }
   },
@@ -22,7 +22,7 @@
     "$type": "fontFamily",
     "sans": {
       "$value": [
-        "Source Serif 4",
+        "Fraunces",
         "serif"
       ]
     }
@@ -32,7 +32,7 @@
     "display": {
       "$value": {
         "fontFamily": [
-          "Source Serif 4",
+          "Fraunces",
           "serif"
         ],
         "fontSize": {
@@ -50,7 +50,7 @@
     "body": {
       "$value": {
         "fontFamily": [
-          "Source Serif 4",
+          "Fraunces",
           "serif"
         ],
         "fontSize": {

@@ -6802,19 +6802,19 @@
           "description": "Buttons, inputs and other controls",
           "layer": "semantic",
           "refs": [
-            "radius/sm"
+            "radius/none"
           ],
           "values": {
             "light": {
-              "raw": "{radius.sm}",
-              "css": "var(--sm-radius)",
-              "resolved": "0.25rem",
+              "raw": "{radius.none}",
+              "css": "var(--none-radius)",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
-              "raw": "{radius.sm}",
-              "css": "var(--sm-radius)",
-              "resolved": "0.25rem",
+              "raw": "{radius.none}",
+              "css": "var(--none-radius)",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -6827,19 +6827,19 @@
           "description": "Cards, panels, dialogs",
           "layer": "semantic",
           "refs": [
-            "radius/md"
+            "radius/none"
           ],
           "values": {
             "light": {
-              "raw": "{radius.md}",
-              "css": "var(--md-radius)",
-              "resolved": "0.375rem",
+              "raw": "{radius.none}",
+              "css": "var(--none-radius)",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
-              "raw": "{radius.md}",
-              "css": "var(--md-radius)",
-              "resolved": "0.375rem",
+              "raw": "{radius.none}",
+              "css": "var(--none-radius)",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -6852,19 +6852,19 @@
           "description": "Badges and tags",
           "layer": "semantic",
           "refs": [
-            "radius/sm"
+            "radius/none"
           ],
           "values": {
             "light": {
-              "raw": "{radius.sm}",
-              "css": "var(--sm-radius)",
-              "resolved": "0.25rem",
+              "raw": "{radius.none}",
+              "css": "var(--none-radius)",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
-              "raw": "{radius.sm}",
-              "css": "var(--sm-radius)",
-              "resolved": "0.25rem",
+              "raw": "{radius.none}",
+              "css": "var(--none-radius)",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -6877,19 +6877,19 @@
           "description": "Checkboxes, tooltips and other small marks",
           "layer": "semantic",
           "refs": [
-            "radius/xs"
+            "radius/none"
           ],
           "values": {
             "light": {
-              "raw": "{radius.xs}",
-              "css": "var(--xs-radius)",
-              "resolved": "0.125rem",
+              "raw": "{radius.none}",
+              "css": "var(--none-radius)",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
-              "raw": "{radius.xs}",
-              "css": "var(--xs-radius)",
-              "resolved": "0.125rem",
+              "raw": "{radius.none}",
+              "css": "var(--none-radius)",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -6904,20 +6904,20 @@
           "values": {
             "light": {
               "raw": [
-                "Source Serif 4",
+                "Fraunces",
                 "serif"
               ],
-              "css": "'Source Serif 4', serif",
-              "resolved": "'Source Serif 4', serif",
+              "css": "Fraunces, serif",
+              "resolved": "Fraunces, serif",
               "alpha": 1
             },
             "dark": {
               "raw": [
-                "Source Serif 4",
+                "Fraunces",
                 "serif"
               ],
-              "css": "'Source Serif 4', serif",
-              "resolved": "'Source Serif 4', serif",
+              "css": "Fraunces, serif",
+              "resolved": "Fraunces, serif",
               "alpha": 1
             }
           }
@@ -6933,7 +6933,7 @@
             "light": {
               "raw": {
                 "fontFamily": [
-                  "Source Serif 4",
+                  "Fraunces",
                   "serif"
                 ],
                 "fontSize": {
@@ -6947,14 +6947,14 @@
                   "unit": "em"
                 }
               },
-              "css": "600 2rem/1.15 'Source Serif 4', serif",
-              "resolved": "600 2rem/1.15 'Source Serif 4', serif",
+              "css": "600 2rem/1.15 Fraunces, serif",
+              "resolved": "600 2rem/1.15 Fraunces, serif",
               "alpha": 1
             },
             "dark": {
               "raw": {
                 "fontFamily": [
-                  "Source Serif 4",
+                  "Fraunces",
                   "serif"
                 ],
                 "fontSize": {
@@ -6968,8 +6968,8 @@
                   "unit": "em"
                 }
               },
-              "css": "600 2rem/1.15 'Source Serif 4', serif",
-              "resolved": "600 2rem/1.15 'Source Serif 4', serif",
+              "css": "600 2rem/1.15 Fraunces, serif",
+              "resolved": "600 2rem/1.15 Fraunces, serif",
               "alpha": 1
             }
           }
@@ -6985,7 +6985,7 @@
             "light": {
               "raw": {
                 "fontFamily": [
-                  "Source Serif 4",
+                  "Fraunces",
                   "serif"
                 ],
                 "fontSize": {
@@ -6995,14 +6995,14 @@
                 "fontWeight": 400,
                 "lineHeight": 1.5
               },
-              "css": "400 0.875rem/1.5 'Source Serif 4', serif",
-              "resolved": "400 0.875rem/1.5 'Source Serif 4', serif",
+              "css": "400 0.875rem/1.5 Fraunces, serif",
+              "resolved": "400 0.875rem/1.5 Fraunces, serif",
               "alpha": 1
             },
             "dark": {
               "raw": {
                 "fontFamily": [
-                  "Source Serif 4",
+                  "Fraunces",
                   "serif"
                 ],
                 "fontSize": {
@@ -7012,8 +7012,8 @@
                 "fontWeight": 400,
                 "lineHeight": 1.5
               },
-              "css": "400 0.875rem/1.5 'Source Serif 4', serif",
-              "resolved": "400 0.875rem/1.5 'Source Serif 4', serif",
+              "css": "400 0.875rem/1.5 Fraunces, serif",
+              "resolved": "400 0.875rem/1.5 Fraunces, serif",
               "alpha": 1
             }
           }
@@ -7282,7 +7282,7 @@
                 "timingFunction": "{ease.standard}"
               },
               "css": "150ms var(--standard-ease)",
-              "resolved": "150ms var(--standard-ease)",
+              "resolved": "150ms cubic-bezier(0.2, 0, 0, 1)",
               "alpha": 1
             },
             "dark": {
@@ -7294,7 +7294,7 @@
                 "timingFunction": "{ease.standard}"
               },
               "css": "150ms var(--standard-ease)",
-              "resolved": "150ms var(--standard-ease)",
+              "resolved": "150ms cubic-bezier(0.2, 0, 0, 1)",
               "alpha": 1
             }
           }
@@ -8126,6 +8126,574 @@
           }
         },
         {
+          "name": "chart-1",
+          "path": "color/chart/1",
+          "group": "color",
+          "type": "color",
+          "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
+          "layer": "semantic",
+          "refs": [
+            "color/emerald/600",
+            "color/emerald/400"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.emerald.600}",
+              "css": "var(--emerald-600)",
+              "resolved": "oklch(0.596 0.145 163.225)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.emerald.400}",
+              "css": "var(--emerald-400)",
+              "resolved": "oklch(0.765 0.177 163.223)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-2",
+          "path": "color/chart/2",
+          "group": "color",
+          "type": "color",
+          "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
+          "layer": "semantic",
+          "refs": [
+            "color/fuchsia/500"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.fuchsia.500}",
+              "css": "var(--fuchsia-500)",
+              "resolved": "oklch(0.667 0.295 322.15)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.fuchsia.500}",
+              "css": "var(--fuchsia-500)",
+              "resolved": "oklch(0.667 0.295 322.15)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-3",
+          "path": "color/chart/3",
+          "group": "color",
+          "type": "color",
+          "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
+          "layer": "semantic",
+          "refs": [
+            "color/red/800",
+            "color/red/500"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.red.800}",
+              "css": "var(--red-800)",
+              "resolved": "oklch(0.444 0.177 26.899)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.red.500}",
+              "css": "var(--red-500)",
+              "resolved": "oklch(0.637 0.237 25.331)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-4",
+          "path": "color/chart/4",
+          "group": "color",
+          "type": "color",
+          "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
+          "layer": "semantic",
+          "refs": [
+            "color/purple/800",
+            "color/purple/200"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.purple.800}",
+              "css": "var(--purple-800)",
+              "resolved": "oklch(0.438 0.218 303.724)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.purple.200}",
+              "css": "var(--purple-200)",
+              "resolved": "oklch(0.902 0.063 306.703)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-5",
+          "path": "color/chart/5",
+          "group": "color",
+          "type": "color",
+          "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
+          "layer": "semantic",
+          "refs": [
+            "color/orange/600",
+            "color/orange/400"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.orange.600}",
+              "css": "var(--orange-600)",
+              "resolved": "oklch(0.646 0.222 41.116)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.orange.400}",
+              "css": "var(--orange-400)",
+              "resolved": "oklch(0.75 0.183 55.934)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-6",
+          "path": "color/chart/6",
+          "group": "color",
+          "type": "color",
+          "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
+          "layer": "semantic",
+          "refs": [
+            "color/pink/700",
+            "color/pink/300"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.pink.700}",
+              "css": "var(--pink-700)",
+              "resolved": "oklch(0.525 0.223 3.958)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.pink.300}",
+              "css": "var(--pink-300)",
+              "resolved": "oklch(0.823 0.12 346.018)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-7",
+          "path": "color/chart/7",
+          "group": "color",
+          "type": "color",
+          "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
+          "layer": "semantic",
+          "refs": [
+            "color/blue/700",
+            "color/blue/300"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.blue.700}",
+              "css": "var(--blue-700)",
+              "resolved": "oklch(0.488 0.243 264.376)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.blue.300}",
+              "css": "var(--blue-300)",
+              "resolved": "oklch(0.809 0.105 251.813)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-8",
+          "path": "color/chart/8",
+          "group": "color",
+          "type": "color",
+          "description": "Chart series color (categories): distinct from the others, also for color vision deficiencies, and 3:1 on the page",
+          "layer": "semantic",
+          "refs": [
+            "color/amber/700",
+            "color/amber/300"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.amber.700}",
+              "css": "var(--amber-700)",
+              "resolved": "oklch(0.555 0.163 48.998)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.amber.300}",
+              "css": "var(--amber-300)",
+              "resolved": "oklch(0.879 0.169 91.605)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-1",
+          "path": "color/chart/seq/1",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
+          "layer": "semantic",
+          "refs": [
+            "color/emerald/200",
+            "color/emerald/800"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.emerald.200}",
+              "css": "var(--emerald-200)",
+              "resolved": "oklch(0.905 0.093 164.15)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.emerald.800}",
+              "css": "var(--emerald-800)",
+              "resolved": "oklch(0.432 0.095 166.913)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-2",
+          "path": "color/chart/seq/2",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
+          "layer": "semantic",
+          "refs": [
+            "color/emerald/300",
+            "color/emerald/700"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.emerald.300}",
+              "css": "var(--emerald-300)",
+              "resolved": "oklch(0.845 0.143 164.978)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.emerald.700}",
+              "css": "var(--emerald-700)",
+              "resolved": "oklch(0.508 0.118 165.612)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-3",
+          "path": "color/chart/seq/3",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
+          "layer": "semantic",
+          "refs": [
+            "color/emerald/400",
+            "color/emerald/600"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.emerald.400}",
+              "css": "var(--emerald-400)",
+              "resolved": "oklch(0.765 0.177 163.223)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.emerald.600}",
+              "css": "var(--emerald-600)",
+              "resolved": "oklch(0.596 0.145 163.225)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-4",
+          "path": "color/chart/seq/4",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
+          "layer": "semantic",
+          "refs": [
+            "color/emerald/500"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.emerald.500}",
+              "css": "var(--emerald-500)",
+              "resolved": "oklch(0.696 0.17 162.48)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.emerald.500}",
+              "css": "var(--emerald-500)",
+              "resolved": "oklch(0.696 0.17 162.48)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-5",
+          "path": "color/chart/seq/5",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
+          "layer": "semantic",
+          "refs": [
+            "color/emerald/600",
+            "color/emerald/400"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.emerald.600}",
+              "css": "var(--emerald-600)",
+              "resolved": "oklch(0.596 0.145 163.225)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.emerald.400}",
+              "css": "var(--emerald-400)",
+              "resolved": "oklch(0.765 0.177 163.223)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-6",
+          "path": "color/chart/seq/6",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
+          "layer": "semantic",
+          "refs": [
+            "color/emerald/700",
+            "color/emerald/300"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.emerald.700}",
+              "css": "var(--emerald-700)",
+              "resolved": "oklch(0.508 0.118 165.612)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.emerald.300}",
+              "css": "var(--emerald-300)",
+              "resolved": "oklch(0.845 0.143 164.978)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-seq-7",
+          "path": "color/chart/seq/7",
+          "group": "color",
+          "type": "color",
+          "description": "Chart sequential step (low to high values) in one hue",
+          "layer": "semantic",
+          "refs": [
+            "color/emerald/800",
+            "color/emerald/200"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.emerald.800}",
+              "css": "var(--emerald-800)",
+              "resolved": "oklch(0.432 0.095 166.913)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.emerald.200}",
+              "css": "var(--emerald-200)",
+              "resolved": "oklch(0.905 0.093 164.15)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-div-1",
+          "path": "color/chart/div/1",
+          "group": "color",
+          "type": "color",
+          "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
+          "layer": "semantic",
+          "refs": [
+            "color/pink/700",
+            "color/pink/300"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.pink.700}",
+              "css": "var(--pink-700)",
+              "resolved": "oklch(0.525 0.223 3.958)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.pink.300}",
+              "css": "var(--pink-300)",
+              "resolved": "oklch(0.823 0.12 346.018)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-div-2",
+          "path": "color/chart/div/2",
+          "group": "color",
+          "type": "color",
+          "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
+          "layer": "semantic",
+          "refs": [
+            "color/pink/500"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.pink.500}",
+              "css": "var(--pink-500)",
+              "resolved": "oklch(0.656 0.241 354.308)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.pink.500}",
+              "css": "var(--pink-500)",
+              "resolved": "oklch(0.656 0.241 354.308)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-div-3",
+          "path": "color/chart/div/3",
+          "group": "color",
+          "type": "color",
+          "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
+          "layer": "semantic",
+          "refs": [
+            "color/pink/300",
+            "color/pink/700"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.pink.300}",
+              "css": "var(--pink-300)",
+              "resolved": "oklch(0.823 0.12 346.018)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.pink.700}",
+              "css": "var(--pink-700)",
+              "resolved": "oklch(0.525 0.223 3.958)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-div-4",
+          "path": "color/chart/div/4",
+          "group": "color",
+          "type": "color",
+          "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
+          "layer": "semantic",
+          "refs": [
+            "color/neutral/200",
+            "color/neutral/800"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.neutral.200}",
+              "css": "var(--neutral-200)",
+              "resolved": "oklch(0.922 0 none)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.neutral.800}",
+              "css": "var(--neutral-800)",
+              "resolved": "oklch(0.269 0 none)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-div-5",
+          "path": "color/chart/div/5",
+          "group": "color",
+          "type": "color",
+          "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
+          "layer": "semantic",
+          "refs": [
+            "color/emerald/300",
+            "color/emerald/700"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.emerald.300}",
+              "css": "var(--emerald-300)",
+              "resolved": "oklch(0.845 0.143 164.978)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.emerald.700}",
+              "css": "var(--emerald-700)",
+              "resolved": "oklch(0.508 0.118 165.612)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-div-6",
+          "path": "color/chart/div/6",
+          "group": "color",
+          "type": "color",
+          "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
+          "layer": "semantic",
+          "refs": [
+            "color/emerald/500"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.emerald.500}",
+              "css": "var(--emerald-500)",
+              "resolved": "oklch(0.696 0.17 162.48)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.emerald.500}",
+              "css": "var(--emerald-500)",
+              "resolved": "oklch(0.696 0.17 162.48)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-div-7",
+          "path": "color/chart/div/7",
+          "group": "color",
+          "type": "color",
+          "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
+          "layer": "semantic",
+          "refs": [
+            "color/emerald/700",
+            "color/emerald/300"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.emerald.700}",
+              "css": "var(--emerald-700)",
+              "resolved": "oklch(0.508 0.118 165.612)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.emerald.300}",
+              "css": "var(--emerald-300)",
+              "resolved": "oklch(0.845 0.143 164.978)",
+              "alpha": 1
+            }
+          }
+        },
+        {
           "name": "alert-radius",
           "path": "alert/radius",
           "group": "alert",
@@ -8138,13 +8706,13 @@
             "light": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0.375rem",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0.375rem",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -8762,13 +9330,13 @@
             "light": {
               "raw": "{radius.pill}",
               "css": "var(--pill-radius)",
-              "resolved": "0.25rem",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.pill}",
               "css": "var(--pill-radius)",
-              "resolved": "0.25rem",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -9194,13 +9762,13 @@
             "light": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0.25rem",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0.25rem",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -9602,13 +10170,13 @@
             "light": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0.375rem",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0.375rem",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -9746,13 +10314,13 @@
             "light": {
               "raw": "{radius.small}",
               "css": "var(--small-radius)",
-              "resolved": "0.125rem",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.small}",
               "css": "var(--small-radius)",
-              "resolved": "0.125rem",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -9891,13 +10459,13 @@
             "light": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0.375rem",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0.375rem",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -10060,13 +10628,13 @@
             "light": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0.25rem",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0.25rem",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -10278,13 +10846,13 @@
             "light": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0.25rem",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0.25rem",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -10688,13 +11256,13 @@
             "light": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0.25rem",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0.25rem",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -10809,13 +11377,13 @@
             "light": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0.25rem",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.control}",
               "css": "var(--control-radius)",
-              "resolved": "0.25rem",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -10930,13 +11498,13 @@
             "light": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0.375rem",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "0.375rem",
+              "resolved": "0px",
               "alpha": 1
             }
           }
@@ -11170,13 +11738,13 @@
             "light": {
               "raw": "{radius.small}",
               "css": "var(--small-radius)",
-              "resolved": "0.125rem",
+              "resolved": "0px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.small}",
               "css": "var(--small-radius)",
-              "resolved": "0.125rem",
+              "resolved": "0px",
               "alpha": 1
             }
           }
