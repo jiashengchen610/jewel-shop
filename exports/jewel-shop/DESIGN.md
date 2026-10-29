@@ -293,6 +293,8 @@ colors:
   black: "#000000"
   material-glass: "#ffffff"
   material-glass-foreground: "#030712"
+  gradient-brand-foreground: "#ffffff"
+  gradient-surface-foreground: "#030712"
   background: "#ffffff"
   foreground: "#030712"
   card: "#ffffff"
@@ -441,6 +443,7 @@ colors:
   empty-media-background: "#f3f4f6"
   empty-media-foreground: "#030712"
   empty-description-foreground: "#4a5565"
+  glass-panel-foreground: "#030712"
   input-group-field-background: "oklch(1 0 0 / 0)"
   input-group-field-border: "#e5e7eb"
   input-group-addon-foreground: "#4a5565"
@@ -472,6 +475,11 @@ colors:
   select-item-highlight-foreground: "#101828"
   select-item-label: "#4a5565"
   separator-line: "#e5e7eb"
+  sheet-overlay: "oklch(0.13 0.028 261.7 / 0.5)"
+  sheet-content-background: "#ffffff"
+  sheet-content-foreground: "#030712"
+  sheet-content-border: "#e5e7eb"
+  sheet-description-foreground: "#4a5565"
   slider-track: "#f3f4f6"
   slider-range: "#101828"
   slider-thumb-background: "#ffffff"
@@ -480,6 +488,14 @@ colors:
   switch-track-off: "#e5e7eb"
   switch-thumb-on: "#ffffff"
   switch-thumb-off: "#ffffff"
+  table-border: "#e5e7eb"
+  table-header-background: "#f3f4f6"
+  table-header-foreground: "#4a5565"
+  table-row-foreground: "#030712"
+  table-row-background-hover: "oklch(0.967 0.003 264.5 / 0.5)"
+  table-footer-background: "oklch(0.967 0.003 264.5 / 0.5)"
+  table-footer-foreground: "#030712"
+  table-caption-foreground: "#4a5565"
   tabs-list-background: "#f3f4f6"
   tabs-list-foreground: "#4a5565"
   tabs-trigger-active-background: "#ffffff"
@@ -596,6 +612,7 @@ rounded:
   dialog-close: 15px
   empty: 2rem
   empty-media: 9999px
+  glass: 2rem
   input-group: 9999px
   input-group-button: 9994px
   input-group-multiline: 1rem
@@ -606,6 +623,7 @@ rounded:
   select: 9999px
   select-content: 9999px
   select-item: 9994px
+  sheet-close: 0.375rem
   slider: 9999px
   slider-thumb: 9999px
   tabs: 9999px
