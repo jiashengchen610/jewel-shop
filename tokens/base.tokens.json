@@ -21,6 +21,11 @@
       "$type": "number",
       "$value": 1,
       "$description": "1: parts inside a rounded container (tabs in the tab bar, options in a menu, close buttons in a corner) take its corners minus the gap, so the space between stays even. 0: they keep their own corners."
+    },
+    "multiline": {
+      "$type": "dimension",
+      "$description": "Fields with several lines (text boxes, message boxes): as round as fields, but never pill-shaped",
+      "$value": "{radius.2xl}"
     }
   },
   "font": {

@@ -566,6 +566,7 @@
   --input-group-control-placeholder: var(--muted-foreground);
   --input-group-field-background: color-mix(in oklab, var(--background) 0%, transparent);
   --input-group-field-border: var(--input);
+  --input-group-multiline-radius: var(--multiline-radius);
   --input-group-radius: var(--control-radius);
   --input-group-text-font: var(--body-md-font);
   --input-radius: var(--control-radius);
@@ -609,6 +610,7 @@
   --material-glass: var(--popover);
   --mono-font: var(--code-font);
   --motion-fast: 150ms var(--standard-ease);
+  --multiline-radius: var(--2xl-radius);
   --muted-foreground: var(--gray-600);
   --muted: var(--gray-100);
   --overlay-shadow: var(--lg-shadow);
@@ -672,7 +674,7 @@
   --textarea-field-font: var(--body-md-font);
   --textarea-field-foreground: var(--foreground);
   --textarea-field-placeholder: var(--muted-foreground);
-  --textarea-radius: var(--control-radius);
+  --textarea-radius: var(--multiline-radius);
   --toast-action-font: var(--label-md-font);
   --toast-action-radius: var(--control-radius);
   --toast-close-radius: max(var(--small-radius), calc(var(--toast-radius) - var(--spacing) * 2 - 1px));
@@ -950,6 +952,7 @@
   --input-group-control-placeholder: var(--muted-foreground);
   --input-group-field-background: color-mix(in oklab, var(--input) 30%, transparent);
   --input-group-field-border: var(--input);
+  --input-group-multiline-radius: var(--multiline-radius);
   --input-group-radius: var(--control-radius);
   --input-group-text-font: var(--body-md-font);
   --input-radius: var(--control-radius);
@@ -993,6 +996,7 @@
   --material-glass: var(--popover);
   --mono-font: var(--code-font);
   --motion-fast: 150ms var(--standard-ease);
+  --multiline-radius: var(--2xl-radius);
   --muted-foreground: var(--gray-400);
   --muted: var(--gray-800);
   --overlay-shadow: 0px 10px 24px -4px oklch(0 0 0 / 0.6), 0px 4px 8px -4px oklch(0 0 0 / 0.5), inset 0px 1px 0px 0px oklch(1 0 0 / 0.08);
@@ -1056,7 +1060,7 @@
   --textarea-field-font: var(--body-md-font);
   --textarea-field-foreground: var(--foreground);
   --textarea-field-placeholder: var(--muted-foreground);
-  --textarea-radius: var(--control-radius);
+  --textarea-radius: var(--multiline-radius);
   --toast-action-font: var(--label-md-font);
   --toast-action-radius: var(--control-radius);
   --toast-close-radius: max(var(--small-radius), calc(var(--toast-radius) - var(--spacing) * 2 - 1px));
@@ -1611,12 +1615,14 @@
   --radius-empty: var(--empty-radius);
   --radius-full: var(--full-radius);
   --radius-input-group-button: var(--input-group-button-radius);
+  --radius-input-group-multiline: var(--input-group-multiline-radius);
   --radius-input-group: var(--input-group-radius);
   --radius-input: var(--input-radius);
   --radius-item-media: var(--item-media-radius);
   --radius-item: var(--item-radius);
   --radius-lg: var(--lg-radius);
   --radius-md: var(--md-radius);
+  --radius-multiline: var(--multiline-radius);
   --radius-none: var(--none-radius);
   --radius-pill: var(--pill-radius);
   --radius-progress: var(--progress-radius);

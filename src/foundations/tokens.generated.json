@@ -7030,6 +7030,31 @@
           }
         },
         {
+          "name": "multiline-radius",
+          "path": "radius/multiline",
+          "group": "radius",
+          "type": "dimension",
+          "description": "Fields with several lines (text boxes, message boxes): as round as fields, but never pill-shaped",
+          "layer": "semantic",
+          "refs": [
+            "radius/2xl"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.2xl}",
+              "css": "var(--2xl-radius)",
+              "resolved": "1rem",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.2xl}",
+              "css": "var(--2xl-radius)",
+              "resolved": "1rem",
+              "alpha": 1
+            }
+          }
+        },
+        {
           "name": "body-font",
           "path": "font/body",
           "group": "font",
@@ -13071,6 +13096,31 @@
           }
         },
         {
+          "name": "input-group-multiline-radius",
+          "path": "input-group/multiline/radius",
+          "group": "input-group",
+          "type": "dimension",
+          "description": "The frame when it holds several lines, or buttons above or below",
+          "layer": "components",
+          "refs": [
+            "radius/multiline"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.multiline}",
+              "css": "var(--multiline-radius)",
+              "resolved": "1rem",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.multiline}",
+              "css": "var(--multiline-radius)",
+              "resolved": "1rem",
+              "alpha": 1
+            }
+          }
+        },
+        {
           "name": "input-radius",
           "path": "input/radius",
           "group": "input",
@@ -14541,19 +14591,19 @@
           "type": "dimension",
           "layer": "components",
           "refs": [
-            "radius/control"
+            "radius/multiline"
           ],
           "values": {
             "light": {
-              "raw": "{radius.control}",
-              "css": "var(--control-radius)",
-              "resolved": "9999px",
+              "raw": "{radius.multiline}",
+              "css": "var(--multiline-radius)",
+              "resolved": "1rem",
               "alpha": 1
             },
             "dark": {
-              "raw": "{radius.control}",
-              "css": "var(--control-radius)",
-              "resolved": "9999px",
+              "raw": "{radius.multiline}",
+              "css": "var(--multiline-radius)",
+              "resolved": "1rem",
               "alpha": 1
             }
           }

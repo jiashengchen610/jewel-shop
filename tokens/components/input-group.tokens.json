@@ -70,6 +70,13 @@
         "$value": "{typography.body.md}",
         "$description": "What people type in a multi-line group"
       }
+    },
+    "multiline": {
+      "radius": {
+        "$type": "dimension",
+        "$description": "The frame when it holds several lines, or buttons above or below",
+        "$value": "{radius.multiline}"
+      }
     }
   }
 }
