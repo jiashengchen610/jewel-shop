@@ -1,6 +1,6 @@
 {
-  "name": "Jewel Shop",
-  "context": "e-commerce",
+  "name": "Plinth Dashboard",
+  "context": "saas-dashboard",
   "defaultBrand": "jewel-shop",
   "layers": [
     {
@@ -18,7 +18,7 @@
   ],
   "brands": {
     "jewel-shop": {
-      "name": "jewel-shop",
+      "name": "Plinth Dashboard",
       "modes": [
         "light",
         "dark"
@@ -6795,8 +6795,8 @@
           }
         },
         {
-          "name": "nunito-font",
-          "path": "font/nunito",
+          "name": "geist-font",
+          "path": "font/geist",
           "group": "font",
           "type": "fontFamily",
           "layer": "primitives",
@@ -6804,20 +6804,76 @@
           "values": {
             "light": {
               "raw": [
-                "Nunito",
+                "Geist",
                 "sans-serif"
               ],
-              "css": "Nunito, sans-serif",
-              "resolved": "Nunito, sans-serif",
+              "css": "Geist, sans-serif",
+              "resolved": "Geist, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": [
-                "Nunito",
+                "Geist",
                 "sans-serif"
               ],
-              "css": "Nunito, sans-serif",
-              "resolved": "Nunito, sans-serif",
+              "css": "Geist, sans-serif",
+              "resolved": "Geist, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "geist-mono-font",
+          "path": "font/geist-mono",
+          "group": "font",
+          "type": "fontFamily",
+          "layer": "primitives",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": [
+                "Geist Mono",
+                "monospace"
+              ],
+              "css": "'Geist Mono', monospace",
+              "resolved": "'Geist Mono', monospace",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": [
+                "Geist Mono",
+                "monospace"
+              ],
+              "css": "'Geist Mono', monospace",
+              "resolved": "'Geist Mono', monospace",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "inter-font",
+          "path": "font/inter",
+          "group": "font",
+          "type": "fontFamily",
+          "layer": "primitives",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": [
+                "Inter",
+                "sans-serif"
+              ],
+              "css": "Inter, sans-serif",
+              "resolved": "Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": [
+                "Inter",
+                "sans-serif"
+              ],
+              "css": "Inter, sans-serif",
+              "resolved": "Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -6883,19 +6939,19 @@
           "description": "Cards, panels, dialogs",
           "layer": "semantic",
           "refs": [
-            "radius/2xl"
+            "radius/4xl"
           ],
           "values": {
             "light": {
-              "raw": "{radius.2xl}",
-              "css": "var(--2xl-radius)",
-              "resolved": "1rem",
+              "raw": "{radius.4xl}",
+              "css": "var(--4xl-radius)",
+              "resolved": "2rem",
               "alpha": 1
             },
             "dark": {
-              "raw": "{radius.2xl}",
-              "css": "var(--2xl-radius)",
-              "resolved": "1rem",
+              "raw": "{radius.4xl}",
+              "css": "var(--4xl-radius)",
+              "resolved": "2rem",
               "alpha": 1
             }
           }
@@ -6974,31 +7030,6 @@
           }
         },
         {
-          "name": "sans-font",
-          "path": "font/sans",
-          "group": "font",
-          "type": "fontFamily",
-          "description": "Tailwind's font-sans: the page's default font",
-          "layer": "semantic",
-          "refs": [
-            "font/body"
-          ],
-          "values": {
-            "light": {
-              "raw": "{font.body}",
-              "css": "var(--body-font)",
-              "resolved": "Nunito, sans-serif",
-              "alpha": 1
-            },
-            "dark": {
-              "raw": "{font.body}",
-              "css": "var(--body-font)",
-              "resolved": "Nunito, sans-serif",
-              "alpha": 1
-            }
-          }
-        },
-        {
           "name": "body-font",
           "path": "font/body",
           "group": "font",
@@ -7006,19 +7037,19 @@
           "description": "Running text, fields and lists",
           "layer": "semantic",
           "refs": [
-            "font/nunito"
+            "font/inter"
           ],
           "values": {
             "light": {
-              "raw": "{font.nunito}",
-              "css": "var(--nunito-font)",
-              "resolved": "Nunito, sans-serif",
+              "raw": "{font.inter}",
+              "css": "var(--inter-font)",
+              "resolved": "Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
-              "raw": "{font.nunito}",
-              "css": "var(--nunito-font)",
-              "resolved": "Nunito, sans-serif",
+              "raw": "{font.inter}",
+              "css": "var(--inter-font)",
+              "resolved": "Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7037,13 +7068,13 @@
             "light": {
               "raw": "{font.body}",
               "css": "var(--body-font)",
-              "resolved": "Nunito, sans-serif",
+              "resolved": "Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{font.body}",
               "css": "var(--body-font)",
-              "resolved": "Nunito, sans-serif",
+              "resolved": "Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7062,13 +7093,13 @@
             "light": {
               "raw": "{font.body}",
               "css": "var(--body-font)",
-              "resolved": "Nunito, sans-serif",
+              "resolved": "Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{font.body}",
               "css": "var(--body-font)",
-              "resolved": "Nunito, sans-serif",
+              "resolved": "Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7094,6 +7125,31 @@
               "raw": "{font.jetbrains-mono}",
               "css": "var(--jetbrains-mono-font)",
               "resolved": "'JetBrains Mono', monospace",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "sans-font",
+          "path": "font/sans",
+          "group": "font",
+          "type": "fontFamily",
+          "description": "Tailwind's font-sans: the page's default font",
+          "layer": "semantic",
+          "refs": [
+            "font/body"
+          ],
+          "values": {
+            "light": {
+              "raw": "{font.body}",
+              "css": "var(--body-font)",
+              "resolved": "Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{font.body}",
+              "css": "var(--body-font)",
+              "resolved": "Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7147,7 +7203,7 @@
                 }
               },
               "css": "600 2rem/1.15 var(--heading-font)",
-              "resolved": "600 2rem/1.15 Nunito, sans-serif",
+              "resolved": "600 2rem/1.15 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
@@ -7165,7 +7221,7 @@
                 }
               },
               "css": "600 2rem/1.15 var(--heading-font)",
-              "resolved": "600 2rem/1.15 Nunito, sans-serif",
+              "resolved": "600 2rem/1.15 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7194,7 +7250,7 @@
                 }
               },
               "css": "600 1.5rem/1.25 var(--heading-font)",
-              "resolved": "600 1.5rem/1.25 Nunito, sans-serif",
+              "resolved": "600 1.5rem/1.25 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
@@ -7212,7 +7268,7 @@
                 }
               },
               "css": "600 1.5rem/1.25 var(--heading-font)",
-              "resolved": "600 1.5rem/1.25 Nunito, sans-serif",
+              "resolved": "600 1.5rem/1.25 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7241,7 +7297,7 @@
                 }
               },
               "css": "600 1.125rem/1.35 var(--heading-font)",
-              "resolved": "600 1.125rem/1.35 Nunito, sans-serif",
+              "resolved": "600 1.125rem/1.35 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
@@ -7259,7 +7315,7 @@
                 }
               },
               "css": "600 1.125rem/1.35 var(--heading-font)",
-              "resolved": "600 1.125rem/1.35 Nunito, sans-serif",
+              "resolved": "600 1.125rem/1.35 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7288,7 +7344,7 @@
                 }
               },
               "css": "500 1rem/1.375 var(--heading-font)",
-              "resolved": "500 1rem/1.375 Nunito, sans-serif",
+              "resolved": "500 1rem/1.375 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
@@ -7306,7 +7362,7 @@
                 }
               },
               "css": "500 1rem/1.375 var(--heading-font)",
-              "resolved": "500 1rem/1.375 Nunito, sans-serif",
+              "resolved": "500 1rem/1.375 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7335,7 +7391,7 @@
                 }
               },
               "css": "500 0.875rem/1.375 var(--heading-font)",
-              "resolved": "500 0.875rem/1.375 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.375 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
@@ -7353,7 +7409,7 @@
                 }
               },
               "css": "500 0.875rem/1.375 var(--heading-font)",
-              "resolved": "500 0.875rem/1.375 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.375 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7382,7 +7438,7 @@
                 }
               },
               "css": "400 1rem/1.5 var(--body-font)",
-              "resolved": "400 1rem/1.5 Nunito, sans-serif",
+              "resolved": "400 1rem/1.5 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
@@ -7400,7 +7456,7 @@
                 }
               },
               "css": "400 1rem/1.5 var(--body-font)",
-              "resolved": "400 1rem/1.5 Nunito, sans-serif",
+              "resolved": "400 1rem/1.5 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7429,7 +7485,7 @@
                 }
               },
               "css": "400 0.875rem/1.5 var(--body-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
@@ -7447,7 +7503,7 @@
                 }
               },
               "css": "400 0.875rem/1.5 var(--body-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7476,7 +7532,7 @@
                 }
               },
               "css": "400 0.75rem/1.35 var(--body-font)",
-              "resolved": "400 0.75rem/1.35 Nunito, sans-serif",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
@@ -7494,7 +7550,7 @@
                 }
               },
               "css": "400 0.75rem/1.35 var(--body-font)",
-              "resolved": "400 0.75rem/1.35 Nunito, sans-serif",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7523,7 +7579,7 @@
                 }
               },
               "css": "500 0.875rem/1.25 var(--label-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
@@ -7541,7 +7597,7 @@
                 }
               },
               "css": "500 0.875rem/1.25 var(--label-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -7570,7 +7626,7 @@
                 }
               },
               "css": "500 0.75rem/1.35 var(--label-font)",
-              "resolved": "500 0.75rem/1.35 Nunito, sans-serif",
+              "resolved": "500 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
@@ -7588,7 +7644,7 @@
                 }
               },
               "css": "500 0.75rem/1.35 var(--label-font)",
-              "resolved": "500 0.75rem/1.35 Nunito, sans-serif",
+              "resolved": "500 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -8150,6 +8206,56 @@
           }
         },
         {
+          "name": "material-glass",
+          "path": "material/glass",
+          "group": "material",
+          "type": "color",
+          "description": "Glass: the color it tints what is behind it with, and shows solid where the browser cannot blur or the system asks for less transparency",
+          "layer": "semantic",
+          "refs": [
+            "color/popover"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.popover}",
+              "css": "var(--popover)",
+              "resolved": "oklch(1 0 0)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.popover}",
+              "css": "var(--popover)",
+              "resolved": "oklch(0.21 0.034 264.665)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "material-glass-foreground",
+          "path": "material/glass-foreground",
+          "group": "material",
+          "type": "color",
+          "description": "Text on glass",
+          "layer": "semantic",
+          "refs": [
+            "color/popover-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.popover-foreground}",
+              "css": "var(--popover-foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.popover-foreground}",
+              "css": "var(--popover-foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
           "name": "background",
           "path": "color/background",
           "group": "color",
@@ -8157,7 +8263,7 @@
           "layer": "semantic",
           "refs": [
             "color/white",
-            "color/slate/950"
+            "color/gray/950"
           ],
           "values": {
             "light": {
@@ -8167,9 +8273,9 @@
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.950}",
-              "css": "var(--slate-950)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "raw": "{color.gray.950}",
+              "css": "var(--gray-950)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             }
           }
@@ -8181,20 +8287,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/slate/950",
-            "color/slate/50"
+            "color/gray/950",
+            "color/gray/50"
           ],
           "values": {
             "light": {
-              "raw": "{color.slate.950}",
-              "css": "var(--slate-950)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "raw": "{color.gray.950}",
+              "css": "var(--gray-950)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.50}",
-              "css": "var(--slate-50)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "raw": "{color.gray.50}",
+              "css": "var(--gray-50)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -8207,7 +8313,7 @@
           "layer": "semantic",
           "refs": [
             "color/white",
-            "color/slate/900"
+            "color/gray/900"
           ],
           "values": {
             "light": {
@@ -8217,9 +8323,9 @@
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.900}",
-              "css": "var(--slate-900)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "raw": "{color.gray.900}",
+              "css": "var(--gray-900)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -8231,20 +8337,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/slate/950",
-            "color/slate/50"
+            "color/gray/950",
+            "color/gray/50"
           ],
           "values": {
             "light": {
-              "raw": "{color.slate.950}",
-              "css": "var(--slate-950)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "raw": "{color.gray.950}",
+              "css": "var(--gray-950)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.50}",
-              "css": "var(--slate-50)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "raw": "{color.gray.50}",
+              "css": "var(--gray-50)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -8257,7 +8363,7 @@
           "layer": "semantic",
           "refs": [
             "color/white",
-            "color/slate/900"
+            "color/gray/900"
           ],
           "values": {
             "light": {
@@ -8267,9 +8373,9 @@
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.900}",
-              "css": "var(--slate-900)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "raw": "{color.gray.900}",
+              "css": "var(--gray-900)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -8281,20 +8387,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/slate/950",
-            "color/slate/50"
+            "color/gray/950",
+            "color/gray/50"
           ],
           "values": {
             "light": {
-              "raw": "{color.slate.950}",
-              "css": "var(--slate-950)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "raw": "{color.gray.950}",
+              "css": "var(--gray-950)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.50}",
-              "css": "var(--slate-50)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "raw": "{color.gray.50}",
+              "css": "var(--gray-50)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -8306,20 +8412,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/blue/600",
-            "color/blue/400"
+            "color/gray/900",
+            "color/gray/200"
           ],
           "values": {
             "light": {
-              "raw": "{color.blue.600}",
-              "css": "var(--blue-600)",
-              "resolved": "oklch(0.546 0.245 262.881)",
+              "raw": "{color.gray.900}",
+              "css": "var(--gray-900)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.blue.400}",
-              "css": "var(--blue-400)",
-              "resolved": "oklch(0.707 0.165 254.624)",
+              "raw": "{color.gray.200}",
+              "css": "var(--gray-200)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             }
           }
@@ -8332,7 +8438,7 @@
           "layer": "semantic",
           "refs": [
             "color/white",
-            "color/blue/950"
+            "color/gray/900"
           ],
           "values": {
             "light": {
@@ -8342,9 +8448,9 @@
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.blue.950}",
-              "css": "var(--blue-950)",
-              "resolved": "oklch(0.282 0.091 267.935)",
+              "raw": "{color.gray.900}",
+              "css": "var(--gray-900)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -8356,20 +8462,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/slate/100",
-            "color/slate/800"
+            "color/gray/100",
+            "color/gray/800"
           ],
           "values": {
             "light": {
-              "raw": "{color.slate.100}",
-              "css": "var(--slate-100)",
-              "resolved": "oklch(0.968 0.007 247.896)",
+              "raw": "{color.gray.100}",
+              "css": "var(--gray-100)",
+              "resolved": "oklch(0.967 0.003 264.542)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.800}",
-              "css": "var(--slate-800)",
-              "resolved": "oklch(0.279 0.041 260.031)",
+              "raw": "{color.gray.800}",
+              "css": "var(--gray-800)",
+              "resolved": "oklch(0.278 0.033 256.848)",
               "alpha": 1
             }
           }
@@ -8381,20 +8487,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/slate/900",
-            "color/slate/50"
+            "color/gray/900",
+            "color/gray/50"
           ],
           "values": {
             "light": {
-              "raw": "{color.slate.900}",
-              "css": "var(--slate-900)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "raw": "{color.gray.900}",
+              "css": "var(--gray-900)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.50}",
-              "css": "var(--slate-50)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "raw": "{color.gray.50}",
+              "css": "var(--gray-50)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -8406,20 +8512,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/slate/100",
-            "color/slate/800"
+            "color/gray/100",
+            "color/gray/800"
           ],
           "values": {
             "light": {
-              "raw": "{color.slate.100}",
-              "css": "var(--slate-100)",
-              "resolved": "oklch(0.968 0.007 247.896)",
+              "raw": "{color.gray.100}",
+              "css": "var(--gray-100)",
+              "resolved": "oklch(0.967 0.003 264.542)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.800}",
-              "css": "var(--slate-800)",
-              "resolved": "oklch(0.279 0.041 260.031)",
+              "raw": "{color.gray.800}",
+              "css": "var(--gray-800)",
+              "resolved": "oklch(0.278 0.033 256.848)",
               "alpha": 1
             }
           }
@@ -8431,20 +8537,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/slate/600",
-            "color/slate/400"
+            "color/gray/600",
+            "color/gray/400"
           ],
           "values": {
             "light": {
-              "raw": "{color.slate.600}",
-              "css": "var(--slate-600)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "raw": "{color.gray.600}",
+              "css": "var(--gray-600)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.400}",
-              "css": "var(--slate-400)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "raw": "{color.gray.400}",
+              "css": "var(--gray-400)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -8456,20 +8562,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/slate/100",
-            "color/slate/800"
+            "color/gray/100",
+            "color/gray/800"
           ],
           "values": {
             "light": {
-              "raw": "{color.slate.100}",
-              "css": "var(--slate-100)",
-              "resolved": "oklch(0.968 0.007 247.896)",
+              "raw": "{color.gray.100}",
+              "css": "var(--gray-100)",
+              "resolved": "oklch(0.967 0.003 264.542)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.800}",
-              "css": "var(--slate-800)",
-              "resolved": "oklch(0.279 0.041 260.031)",
+              "raw": "{color.gray.800}",
+              "css": "var(--gray-800)",
+              "resolved": "oklch(0.278 0.033 256.848)",
               "alpha": 1
             }
           }
@@ -8481,20 +8587,20 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/slate/900",
-            "color/slate/50"
+            "color/gray/900",
+            "color/gray/50"
           ],
           "values": {
             "light": {
-              "raw": "{color.slate.900}",
-              "css": "var(--slate-900)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "raw": "{color.gray.900}",
+              "css": "var(--gray-900)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.50}",
-              "css": "var(--slate-50)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "raw": "{color.gray.50}",
+              "css": "var(--gray-50)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -8531,14 +8637,14 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/slate/200",
+            "color/gray/200",
             "color/white"
           ],
           "values": {
             "light": {
-              "raw": "{color.slate.200}",
-              "css": "var(--slate-200)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "raw": "{color.gray.200}",
+              "css": "var(--gray-200)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -8556,14 +8662,14 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/slate/200",
+            "color/gray/200",
             "color/white"
           ],
           "values": {
             "light": {
-              "raw": "{color.slate.200}",
-              "css": "var(--slate-200)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "raw": "{color.gray.200}",
+              "css": "var(--gray-200)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -8581,19 +8687,19 @@
           "type": "color",
           "layer": "semantic",
           "refs": [
-            "color/blue/500"
+            "color/gray/500"
           ],
           "values": {
             "light": {
-              "raw": "{color.blue.500}",
-              "css": "var(--blue-500)",
-              "resolved": "oklch(0.623 0.214 259.815)",
+              "raw": "{color.gray.500}",
+              "css": "var(--gray-500)",
+              "resolved": "oklch(0.551 0.027 264.364)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.blue.500}",
-              "css": "var(--blue-500)",
-              "resolved": "oklch(0.623 0.214 259.815)",
+              "raw": "{color.gray.500}",
+              "css": "var(--gray-500)",
+              "resolved": "oklch(0.551 0.027 264.364)",
               "alpha": 1
             }
           }
@@ -9219,20 +9325,20 @@
           "description": "Chart diverging step: one hue below the middle, a neutral at it, another hue above",
           "layer": "semantic",
           "refs": [
-            "color/slate/200",
-            "color/slate/800"
+            "color/gray/200",
+            "color/gray/800"
           ],
           "values": {
             "light": {
-              "raw": "{color.slate.200}",
-              "css": "var(--slate-200)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "raw": "{color.gray.200}",
+              "css": "var(--gray-200)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.slate.800}",
-              "css": "var(--slate-800)",
-              "resolved": "oklch(0.279 0.041 260.031)",
+              "raw": "{color.gray.800}",
+              "css": "var(--gray-800)",
+              "resolved": "oklch(0.278 0.033 256.848)",
               "alpha": 1
             }
           }
@@ -9315,9 +9421,9 @@
           }
         },
         {
-          "name": "alert-radius",
-          "path": "alert/radius",
-          "group": "alert",
+          "name": "alert-dialog-radius",
+          "path": "alert-dialog/radius",
+          "group": "alert-dialog",
           "type": "dimension",
           "layer": "components",
           "refs": [
@@ -9327,21 +9433,70 @@
             "light": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "1rem",
+              "resolved": "2rem",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "1rem",
+              "resolved": "2rem",
               "alpha": 1
             }
           }
         },
         {
-          "name": "alert-default-background",
-          "path": "alert/default/background",
-          "group": "alert",
+          "name": "alert-dialog-shadow",
+          "path": "alert-dialog/shadow",
+          "group": "alert-dialog",
+          "type": "shadow",
+          "layer": "components",
+          "refs": [
+            "shadow/overlay"
+          ],
+          "values": {
+            "light": {
+              "raw": "{shadow.overlay}",
+              "css": "var(--overlay-shadow)",
+              "resolved": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{shadow.overlay}",
+              "css": "var(--overlay-shadow)",
+              "resolved": "0px 10px 24px -4px oklch(0 0 0 / 0.6), 0px 4px 8px -4px oklch(0 0 0 / 0.5), inset 0px 1px 0px 0px oklch(1 0 0 / 0.08)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "alert-dialog-overlay",
+          "path": "alert-dialog/overlay",
+          "group": "alert-dialog",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground",
+            "color/background"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "color-mix(in oklab, var(--foreground) 50%, transparent)",
+              "resolved": "oklch(0.13 0.028 261.7 / 0.5)",
+              "alpha": 0.5
+            },
+            "dark": {
+              "raw": "{color.background}",
+              "css": "color-mix(in oklab, var(--background) 80%, transparent)",
+              "resolved": "oklch(0.13 0.028 261.7 / 0.8)",
+              "alpha": 0.8
+            }
+          }
+        },
+        {
+          "name": "alert-dialog-content-background",
+          "path": "alert-dialog/content/background",
+          "group": "alert-dialog",
           "type": "color",
           "layer": "components",
           "refs": [
@@ -9357,7 +9512,300 @@
             "dark": {
               "raw": "{color.background}",
               "css": "var(--background)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "alert-dialog-content-foreground",
+          "path": "alert-dialog/content/foreground",
+          "group": "alert-dialog",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "alert-dialog-content-border",
+          "path": "alert-dialog/content/border",
+          "group": "alert-dialog",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "color-mix(in oklab, var(--foreground) 10%, transparent)",
+              "resolved": "oklch(0.13 0.028 261.7 / 0.1)",
+              "alpha": 0.1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "color-mix(in oklab, var(--foreground) 10%, transparent)",
+              "resolved": "oklch(0.985 0.002 247.8 / 0.1)",
+              "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "alert-dialog-footer-background",
+          "path": "alert-dialog/footer/background",
+          "group": "alert-dialog",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted}",
+              "css": "color-mix(in oklab, var(--muted) 50%, transparent)",
+              "resolved": "oklch(0.967 0.003 264.5 / 0.5)",
+              "alpha": 0.5
+            },
+            "dark": {
+              "raw": "{color.muted}",
+              "css": "color-mix(in oklab, var(--muted) 50%, transparent)",
+              "resolved": "oklch(0.278 0.033 256.8 / 0.5)",
+              "alpha": 0.5
+            }
+          }
+        },
+        {
+          "name": "alert-dialog-footer-border",
+          "path": "alert-dialog/footer/border",
+          "group": "alert-dialog",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/border"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(0.928 0.006 264.531)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(1 0 0 / 0.1)",
+              "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "alert-dialog-title-font",
+          "path": "alert-dialog/title/font",
+          "group": "alert-dialog",
+          "type": "typography",
+          "description": "The question being asked",
+          "layer": "components",
+          "refs": [
+            "typography/heading/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.heading.sm}",
+              "css": "var(--heading-sm-font)",
+              "resolved": "500 1rem/1.375 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.heading.sm}",
+              "css": "var(--heading-sm-font)",
+              "resolved": "500 1rem/1.375 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "alert-dialog-description-foreground",
+          "path": "alert-dialog/description/foreground",
+          "group": "alert-dialog",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.446 0.03 256.802)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.707 0.022 261.325)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "alert-dialog-description-font",
+          "path": "alert-dialog/description/font",
+          "group": "alert-dialog",
+          "type": "typography",
+          "description": "What happens if they go ahead",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "alert-dialog-media-background",
+          "path": "alert-dialog/media/background",
+          "group": "alert-dialog",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.967 0.003 264.542)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.278 0.033 256.848)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "alert-dialog-media-foreground",
+          "path": "alert-dialog/media/foreground",
+          "group": "alert-dialog",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "alert-dialog-media-radius",
+          "path": "alert-dialog/media/radius",
+          "group": "alert-dialog",
+          "type": "dimension",
+          "description": "The icon tile beside the title",
+          "layer": "components",
+          "refs": [
+            "radius/control",
+            "alert-dialog/radius",
+            "radius/small"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.control}",
+              "css": "max(var(--small-radius), calc(var(--alert-dialog-radius) - var(--spacing) * 4 - 1px))",
+              "resolved": "15px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.control}",
+              "css": "max(var(--small-radius), calc(var(--alert-dialog-radius) - var(--spacing) * 4 - 1px))",
+              "resolved": "15px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "alert-radius",
+          "path": "alert/radius",
+          "group": "alert",
+          "type": "dimension",
+          "layer": "components",
+          "refs": [
+            "radius/container"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.container}",
+              "css": "var(--container-radius)",
+              "resolved": "2rem",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.container}",
+              "css": "var(--container-radius)",
+              "resolved": "2rem",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "alert-default-background",
+          "path": "alert/default/background",
+          "group": "alert",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/card"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.card}",
+              "css": "var(--card)",
+              "resolved": "oklch(1 0 0)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.card}",
+              "css": "var(--card)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -9375,13 +9823,13 @@
             "light": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -9399,7 +9847,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -9423,13 +9871,13 @@
             "light": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -9447,13 +9895,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -9477,7 +9925,7 @@
             "dark": {
               "raw": "{color.card}",
               "css": "var(--card)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -9597,7 +10045,7 @@
             "dark": {
               "raw": "{color.card}",
               "css": "var(--card)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -9615,13 +10063,13 @@
             "light": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -9687,13 +10135,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -9717,7 +10165,7 @@
             "dark": {
               "raw": "{color.card}",
               "css": "var(--card)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -9735,13 +10183,13 @@
             "light": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -9807,13 +10255,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -9837,7 +10285,7 @@
             "dark": {
               "raw": "{color.card}",
               "css": "var(--card)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -9855,13 +10303,13 @@
             "light": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -9927,13 +10375,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -9952,13 +10400,13 @@
             "light": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -9977,13 +10425,13 @@
             "light": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -10025,13 +10473,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.546 0.245 262.881)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.707 0.165 254.624)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             }
           }
@@ -10055,7 +10503,7 @@
             "dark": {
               "raw": "{color.primary-foreground}",
               "css": "var(--primary-foreground)",
-              "resolved": "oklch(0.282 0.091 267.935)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -10073,13 +10521,13 @@
             "light": {
               "raw": "{color.secondary}",
               "css": "var(--secondary)",
-              "resolved": "oklch(0.968 0.007 247.896)",
+              "resolved": "oklch(0.967 0.003 264.542)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.secondary}",
               "css": "var(--secondary)",
-              "resolved": "oklch(0.279 0.041 260.031)",
+              "resolved": "oklch(0.278 0.033 256.848)",
               "alpha": 1
             }
           }
@@ -10097,13 +10545,13 @@
             "light": {
               "raw": "{color.secondary-foreground}",
               "css": "var(--secondary-foreground)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.secondary-foreground}",
               "css": "var(--secondary-foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -10313,13 +10761,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -10337,7 +10785,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -10361,13 +10809,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -10385,13 +10833,13 @@
             "light": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.968 0.007 247.896)",
+              "resolved": "oklch(0.967 0.003 264.542)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.279 0.041 260.031)",
+              "resolved": "oklch(0.278 0.033 256.848)",
               "alpha": 1
             }
           }
@@ -10409,13 +10857,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.546 0.245 262.881)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.707 0.165 254.624)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             }
           }
@@ -10434,13 +10882,256 @@
             "light": {
               "raw": "{typography.label.sm}",
               "css": "var(--label-sm-font)",
-              "resolved": "500 0.75rem/1.35 Nunito, sans-serif",
+              "resolved": "500 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.label.sm}",
               "css": "var(--label-sm-font)",
-              "resolved": "500 0.75rem/1.35 Nunito, sans-serif",
+              "resolved": "500 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "breadcrumb-list-foreground",
+          "path": "breadcrumb/list/foreground",
+          "group": "breadcrumb",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.446 0.03 256.802)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.707 0.022 261.325)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "breadcrumb-list-font",
+          "path": "breadcrumb/list/font",
+          "group": "breadcrumb",
+          "type": "typography",
+          "description": "The trail of pages",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "breadcrumb-link-foreground-hover",
+          "path": "breadcrumb/link/foreground-hover",
+          "group": "breadcrumb",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "breadcrumb-page-foreground",
+          "path": "breadcrumb/page/foreground",
+          "group": "breadcrumb",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "button-group-radius",
+          "path": "button-group/radius",
+          "group": "button-group",
+          "type": "dimension",
+          "description": "The outer corners of the group: the same as a button's",
+          "layer": "components",
+          "refs": [
+            "radius/control"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.control}",
+              "css": "var(--control-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.control}",
+              "css": "var(--control-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "button-group-separator",
+          "path": "button-group/separator",
+          "group": "button-group",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/input"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.input}",
+              "css": "var(--input)",
+              "resolved": "oklch(0.928 0.006 264.531)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.input}",
+              "css": "var(--input)",
+              "resolved": "oklch(1 0 0 / 0.15)",
+              "alpha": 0.15
+            }
+          }
+        },
+        {
+          "name": "button-group-text-background",
+          "path": "button-group/text/background",
+          "group": "button-group",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.967 0.003 264.542)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.278 0.033 256.848)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "button-group-text-foreground",
+          "path": "button-group/text/foreground",
+          "group": "button-group",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "button-group-text-border",
+          "path": "button-group/text/border",
+          "group": "button-group",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/border"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(0.928 0.006 264.531)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(1 0 0 / 0.1)",
+              "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "button-group-text-font",
+          "path": "button-group/text/font",
+          "group": "button-group",
+          "type": "typography",
+          "description": "Text joined to the buttons, like a currency sign",
+          "layer": "components",
+          "refs": [
+            "typography/label/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -10482,13 +11173,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.546 0.245 262.881)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.707 0.165 254.624)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             }
           }
@@ -10512,7 +11203,7 @@
             "dark": {
               "raw": "{color.primary-foreground}",
               "css": "var(--primary-foreground)",
-              "resolved": "oklch(0.282 0.091 267.935)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -10530,13 +11221,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "color-mix(in oklab, var(--primary) 80%, transparent)",
-              "resolved": "oklch(0.546 0.245 262.9 / 0.8)",
+              "resolved": "oklch(0.21 0.034 264.7 / 0.8)",
               "alpha": 0.8
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "color-mix(in oklab, var(--primary) 80%, transparent)",
-              "resolved": "oklch(0.707 0.156 254.6 / 0.8)",
+              "resolved": "oklch(0.928 0.006 264.5 / 0.8)",
               "alpha": 0.8
             }
           }
@@ -10554,13 +11245,13 @@
             "light": {
               "raw": "{color.secondary}",
               "css": "var(--secondary)",
-              "resolved": "oklch(0.968 0.007 247.896)",
+              "resolved": "oklch(0.967 0.003 264.542)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.secondary}",
               "css": "var(--secondary)",
-              "resolved": "oklch(0.279 0.041 260.031)",
+              "resolved": "oklch(0.278 0.033 256.848)",
               "alpha": 1
             }
           }
@@ -10578,13 +11269,13 @@
             "light": {
               "raw": "{color.secondary-foreground}",
               "css": "var(--secondary-foreground)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.secondary-foreground}",
               "css": "var(--secondary-foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -10602,13 +11293,13 @@
             "light": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.968 0.007 247.896)",
+              "resolved": "oklch(0.967 0.003 264.542)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.279 0.041 260.031)",
+              "resolved": "oklch(0.278 0.033 256.848)",
               "alpha": 1
             }
           }
@@ -10632,7 +11323,7 @@
             "dark": {
               "raw": "{color.background}",
               "css": "var(--background)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             }
           }
@@ -10650,13 +11341,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -10674,7 +11365,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -10698,13 +11389,13 @@
             "light": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.968 0.007 247.896)",
+              "resolved": "oklch(0.967 0.003 264.542)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.279 0.041 260.031)",
+              "resolved": "oklch(0.278 0.033 256.848)",
               "alpha": 1
             }
           }
@@ -10722,13 +11413,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -10746,13 +11437,13 @@
             "light": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.968 0.007 247.896)",
+              "resolved": "oklch(0.967 0.003 264.542)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.279 0.041 260.031)",
+              "resolved": "oklch(0.278 0.033 256.848)",
               "alpha": 1
             }
           }
@@ -10842,13 +11533,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.546 0.245 262.881)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.707 0.165 254.624)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             }
           }
@@ -10867,13 +11558,13 @@
             "light": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -10892,13 +11583,13 @@
             "light": {
               "raw": "{typography.label.sm}",
               "css": "var(--label-sm-font)",
-              "resolved": "500 0.75rem/1.35 Nunito, sans-serif",
+              "resolved": "500 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.label.sm}",
               "css": "var(--label-sm-font)",
-              "resolved": "500 0.75rem/1.35 Nunito, sans-serif",
+              "resolved": "500 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -10916,13 +11607,13 @@
             "light": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "1rem",
+              "resolved": "2rem",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "1rem",
+              "resolved": "2rem",
               "alpha": 1
             }
           }
@@ -10946,7 +11637,7 @@
             "dark": {
               "raw": "{color.card}",
               "css": "var(--card)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -10964,13 +11655,13 @@
             "light": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.card-foreground}",
               "css": "var(--card-foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -10988,13 +11679,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "color-mix(in oklab, var(--foreground) 10%, transparent)",
-              "resolved": "oklch(0.129 0.042 264.7 / 0.1)",
+              "resolved": "oklch(0.13 0.028 261.7 / 0.1)",
               "alpha": 0.1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "color-mix(in oklab, var(--foreground) 10%, transparent)",
-              "resolved": "oklch(0.984 0.003 247.9 / 0.1)",
+              "resolved": "oklch(0.985 0.002 247.8 / 0.1)",
               "alpha": 0.1
             }
           }
@@ -11013,13 +11704,13 @@
             "light": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -11037,13 +11728,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -11062,13 +11753,13 @@
             "light": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -11086,13 +11777,13 @@
             "light": {
               "raw": "{color.muted}",
               "css": "color-mix(in oklab, var(--muted) 50%, transparent)",
-              "resolved": "oklch(0.968 0.007 247.9 / 0.5)",
+              "resolved": "oklch(0.967 0.003 264.5 / 0.5)",
               "alpha": 0.5
             },
             "dark": {
               "raw": "{color.muted}",
               "css": "color-mix(in oklab, var(--muted) 50%, transparent)",
-              "resolved": "oklch(0.279 0.041 260 / 0.5)",
+              "resolved": "oklch(0.278 0.033 256.8 / 0.5)",
               "alpha": 0.5
             }
           }
@@ -11111,13 +11802,13 @@
             "light": {
               "raw": "{typography.heading.sm}",
               "css": "var(--heading-sm-font)",
-              "resolved": "500 1rem/1.375 Nunito, sans-serif",
+              "resolved": "500 1rem/1.375 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.heading.sm}",
               "css": "var(--heading-sm-font)",
-              "resolved": "500 1rem/1.375 Nunito, sans-serif",
+              "resolved": "500 1rem/1.375 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -11136,13 +11827,413 @@
             "light": {
               "raw": "{typography.heading.xs}",
               "css": "var(--heading-xs-font)",
-              "resolved": "500 0.875rem/1.375 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.375 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.heading.xs}",
               "css": "var(--heading-xs-font)",
-              "resolved": "500 0.875rem/1.375 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.375 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-key-radius",
+          "path": "chart/key/radius",
+          "group": "chart",
+          "type": "dimension",
+          "description": "Corners of the color keys in the tooltip and legend",
+          "layer": "components",
+          "refs": [
+            "radius/small"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.small}",
+              "css": "var(--small-radius)",
+              "resolved": "0.375rem",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.small}",
+              "css": "var(--small-radius)",
+              "resolved": "0.375rem",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-grid",
+          "path": "chart/grid",
+          "group": "chart",
+          "type": "color",
+          "description": "Grid lines, axis lines and the line under the pointer",
+          "layer": "components",
+          "refs": [
+            "color/border"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(0.928 0.006 264.531)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(1 0 0 / 0.1)",
+              "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "chart-surface",
+          "path": "chart/surface",
+          "group": "chart",
+          "type": "color",
+          "description": "The gaps between slices and around points: the page color",
+          "layer": "components",
+          "refs": [
+            "color/background"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.background}",
+              "css": "var(--background)",
+              "resolved": "oklch(1 0 0)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.background}",
+              "css": "var(--background)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-cursor",
+          "path": "chart/cursor",
+          "group": "chart",
+          "type": "color",
+          "description": "The band behind the bar under the pointer",
+          "layer": "components",
+          "refs": [
+            "color/muted"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.967 0.003 264.542)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.278 0.033 256.848)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-axis-foreground",
+          "path": "chart/axis/foreground",
+          "group": "chart",
+          "type": "color",
+          "description": "Axis labels",
+          "layer": "components",
+          "refs": [
+            "color/muted-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.446 0.03 256.802)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.707 0.022 261.325)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-axis-font",
+          "path": "chart/axis/font",
+          "group": "chart",
+          "type": "typography",
+          "description": "Axis labels",
+          "layer": "components",
+          "refs": [
+            "typography/body/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-legend-foreground",
+          "path": "chart/legend/foreground",
+          "group": "chart",
+          "type": "color",
+          "description": "Legend labels",
+          "layer": "components",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-legend-font",
+          "path": "chart/legend/font",
+          "group": "chart",
+          "type": "typography",
+          "description": "Legend labels",
+          "layer": "components",
+          "refs": [
+            "typography/body/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-tooltip-radius",
+          "path": "chart/tooltip/radius",
+          "group": "chart",
+          "type": "dimension",
+          "description": "Tooltip corners",
+          "layer": "components",
+          "refs": [
+            "radius/control"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.control}",
+              "css": "var(--control-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.control}",
+              "css": "var(--control-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-tooltip-background",
+          "path": "chart/tooltip/background",
+          "group": "chart",
+          "type": "color",
+          "description": "Tooltip",
+          "layer": "components",
+          "refs": [
+            "color/popover"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.popover}",
+              "css": "var(--popover)",
+              "resolved": "oklch(1 0 0)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.popover}",
+              "css": "var(--popover)",
+              "resolved": "oklch(0.21 0.034 264.665)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-tooltip-foreground",
+          "path": "chart/tooltip/foreground",
+          "group": "chart",
+          "type": "color",
+          "description": "Tooltip values",
+          "layer": "components",
+          "refs": [
+            "color/popover-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.popover-foreground}",
+              "css": "var(--popover-foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.popover-foreground}",
+              "css": "var(--popover-foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-tooltip-border",
+          "path": "chart/tooltip/border",
+          "group": "chart",
+          "type": "color",
+          "description": "Tooltip outline",
+          "layer": "components",
+          "refs": [
+            "color/border"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(0.928 0.006 264.531)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(1 0 0 / 0.1)",
+              "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "chart-tooltip-label",
+          "path": "chart/tooltip/label",
+          "group": "chart",
+          "type": "color",
+          "description": "Series names in the tooltip",
+          "layer": "components",
+          "refs": [
+            "color/muted-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.446 0.03 256.802)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.707 0.022 261.325)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-tooltip-font",
+          "path": "chart/tooltip/font",
+          "group": "chart",
+          "type": "typography",
+          "description": "Tooltip text",
+          "layer": "components",
+          "refs": [
+            "typography/body/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-tooltip-title-font",
+          "path": "chart/tooltip/title/font",
+          "group": "chart",
+          "type": "typography",
+          "description": "The tooltip's heading (the category or date)",
+          "layer": "components",
+          "refs": [
+            "typography/label/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.sm}",
+              "css": "var(--label-sm-font)",
+              "resolved": "500 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.sm}",
+              "css": "var(--label-sm-font)",
+              "resolved": "500 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "chart-tooltip-value-font",
+          "path": "chart/tooltip/value/font",
+          "group": "chart",
+          "type": "typography",
+          "description": "Numbers in the tooltip",
+          "layer": "components",
+          "refs": [
+            "typography/label/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.sm}",
+              "css": "var(--label-sm-font)",
+              "resolved": "500 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.sm}",
+              "css": "var(--label-sm-font)",
+              "resolved": "500 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -11209,7 +12300,7 @@
             "light": {
               "raw": "{color.input}",
               "css": "var(--input)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -11233,13 +12324,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.546 0.245 262.881)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.707 0.165 254.624)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             }
           }
@@ -11263,7 +12354,7 @@
             "dark": {
               "raw": "{color.primary-foreground}",
               "css": "var(--primary-foreground)",
-              "resolved": "oklch(0.282 0.091 267.935)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -11281,13 +12372,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.546 0.245 262.881)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.707 0.165 254.624)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             }
           }
@@ -11305,13 +12396,13 @@
             "light": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "1rem",
+              "resolved": "2rem",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "1rem",
+              "resolved": "2rem",
               "alpha": 1
             }
           }
@@ -11354,13 +12445,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "color-mix(in oklab, var(--foreground) 50%, transparent)",
-              "resolved": "oklch(0.129 0.042 264.7 / 0.5)",
+              "resolved": "oklch(0.13 0.028 261.7 / 0.5)",
               "alpha": 0.5
             },
             "dark": {
               "raw": "{color.background}",
               "css": "color-mix(in oklab, var(--background) 80%, transparent)",
-              "resolved": "oklch(0.129 0.042 264.7 / 0.8)",
+              "resolved": "oklch(0.13 0.028 261.7 / 0.8)",
               "alpha": 0.8
             }
           }
@@ -11384,7 +12475,7 @@
             "dark": {
               "raw": "{color.background}",
               "css": "var(--background)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             }
           }
@@ -11402,13 +12493,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -11426,7 +12517,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -11450,13 +12541,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -11475,13 +12566,13 @@
             "light": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -11500,13 +12591,13 @@
             "light": {
               "raw": "{typography.heading.md}",
               "css": "var(--heading-md-font)",
-              "resolved": "600 1.125rem/1.35 Nunito, sans-serif",
+              "resolved": "600 1.125rem/1.35 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.heading.md}",
               "css": "var(--heading-md-font)",
-              "resolved": "600 1.125rem/1.35 Nunito, sans-serif",
+              "resolved": "600 1.125rem/1.35 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -11526,13 +12617,455 @@
             "light": {
               "raw": "{radius.small}",
               "css": "max(var(--small-radius), calc(var(--dialog-radius) - var(--spacing) * 4 - 1px))",
-              "resolved": "6px",
+              "resolved": "15px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.small}",
               "css": "max(var(--small-radius), calc(var(--dialog-radius) - var(--spacing) * 4 - 1px))",
-              "resolved": "6px",
+              "resolved": "15px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "empty-radius",
+          "path": "empty/radius",
+          "group": "empty",
+          "type": "dimension",
+          "layer": "components",
+          "refs": [
+            "radius/container"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.container}",
+              "css": "var(--container-radius)",
+              "resolved": "2rem",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.container}",
+              "css": "var(--container-radius)",
+              "resolved": "2rem",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "empty-border",
+          "path": "empty/border",
+          "group": "empty",
+          "type": "color",
+          "description": "The dashed outline, when there is one",
+          "layer": "components",
+          "refs": [
+            "color/border"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(0.928 0.006 264.531)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(1 0 0 / 0.1)",
+              "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "empty-media-background",
+          "path": "empty/media/background",
+          "group": "empty",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.967 0.003 264.542)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.278 0.033 256.848)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "empty-media-foreground",
+          "path": "empty/media/foreground",
+          "group": "empty",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "empty-media-radius",
+          "path": "empty/media/radius",
+          "group": "empty",
+          "type": "dimension",
+          "description": "The icon tile",
+          "layer": "components",
+          "refs": [
+            "radius/control"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.control}",
+              "css": "var(--control-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.control}",
+              "css": "var(--control-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "empty-title-font",
+          "path": "empty/title/font",
+          "group": "empty",
+          "type": "typography",
+          "description": "What is missing",
+          "layer": "components",
+          "refs": [
+            "typography/heading/xs"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.heading.xs}",
+              "css": "var(--heading-xs-font)",
+              "resolved": "500 0.875rem/1.375 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.heading.xs}",
+              "css": "var(--heading-xs-font)",
+              "resolved": "500 0.875rem/1.375 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "empty-description-foreground",
+          "path": "empty/description/foreground",
+          "group": "empty",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.446 0.03 256.802)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.707 0.022 261.325)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "empty-description-font",
+          "path": "empty/description/font",
+          "group": "empty",
+          "type": "typography",
+          "description": "Why, and what to do",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "input-group-radius",
+          "path": "input-group/radius",
+          "group": "input-group",
+          "type": "dimension",
+          "layer": "components",
+          "refs": [
+            "radius/control"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.control}",
+              "css": "var(--control-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.control}",
+              "css": "var(--control-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "input-group-button-radius",
+          "path": "input-group/button/radius",
+          "group": "input-group",
+          "type": "dimension",
+          "description": "A button inside the field",
+          "layer": "components",
+          "refs": [
+            "radius/small",
+            "input-group/radius"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.small}",
+              "css": "max(var(--small-radius), calc(var(--input-group-radius) - var(--spacing) * 1 - 1px))",
+              "resolved": "9994px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.small}",
+              "css": "max(var(--small-radius), calc(var(--input-group-radius) - var(--spacing) * 1 - 1px))",
+              "resolved": "9994px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "input-group-field-background",
+          "path": "input-group/field/background",
+          "group": "input-group",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/background",
+            "color/input"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.background}",
+              "css": "color-mix(in oklab, var(--background) 0%, transparent)",
+              "resolved": "oklch(1 0 0 / 0)",
+              "alpha": 0
+            },
+            "dark": {
+              "raw": "{color.input}",
+              "css": "color-mix(in oklab, var(--input) 30%, transparent)",
+              "resolved": "oklch(1 0 0 / 0.045)",
+              "alpha": 0.045
+            }
+          }
+        },
+        {
+          "name": "input-group-field-border",
+          "path": "input-group/field/border",
+          "group": "input-group",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/input"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.input}",
+              "css": "var(--input)",
+              "resolved": "oklch(0.928 0.006 264.531)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.input}",
+              "css": "var(--input)",
+              "resolved": "oklch(1 0 0 / 0.15)",
+              "alpha": 0.15
+            }
+          }
+        },
+        {
+          "name": "input-group-addon-foreground",
+          "path": "input-group/addon/foreground",
+          "group": "input-group",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.446 0.03 256.802)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.707 0.022 261.325)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "input-group-addon-font",
+          "path": "input-group/addon/font",
+          "group": "input-group",
+          "type": "typography",
+          "description": "Text and icons beside the field",
+          "layer": "components",
+          "refs": [
+            "typography/label/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "input-group-text-font",
+          "path": "input-group/text/font",
+          "group": "input-group",
+          "type": "typography",
+          "description": "Plain text beside the field, like a unit",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "input-group-control-foreground",
+          "path": "input-group/control/foreground",
+          "group": "input-group",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "input-group-control-placeholder",
+          "path": "input-group/control/placeholder",
+          "group": "input-group",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.446 0.03 256.802)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.707 0.022 261.325)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "input-group-control-font",
+          "path": "input-group/control/font",
+          "group": "input-group",
+          "type": "typography",
+          "description": "What people type in a multi-line group",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -11599,13 +13132,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -11623,7 +13156,7 @@
             "light": {
               "raw": "{color.input}",
               "css": "var(--input)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -11647,13 +13180,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -11672,13 +13205,13 @@
             "light": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -11697,13 +13230,259 @@
             "light": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "item-radius",
+          "path": "item/radius",
+          "group": "item",
+          "type": "dimension",
+          "layer": "components",
+          "refs": [
+            "radius/control"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.control}",
+              "css": "var(--control-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.control}",
+              "css": "var(--control-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "item-border",
+          "path": "item/border",
+          "group": "item",
+          "type": "color",
+          "description": "The outline variant",
+          "layer": "components",
+          "refs": [
+            "color/border"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(0.928 0.006 264.531)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(1 0 0 / 0.1)",
+              "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "item-muted-background",
+          "path": "item/muted/background",
+          "group": "item",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted}",
+              "css": "color-mix(in oklab, var(--muted) 50%, transparent)",
+              "resolved": "oklch(0.967 0.003 264.5 / 0.5)",
+              "alpha": 0.5
+            },
+            "dark": {
+              "raw": "{color.muted}",
+              "css": "color-mix(in oklab, var(--muted) 50%, transparent)",
+              "resolved": "oklch(0.278 0.033 256.8 / 0.5)",
+              "alpha": 0.5
+            }
+          }
+        },
+        {
+          "name": "item-hover-background",
+          "path": "item/hover/background",
+          "group": "item",
+          "type": "color",
+          "description": "An item that is a link, under the pointer",
+          "layer": "components",
+          "refs": [
+            "color/muted"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.967 0.003 264.542)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.278 0.033 256.848)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "item-separator",
+          "path": "item/separator",
+          "group": "item",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/border"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(0.928 0.006 264.531)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(1 0 0 / 0.1)",
+              "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "item-title-font",
+          "path": "item/title/font",
+          "group": "item",
+          "type": "typography",
+          "description": "Item title",
+          "layer": "components",
+          "refs": [
+            "typography/label/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "item-description-foreground",
+          "path": "item/description/foreground",
+          "group": "item",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.446 0.03 256.802)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.707 0.022 261.325)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "item-description-font",
+          "path": "item/description/font",
+          "group": "item",
+          "type": "typography",
+          "description": "Item description",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "item-description-small-font",
+          "path": "item/description-small/font",
+          "group": "item",
+          "type": "typography",
+          "description": "Item description in the extra small item",
+          "layer": "components",
+          "refs": [
+            "typography/body/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "item-media-radius",
+          "path": "item/media/radius",
+          "group": "item",
+          "type": "dimension",
+          "description": "An image beside the title",
+          "layer": "components",
+          "refs": [
+            "radius/small"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.small}",
+              "css": "var(--small-radius)",
+              "resolved": "0.375rem",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.small}",
+              "css": "var(--small-radius)",
+              "resolved": "0.375rem",
               "alpha": 1
             }
           }
@@ -11721,13 +13500,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -11746,13 +13525,85 @@
             "light": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "progress-radius",
+          "path": "progress/radius",
+          "group": "progress",
+          "type": "dimension",
+          "layer": "components",
+          "refs": [
+            "radius/pill"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.pill}",
+              "css": "var(--pill-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.pill}",
+              "css": "var(--pill-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "progress-track",
+          "path": "progress/track",
+          "group": "progress",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.967 0.003 264.542)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.278 0.033 256.848)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "progress-indicator",
+          "path": "progress/indicator",
+          "group": "progress",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/primary"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.primary}",
+              "css": "var(--primary)",
+              "resolved": "oklch(0.21 0.034 264.665)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.primary}",
+              "css": "var(--primary)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             }
           }
@@ -11795,7 +13646,7 @@
             "light": {
               "raw": "{color.input}",
               "css": "var(--input)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -11819,13 +13670,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.546 0.245 262.881)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.707 0.165 254.624)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             }
           }
@@ -11916,13 +13767,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -11940,7 +13791,7 @@
             "light": {
               "raw": "{color.input}",
               "css": "var(--input)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -11964,13 +13815,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -11989,13 +13840,13 @@
             "light": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -12019,7 +13870,7 @@
             "dark": {
               "raw": "{color.popover}",
               "css": "var(--popover)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -12037,13 +13888,13 @@
             "light": {
               "raw": "{color.popover-foreground}",
               "css": "var(--popover-foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.popover-foreground}",
               "css": "var(--popover-foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -12061,7 +13912,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -12110,13 +13961,13 @@
             "light": {
               "raw": "{color.accent}",
               "css": "var(--accent)",
-              "resolved": "oklch(0.968 0.007 247.896)",
+              "resolved": "oklch(0.967 0.003 264.542)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.accent}",
               "css": "var(--accent)",
-              "resolved": "oklch(0.279 0.041 260.031)",
+              "resolved": "oklch(0.278 0.033 256.848)",
               "alpha": 1
             }
           }
@@ -12134,13 +13985,13 @@
             "light": {
               "raw": "{color.accent-foreground}",
               "css": "var(--accent-foreground)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.accent-foreground}",
               "css": "var(--accent-foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -12158,13 +14009,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -12183,13 +14034,13 @@
             "light": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -12234,13 +14085,13 @@
             "light": {
               "raw": "{typography.body.sm}",
               "css": "var(--body-sm-font)",
-              "resolved": "400 0.75rem/1.35 Nunito, sans-serif",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.body.sm}",
               "css": "var(--body-sm-font)",
-              "resolved": "400 0.75rem/1.35 Nunito, sans-serif",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -12258,7 +14109,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -12266,6 +14117,151 @@
               "css": "var(--border)",
               "resolved": "oklch(1 0 0 / 0.1)",
               "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "slider-radius",
+          "path": "slider/radius",
+          "group": "slider",
+          "type": "dimension",
+          "layer": "components",
+          "refs": [
+            "radius/pill"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.pill}",
+              "css": "var(--pill-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.pill}",
+              "css": "var(--pill-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "slider-track",
+          "path": "slider/track",
+          "group": "slider",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.967 0.003 264.542)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.278 0.033 256.848)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "slider-range",
+          "path": "slider/range",
+          "group": "slider",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/primary"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.primary}",
+              "css": "var(--primary)",
+              "resolved": "oklch(0.21 0.034 264.665)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.primary}",
+              "css": "var(--primary)",
+              "resolved": "oklch(0.928 0.006 264.531)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "slider-thumb-radius",
+          "path": "slider/thumb/radius",
+          "group": "slider",
+          "type": "dimension",
+          "description": "The handle",
+          "layer": "components",
+          "refs": [
+            "radius/pill"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.pill}",
+              "css": "var(--pill-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.pill}",
+              "css": "var(--pill-radius)",
+              "resolved": "9999px",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "slider-thumb-background",
+          "path": "slider/thumb/background",
+          "group": "slider",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/background"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.background}",
+              "css": "var(--background)",
+              "resolved": "oklch(1 0 0)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.background}",
+              "css": "var(--background)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "slider-thumb-border",
+          "path": "slider/thumb/border",
+          "group": "slider",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/ring"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.ring}",
+              "css": "var(--ring)",
+              "resolved": "oklch(0.551 0.027 264.364)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.ring}",
+              "css": "var(--ring)",
+              "resolved": "oklch(0.551 0.027 264.364)",
+              "alpha": 1
             }
           }
         },
@@ -12282,13 +14278,13 @@
             "light": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.546 0.245 262.881)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.primary}",
               "css": "var(--primary)",
-              "resolved": "oklch(0.707 0.165 254.624)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             }
           }
@@ -12306,7 +14302,7 @@
             "light": {
               "raw": "{color.input}",
               "css": "var(--input)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -12336,7 +14332,7 @@
             "dark": {
               "raw": "{color.primary-foreground}",
               "css": "var(--primary-foreground)",
-              "resolved": "oklch(0.282 0.091 267.935)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -12361,7 +14357,7 @@
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -12403,13 +14399,13 @@
             "light": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.968 0.007 247.896)",
+              "resolved": "oklch(0.967 0.003 264.542)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted}",
               "css": "var(--muted)",
-              "resolved": "oklch(0.279 0.041 260.031)",
+              "resolved": "oklch(0.278 0.033 256.848)",
               "alpha": 1
             }
           }
@@ -12427,13 +14423,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -12476,13 +14472,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -12501,13 +14497,13 @@
             "light": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -12600,13 +14596,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -12624,7 +14620,7 @@
             "light": {
               "raw": "{color.input}",
               "css": "var(--input)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -12648,13 +14644,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -12673,13 +14669,13 @@
             "light": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -12697,13 +14693,13 @@
             "light": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "1rem",
+              "resolved": "2rem",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.container}",
               "css": "var(--container-radius)",
-              "resolved": "1rem",
+              "resolved": "2rem",
               "alpha": 1
             }
           }
@@ -12751,7 +14747,7 @@
             "dark": {
               "raw": "{color.popover}",
               "css": "var(--popover)",
-              "resolved": "oklch(0.208 0.042 265.755)",
+              "resolved": "oklch(0.21 0.034 264.665)",
               "alpha": 1
             }
           }
@@ -12769,13 +14765,13 @@
             "light": {
               "raw": "{color.popover-foreground}",
               "css": "var(--popover-foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.popover-foreground}",
               "css": "var(--popover-foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -12793,7 +14789,7 @@
             "light": {
               "raw": "{color.border}",
               "css": "var(--border)",
-              "resolved": "oklch(0.929 0.013 255.508)",
+              "resolved": "oklch(0.928 0.006 264.531)",
               "alpha": 1
             },
             "dark": {
@@ -12817,13 +14813,13 @@
             "light": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.446 0.043 257.281)",
+              "resolved": "oklch(0.446 0.03 256.802)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.muted-foreground}",
               "css": "var(--muted-foreground)",
-              "resolved": "oklch(0.704 0.04 256.788)",
+              "resolved": "oklch(0.707 0.022 261.325)",
               "alpha": 1
             }
           }
@@ -12871,7 +14867,7 @@
             "dark": {
               "raw": "{color.background}",
               "css": "var(--background)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             }
           }
@@ -12919,7 +14915,7 @@
             "dark": {
               "raw": "{color.background}",
               "css": "var(--background)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             }
           }
@@ -12938,13 +14934,13 @@
             "light": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -12963,13 +14959,13 @@
             "light": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.body.md}",
               "css": "var(--body-md-font)",
-              "resolved": "400 0.875rem/1.5 Nunito, sans-serif",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -12988,13 +14984,13 @@
             "light": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.label.md}",
               "css": "var(--label-md-font)",
-              "resolved": "500 0.875rem/1.25 Nunito, sans-serif",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -13039,13 +15035,13 @@
             "light": {
               "raw": "{radius.small}",
               "css": "max(var(--small-radius), calc(var(--toast-radius) - var(--spacing) * 2 - 1px))",
-              "resolved": "7px",
+              "resolved": "23px",
               "alpha": 1
             },
             "dark": {
               "raw": "{radius.small}",
               "css": "max(var(--small-radius), calc(var(--toast-radius) - var(--spacing) * 2 - 1px))",
-              "resolved": "7px",
+              "resolved": "23px",
               "alpha": 1
             }
           }
@@ -13087,13 +15083,13 @@
             "light": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
-              "resolved": "oklch(0.984 0.003 247.858)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -13117,7 +15113,7 @@
             "dark": {
               "raw": "{color.background}",
               "css": "var(--background)",
-              "resolved": "oklch(0.129 0.042 264.695)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             }
           }
@@ -13136,13 +15132,13 @@
             "light": {
               "raw": "{typography.body.sm}",
               "css": "var(--body-sm-font)",
-              "resolved": "400 0.75rem/1.35 Nunito, sans-serif",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             },
             "dark": {
               "raw": "{typography.body.sm}",
               "css": "var(--body-sm-font)",
-              "resolved": "400 0.75rem/1.35 Nunito, sans-serif",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -13153,7 +15149,7 @@
           "mode": "light",
           "bg": "background",
           "fg": "foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13162,7 +15158,25 @@
           "mode": "dark",
           "bg": "background",
           "fg": "foreground",
-          "ratio": 19.27,
+          "ratio": 19.28,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "material-glass",
+          "fg": "material-glass-foreground",
+          "ratio": 20.13,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "material-glass",
+          "fg": "material-glass-foreground",
+          "ratio": 17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13171,7 +15185,7 @@
           "mode": "light",
           "bg": "card",
           "fg": "card-foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13180,7 +15194,7 @@
           "mode": "dark",
           "bg": "card",
           "fg": "card-foreground",
-          "ratio": 17.05,
+          "ratio": 17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13189,7 +15203,7 @@
           "mode": "light",
           "bg": "popover",
           "fg": "popover-foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13198,7 +15212,7 @@
           "mode": "dark",
           "bg": "popover",
           "fg": "popover-foreground",
-          "ratio": 17.05,
+          "ratio": 17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13207,7 +15221,7 @@
           "mode": "light",
           "bg": "primary",
           "fg": "primary-foreground",
-          "ratio": 5.26,
+          "ratio": 17.75,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13216,6 +15230,42 @@
           "mode": "dark",
           "bg": "primary",
           "fg": "primary-foreground",
+          "ratio": 14.35,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "secondary",
+          "fg": "secondary-foreground",
+          "ratio": 16.13,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "secondary",
+          "fg": "secondary-foreground",
+          "ratio": 14.07,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "muted",
+          "fg": "muted-foreground",
+          "ratio": 6.87,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "muted",
+          "fg": "muted-foreground",
           "ratio": 5.64,
           "min": 4.5,
           "pass": true,
@@ -13223,45 +15273,9 @@
         },
         {
           "mode": "light",
-          "bg": "secondary",
-          "fg": "secondary-foreground",
-          "ratio": 16.28,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "secondary",
-          "fg": "secondary-foreground",
-          "ratio": 14,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "muted",
-          "fg": "muted-foreground",
-          "ratio": 6.9,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "muted",
-          "fg": "muted-foreground",
-          "ratio": 5.58,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
           "bg": "accent",
           "fg": "accent-foreground",
-          "ratio": 16.28,
+          "ratio": 16.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13270,7 +15284,7 @@
           "mode": "dark",
           "bg": "accent",
           "fg": "accent-foreground",
-          "ratio": 14,
+          "ratio": 14.07,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13331,9 +15345,45 @@
         },
         {
           "mode": "light",
+          "bg": "alert-dialog-content-background",
+          "fg": "alert-dialog-content-foreground",
+          "ratio": 20.13,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "alert-dialog-content-background",
+          "fg": "alert-dialog-content-foreground",
+          "ratio": 19.28,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "alert-dialog-media-background",
+          "fg": "alert-dialog-media-foreground",
+          "ratio": 18.29,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "alert-dialog-media-background",
+          "fg": "alert-dialog-media-foreground",
+          "ratio": 14.07,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
           "bg": "alert-default-background",
           "fg": "alert-default-foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13342,7 +15392,7 @@
           "mode": "dark",
           "bg": "alert-default-background",
           "fg": "alert-default-foreground",
-          "ratio": 19.27,
+          "ratio": 17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13360,7 +15410,7 @@
           "mode": "dark",
           "bg": "alert-destructive-background",
           "fg": "alert-destructive-foreground",
-          "ratio": 6.22,
+          "ratio": 6.19,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13369,7 +15419,7 @@
           "mode": "light",
           "bg": "alert-success-background",
           "fg": "alert-success-foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13378,7 +15428,7 @@
           "mode": "dark",
           "bg": "alert-success-background",
           "fg": "alert-success-foreground",
-          "ratio": 17.05,
+          "ratio": 17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13387,7 +15437,7 @@
           "mode": "light",
           "bg": "alert-warning-background",
           "fg": "alert-warning-foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13396,7 +15446,7 @@
           "mode": "dark",
           "bg": "alert-warning-background",
           "fg": "alert-warning-foreground",
-          "ratio": 17.05,
+          "ratio": 17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13405,7 +15455,7 @@
           "mode": "light",
           "bg": "alert-info-background",
           "fg": "alert-info-foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13414,7 +15464,7 @@
           "mode": "dark",
           "bg": "alert-info-background",
           "fg": "alert-info-foreground",
-          "ratio": 17.05,
+          "ratio": 17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13423,7 +15473,7 @@
           "mode": "light",
           "bg": "badge-default-background",
           "fg": "badge-default-foreground",
-          "ratio": 5.26,
+          "ratio": 17.75,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13432,7 +15482,7 @@
           "mode": "dark",
           "bg": "badge-default-background",
           "fg": "badge-default-foreground",
-          "ratio": 5.64,
+          "ratio": 14.35,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13441,7 +15491,7 @@
           "mode": "light",
           "bg": "badge-secondary-background",
           "fg": "badge-secondary-foreground",
-          "ratio": 16.28,
+          "ratio": 16.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13450,7 +15500,7 @@
           "mode": "dark",
           "bg": "badge-secondary-background",
           "fg": "badge-secondary-foreground",
-          "ratio": 14,
+          "ratio": 14.07,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13468,7 +15518,7 @@
           "mode": "dark",
           "bg": "badge-destructive-background",
           "fg": "badge-destructive-foreground",
-          "ratio": 5.55,
+          "ratio": 5.54,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13529,9 +15579,27 @@
         },
         {
           "mode": "light",
+          "bg": "button-group-text-background",
+          "fg": "button-group-text-foreground",
+          "ratio": 18.29,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "button-group-text-background",
+          "fg": "button-group-text-foreground",
+          "ratio": 14.07,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
           "bg": "button-default-background",
           "fg": "button-default-foreground",
-          "ratio": 5.26,
+          "ratio": 17.75,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13540,7 +15608,7 @@
           "mode": "dark",
           "bg": "button-default-background",
           "fg": "button-default-foreground",
-          "ratio": 5.64,
+          "ratio": 14.35,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13549,7 +15617,7 @@
           "mode": "light",
           "bg": "button-secondary-background",
           "fg": "button-secondary-foreground",
-          "ratio": 16.28,
+          "ratio": 16.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13558,7 +15626,7 @@
           "mode": "dark",
           "bg": "button-secondary-background",
           "fg": "button-secondary-foreground",
-          "ratio": 14,
+          "ratio": 14.07,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13567,7 +15635,7 @@
           "mode": "light",
           "bg": "button-outline-background",
           "fg": "button-outline-foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13576,7 +15644,7 @@
           "mode": "dark",
           "bg": "button-outline-background",
           "fg": "button-outline-foreground",
-          "ratio": 19.27,
+          "ratio": 19.28,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13594,7 +15662,7 @@
           "mode": "dark",
           "bg": "button-destructive-background",
           "fg": "button-destructive-foreground",
-          "ratio": 5.55,
+          "ratio": 5.54,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13603,7 +15671,7 @@
           "mode": "light",
           "bg": "card-container-background",
           "fg": "card-container-foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13612,7 +15680,25 @@
           "mode": "dark",
           "bg": "card-container-background",
           "fg": "card-container-foreground",
-          "ratio": 17.05,
+          "ratio": 17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "chart-tooltip-background",
+          "fg": "chart-tooltip-foreground",
+          "ratio": 20.13,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "chart-tooltip-background",
+          "fg": "chart-tooltip-foreground",
+          "ratio": 17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13621,7 +15707,7 @@
           "mode": "light",
           "bg": "checkbox-box-checked-background",
           "fg": "checkbox-box-checked-foreground",
-          "ratio": 5.26,
+          "ratio": 17.75,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13630,6 +15716,132 @@
           "mode": "dark",
           "bg": "checkbox-box-checked-background",
           "fg": "checkbox-box-checked-foreground",
+          "ratio": 14.35,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "dialog-content-background",
+          "fg": "dialog-content-foreground",
+          "ratio": 20.13,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "dialog-content-background",
+          "fg": "dialog-content-foreground",
+          "ratio": 19.28,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "empty-media-background",
+          "fg": "empty-media-foreground",
+          "ratio": 18.29,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "empty-media-background",
+          "fg": "empty-media-foreground",
+          "ratio": 14.07,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "input-field-background",
+          "fg": "input-field-foreground",
+          "ratio": 20.13,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "input-field-background",
+          "fg": "input-field-foreground",
+          "ratio": 17.92,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "select-trigger-background",
+          "fg": "select-trigger-foreground",
+          "ratio": 20.13,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "select-trigger-background",
+          "fg": "select-trigger-foreground",
+          "ratio": 17.92,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "select-content-background",
+          "fg": "select-content-foreground",
+          "ratio": 20.13,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "select-content-background",
+          "fg": "select-content-foreground",
+          "ratio": 17,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "select-item-highlight-background",
+          "fg": "select-item-highlight-foreground",
+          "ratio": 16.13,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "select-item-highlight-background",
+          "fg": "select-item-highlight-foreground",
+          "ratio": 14.07,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "tabs-list-background",
+          "fg": "tabs-list-foreground",
+          "ratio": 6.87,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "tabs-list-background",
+          "fg": "tabs-list-foreground",
           "ratio": 5.64,
           "min": 4.5,
           "pass": true,
@@ -13637,117 +15849,9 @@
         },
         {
           "mode": "light",
-          "bg": "dialog-content-background",
-          "fg": "dialog-content-foreground",
-          "ratio": 20.17,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "dialog-content-background",
-          "fg": "dialog-content-foreground",
-          "ratio": 19.27,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "input-field-background",
-          "fg": "input-field-foreground",
-          "ratio": 20.17,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "input-field-background",
-          "fg": "input-field-foreground",
-          "ratio": 17.91,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "select-trigger-background",
-          "fg": "select-trigger-foreground",
-          "ratio": 20.17,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "select-trigger-background",
-          "fg": "select-trigger-foreground",
-          "ratio": 17.91,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "select-content-background",
-          "fg": "select-content-foreground",
-          "ratio": 20.17,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "select-content-background",
-          "fg": "select-content-foreground",
-          "ratio": 17.05,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "select-item-highlight-background",
-          "fg": "select-item-highlight-foreground",
-          "ratio": 16.28,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "select-item-highlight-background",
-          "fg": "select-item-highlight-foreground",
-          "ratio": 14,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
-          "bg": "tabs-list-background",
-          "fg": "tabs-list-foreground",
-          "ratio": 6.9,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "dark",
-          "bg": "tabs-list-background",
-          "fg": "tabs-list-foreground",
-          "ratio": 5.58,
-          "min": 4.5,
-          "pass": true,
-          "accepted": false
-        },
-        {
-          "mode": "light",
           "bg": "tabs-trigger-active-background",
           "fg": "tabs-trigger-active-foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13756,7 +15860,7 @@
           "mode": "dark",
           "bg": "tabs-trigger-active-background",
           "fg": "tabs-trigger-active-foreground",
-          "ratio": 17.91,
+          "ratio": 17.92,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13765,7 +15869,7 @@
           "mode": "light",
           "bg": "textarea-field-background",
           "fg": "textarea-field-foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13774,7 +15878,7 @@
           "mode": "dark",
           "bg": "textarea-field-background",
           "fg": "textarea-field-foreground",
-          "ratio": 17.91,
+          "ratio": 17.92,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13783,7 +15887,7 @@
           "mode": "light",
           "bg": "toast-default-background",
           "fg": "toast-default-foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13792,7 +15896,7 @@
           "mode": "dark",
           "bg": "toast-default-background",
           "fg": "toast-default-foreground",
-          "ratio": 17.05,
+          "ratio": 17,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13810,7 +15914,7 @@
           "mode": "dark",
           "bg": "toast-destructive-background",
           "fg": "toast-destructive-foreground",
-          "ratio": 7.04,
+          "ratio": 7.02,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13819,7 +15923,7 @@
           "mode": "light",
           "bg": "tooltip-background",
           "fg": "tooltip-foreground",
-          "ratio": 20.17,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13828,7 +15932,7 @@
           "mode": "dark",
           "bg": "tooltip-background",
           "fg": "tooltip-foreground",
-          "ratio": 19.27,
+          "ratio": 19.28,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13846,7 +15950,7 @@
           "mode": "dark",
           "bg": "background",
           "fg": "muted-foreground",
-          "ratio": 7.68,
+          "ratio": 7.73,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -13855,7 +15959,7 @@
           "mode": "light",
           "bg": "background",
           "fg": "ring",
-          "ratio": 3.7,
+          "ratio": 4.84,
           "min": 3,
           "pass": true,
           "accepted": false
@@ -13864,8 +15968,44 @@
           "mode": "dark",
           "bg": "background",
           "fg": "ring",
-          "ratio": 5.46,
+          "ratio": 4.16,
           "min": 3,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "material-glass over black",
+          "fg": "material-glass-foreground",
+          "ratio": 9.49,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "material-glass over white",
+          "fg": "material-glass-foreground",
+          "ratio": 20.13,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "material-glass over black",
+          "fg": "material-glass-foreground",
+          "ratio": 18.08,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "material-glass over white",
+          "fg": "material-glass-foreground",
+          "ratio": 6.33,
+          "min": 4.5,
           "pass": true,
           "accepted": false
         }

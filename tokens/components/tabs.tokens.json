@@ -32,13 +32,13 @@
       },
       "font": {
         "$type": "typography",
-        "$description": "Tab names",
-        "$value": "{typography.label.md}"
+        "$value": "{typography.label.md}",
+        "$description": "Tab names"
       },
       "radius": {
         "$type": "dimension",
-        "$description": "Tab corners: inside the tab bar they fit its corners",
         "$value": "{radius.control}",
+        "$description": "Tab corners: inside the tab bar they fit its corners",
         "$extensions": {
           "plinth": {
             "fit": {

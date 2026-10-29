@@ -7,7 +7,7 @@
     "$type": "color",
     "default": {
       "background": {
-        "$value": "{color.background}"
+        "$value": "{color.card}"
       },
       "foreground": {
         "$value": "{color.card-foreground}"
@@ -93,15 +93,15 @@
     "title": {
       "font": {
         "$type": "typography",
-        "$description": "Alert title",
-        "$value": "{typography.label.md}"
+        "$value": "{typography.label.md}",
+        "$description": "Alert title"
       }
     },
     "description": {
       "font": {
         "$type": "typography",
-        "$description": "Alert text",
-        "$value": "{typography.body.md}"
+        "$value": "{typography.body.md}",
+        "$description": "Alert text"
       }
     }
   }

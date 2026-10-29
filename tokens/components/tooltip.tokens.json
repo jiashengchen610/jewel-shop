@@ -14,8 +14,8 @@
     "text": {
       "font": {
         "$type": "typography",
-        "$description": "Tooltip text",
-        "$value": "{typography.body.sm}"
+        "$value": "{typography.body.sm}",
+        "$description": "Tooltip text"
       }
     }
   }

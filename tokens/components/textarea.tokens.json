@@ -31,8 +31,8 @@
       },
       "font": {
         "$type": "typography",
-        "$description": "What people type (16px on phones, so iOS does not zoom)",
-        "$value": "{typography.body.md}"
+        "$value": "{typography.body.md}",
+        "$description": "What people type (16px on phones, so iOS does not zoom)"
       }
     }
   }

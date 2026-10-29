@@ -40,22 +40,22 @@
       },
       "font": {
         "$type": "typography",
-        "$description": "Dialog text",
-        "$value": "{typography.body.md}"
+        "$value": "{typography.body.md}",
+        "$description": "Dialog text"
       }
     },
     "title": {
       "font": {
         "$type": "typography",
-        "$description": "Dialog title",
-        "$value": "{typography.heading.md}"
+        "$value": "{typography.heading.md}",
+        "$description": "Dialog title"
       }
     },
     "close": {
       "radius": {
         "$type": "dimension",
-        "$description": "The close button in the corner",
         "$value": "{radius.small}",
+        "$description": "The close button in the corner",
         "$extensions": {
           "plinth": {
             "fit": {

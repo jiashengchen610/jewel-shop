@@ -40,34 +40,34 @@
     "title": {
       "font": {
         "$type": "typography",
-        "$description": "Toast title",
-        "$value": "{typography.label.md}"
+        "$value": "{typography.label.md}",
+        "$description": "Toast title"
       }
     },
     "description": {
       "font": {
         "$type": "typography",
-        "$description": "Toast text",
-        "$value": "{typography.body.md}"
+        "$value": "{typography.body.md}",
+        "$description": "Toast text"
       }
     },
     "action": {
       "font": {
         "$type": "typography",
-        "$description": "Toast action button",
-        "$value": "{typography.label.md}"
+        "$value": "{typography.label.md}",
+        "$description": "Toast action button"
       },
       "radius": {
         "$type": "dimension",
-        "$description": "The action button, a control like any other",
-        "$value": "{radius.control}"
+        "$value": "{radius.control}",
+        "$description": "The action button, a control like any other"
       }
     },
     "close": {
       "radius": {
         "$type": "dimension",
-        "$description": "The close button in the corner",
         "$value": "{radius.small}",
+        "$description": "The close button in the corner",
         "$extensions": {
           "plinth": {
             "fit": {

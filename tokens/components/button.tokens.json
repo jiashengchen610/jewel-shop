@@ -89,15 +89,15 @@
     "label": {
       "font": {
         "$type": "typography",
-        "$description": "Button text",
-        "$value": "{typography.label.md}"
+        "$value": "{typography.label.md}",
+        "$description": "Button text"
       }
     },
     "label-small": {
       "font": {
         "$type": "typography",
-        "$description": "Button text in the small sizes",
-        "$value": "{typography.label.sm}"
+        "$value": "{typography.label.sm}",
+        "$description": "Button text in the small sizes"
       }
     }
   }

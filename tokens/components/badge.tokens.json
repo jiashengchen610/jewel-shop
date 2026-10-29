@@ -85,8 +85,8 @@
     "text": {
       "font": {
         "$type": "typography",
-        "$description": "Badge text",
-        "$value": "{typography.label.sm}"
+        "$value": "{typography.label.sm}",
+        "$description": "Badge text"
       }
     }
   }

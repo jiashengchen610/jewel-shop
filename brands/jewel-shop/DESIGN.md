@@ -1,55 +1,68 @@
-# Jewel Shop
+# Household budget dashboard
 
-An online shop for handmade jewelry. Each piece is made by hand, so the store should feel like a quiet, well-lit display case with a maker standing behind it: elegant, unhurried and personal.
+A budgeting dashboard for households: income, bills, savings goals and spending limits in one place. It should feel clear and calm: a tidy kitchen table where the month's money is laid out plainly, so anyone in the household can see where things stand in a few seconds.
 
 ## Overview
 
-- The jewelry is the color. The interface stays calm and neutral so photos of the pieces carry the page.
-- Elegant means restraint: generous white space, few elements per view, one clear action.
-- Personal means warmth and detail: the maker's voice, the story of a piece, care in small moments (packaging notes, gift messages, order updates).
-- Never loud: no flashing sale banners, countdown timers, or crowded promo strips.
+- Clear: every screen answers one question first (How much is left this month? What's due next?), in a big number or a short sentence.
+- Calm: a quiet, mostly ink-and-white look. Color appears only where it means something: an action, a status, a chart series.
+- Soft, friendly shapes: fully rounded buttons and fields, generously rounded cards. Nothing sharp or crowded.
+- Shared: written and laid out so every member of the household understands it, not only the person who set it up.
 
 ## Colors
 
-- primary (deep emerald): the main action, such as Add to bag or Check out. One per view. Emerald also works as a quiet signature in links and focus rings.
-- background, card: white in light mode, near-black in dark mode. Product photos sit on these, never on tinted surfaces.
-- muted / muted-foreground: secondary surfaces and supporting text such as materials, sizes and shipping notes.
-- secondary, accent: soft neutral fills for secondary buttons, selected filters and hovered rows.
-- destructive: removing items for good, cancelling orders and errors only.
-- success, warning, info: status only (order confirmed, low stock, shipping notices), never for actions. Success is a green close to the emerald primary, so always pair it with an icon and text, and never place a success message next to a primary button.
+- primary (deep ink, nearly black with a hint of navy; light gray in dark mode): the main action on a view, such as Add bill or Save goal. One per view. The look relies on this ink against white instead of a bright brand color.
+- background, card: white in light mode, near-black in dark mode. Cards hold one topic each: income, bills, a goal, a limit.
+- muted / muted-foreground: secondary surfaces and supporting text such as dates, categories and who paid.
+- secondary, accent: soft gray fills for secondary buttons, selected filters, hovered rows and tab bars.
+- destructive: deleting things for good and errors only. Never use it for being over a limit or a negative balance.
+- warning: a limit almost reached or a bill due soon. Always with words that say what to do.
+- success: a goal reached, a bill paid. Always with an icon or text.
+- info: neutral notices, such as a sync in progress.
+- Charts carry most of the color. Use the chart colors in order (blue first); keep the same category in the same color on every chart. Use the one-hue scale for low-to-high values and the two-sided scale for above or below a limit.
 
 ## Typography
 
-- Nunito for everything. Its soft, rounded shapes give the personal, handmade warmth; keep it elegant through weight and space, not decoration.
-- Display style (semibold, large, tight line height) for page titles and product names on the product page.
-- Body style for descriptions, prices in lists and form text. Product stories may use a slightly larger body size with comfortable line height.
-- Prices use the regular body weight; do not make them bold or colored.
-- No all-caps headings and no decorative letter-spacing.
+- Inter for everything: headings, text, buttons and labels. Hierarchy comes from size and weight, not from extra fonts or colors.
+- Display style for the one key number on a page (left to spend, total saved) and for page titles.
+- Heading styles for section, dialog and card titles; body styles for tables, lists, descriptions and fields; label styles for buttons, tabs and badges.
+- Amounts use tabular figures so columns line up, and are right-aligned in tables. Positive and negative amounts differ by sign and label, not only by color.
+- No all-caps headings.
 
 ## Shape and depth
 
-- Corners are slight: controls and badges use the small radius, cards and dialogs the medium radius, small marks the smallest. Never pill-shaped buttons.
-- Product images are never rounded more than the card that holds them.
-- Prefer thin borders and space over shadows. Use a soft shadow only for things that float: dialogs, popovers, toasts.
+- Controls are pill-shaped: buttons, fields, chips and badges are fully rounded.
+- Cards, panels and dialogs use the large container radius: soft, generous corners.
+- Small marks (checkboxes, tooltips) use the small radius.
+- Parts inside a rounded container (tabs in a tab bar, options in a menu) follow the container's corners minus the gap, so the space between stays even.
+- Depth is quiet: a faint shadow for cards, a stronger one only for things that float (menus, dialogs, toasts).
 
 ## Layout
 
-- Product imagery leads: large, consistent aspect ratios, plenty of space around each piece.
-- Product grids stay airy: at most 4 columns on desktop, 2 on mobile.
-- On a product page: photos, name, price, one primary action, then the story, materials and care.
-- Keep checkout plain and focused: no promotions or distractions inside it.
+- A dashboard grid of cards on wide screens; one column on narrow ones. The most important card (this month's summary) sits top left.
+- Generous spacing between cards; tighter, consistent spacing inside them.
+- Each card shows a headline number, then the detail, then at most one action.
+- Tables for transactions and bills: few columns, clear headers, amounts on the right.
+- Progress bars for limits and goals, always with the numbers next to them ("$320 of $500").
+- Body text stays under 75 characters per line.
 
 ## Components
 
-- Buttons: primary for the single main action; outline or ghost for everything else (Save for later, View details).
-- Badges: for quiet facts such as Handmade, One of a kind or Made to order. Neutral by default; status colors only for real status (Low stock).
-- Toasts: short and warm confirmations (Added to your bag). No toasts for errors that need action; use an inline alert.
-- Dialogs: only for decisions that need focus, such as removing a saved address.
+- Buttons: primary for the single main action; outline or ghost for the rest (Edit, See all). Button groups for related choices such as a month switcher.
+- Badges: categories and small facts (Recurring, Shared, Paid). Neutral by default; status colors only for real status.
+- Progress: spending limits and savings goals. Pair with the amount and what's left.
+- Charts: one question per chart, with an accessible label and a legend or labeled series.
+- Empty states: say what will appear here and offer one action (Add your first bill).
+- Toasts: short confirmations, with undo where it helps (Bill deleted. Undo).
+- Alerts: inline, for things that need attention, written as helpful facts.
+- Dialogs and alert dialogs: only for decisions that need focus, such as deleting a goal.
 
 ## Do's and Don'ts
 
-- Do let photos and white space do the work.
-- Do show care in small details: gift options, packaging, a note from the maker.
-- Don't use urgency tricks (timers, "only 2 left!" in red, pop-ups on arrival).
-- Don't add gradients, glitter or gold-look effects to suggest luxury; restraint reads as quality.
-- Don't use emerald for decoration on every surface; keep it for actions and small signature touches.
+- Do lead with the answer, then the detail.
+- Do keep the same category in the same color everywhere.
+- Do make mistakes easy to fix: undo, edit, move a transaction.
+- Don't paint over-limit spending red or use alarm icons for ordinary spending.
+- Don't add a bright brand color to decorate; ink, white and the chart colors are enough.
+- Don't show more than one display-size number per card.
+- Don't hide meaning in color alone.

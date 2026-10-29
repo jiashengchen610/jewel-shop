@@ -6,7 +6,7 @@
       "$description": "Buttons, inputs and other controls"
     },
     "container": {
-      "$value": "{radius.2xl}",
+      "$value": "{radius.4xl}",
       "$description": "Cards, panels, dialogs"
     },
     "pill": {
@@ -19,45 +19,43 @@
     },
     "fit-inside": {
       "$type": "number",
-      "$description": "1: parts inside a rounded container (tabs in the tab bar, options in a menu, close buttons in a corner) take its corners minus the gap, so the space between stays even. 0: they keep their own corners.",
-      "$value": 1
+      "$value": 1,
+      "$description": "1: parts inside a rounded container (tabs in the tab bar, options in a menu, close buttons in a corner) take its corners minus the gap, so the space between stays even. 0: they keep their own corners."
     }
   },
   "font": {
     "$type": "fontFamily",
-    "sans": {
-      "$value": "{font.body}",
-      "$type": "fontFamily",
-      "$description": "Tailwind's font-sans: the page's default font"
-    },
+    "$description": "Font roles: which font each kind of text uses. They point at fonts in the palette (tokens/primitives.tokens.json → font).",
     "body": {
-      "$type": "fontFamily",
+      "$value": "{font.inter}",
       "$description": "Running text, fields and lists",
-      "$value": "{font.nunito}"
+      "$type": "fontFamily"
     },
     "heading": {
-      "$type": "fontFamily",
-      "$description": "Headings and titles: the same as body until another font is picked",
-      "$value": "{font.body}"
+      "$value": "{font.body}",
+      "$description": "Headings and titles: the same as body until another font is picked"
     },
     "label": {
-      "$type": "fontFamily",
-      "$description": "Buttons, tabs, badges and field labels: follows body or heading",
-      "$value": "{font.body}"
+      "$value": "{font.body}",
+      "$description": "Buttons, tabs, badges and field labels: follows body or heading"
     },
     "code": {
-      "$type": "fontFamily",
+      "$value": "{font.jetbrains-mono}",
       "$description": "Code",
-      "$value": "{font.jetbrains-mono}"
+      "$type": "fontFamily"
+    },
+    "sans": {
+      "$value": "{font.body}",
+      "$description": "Tailwind's font-sans: the page's default font"
     },
     "mono": {
-      "$type": "fontFamily",
-      "$description": "Tailwind's font-mono",
-      "$value": "{font.code}"
+      "$value": "{font.code}",
+      "$description": "Tailwind's font-mono"
     }
   },
   "typography": {
     "$type": "typography",
+    "$description": "Text styles. Each uses a font role; components point at these through their own text tokens (tokens/components).",
     "display": {
       "$value": {
         "fontFamily": "{font.heading}",
@@ -72,13 +70,10 @@
           "unit": "em"
         }
       },
-      "$type": "typography",
       "$description": "Big numbers and page titles"
     },
     "heading": {
       "lg": {
-        "$type": "typography",
-        "$description": "Section titles",
         "$value": {
           "fontFamily": "{font.heading}",
           "fontSize": {
@@ -91,11 +86,10 @@
             "value": -0.01,
             "unit": "em"
           }
-        }
+        },
+        "$description": "Section titles"
       },
       "md": {
-        "$type": "typography",
-        "$description": "Dialog titles",
         "$value": {
           "fontFamily": "{font.heading}",
           "fontSize": {
@@ -108,11 +102,10 @@
             "value": 0,
             "unit": "em"
           }
-        }
+        },
+        "$description": "Dialog titles"
       },
       "sm": {
-        "$type": "typography",
-        "$description": "Card titles",
         "$value": {
           "fontFamily": "{font.heading}",
           "fontSize": {
@@ -125,11 +118,10 @@
             "value": 0,
             "unit": "em"
           }
-        }
+        },
+        "$description": "Card titles"
       },
       "xs": {
-        "$type": "typography",
-        "$description": "Small card titles",
         "$value": {
           "fontFamily": "{font.heading}",
           "fontSize": {
@@ -142,13 +134,12 @@
             "value": 0,
             "unit": "em"
           }
-        }
+        },
+        "$description": "Small card titles"
       }
     },
     "body": {
       "lg": {
-        "$type": "typography",
-        "$description": "Longer reading text",
         "$value": {
           "fontFamily": "{font.body}",
           "fontSize": {
@@ -161,11 +152,10 @@
             "value": 0,
             "unit": "em"
           }
-        }
+        },
+        "$description": "Longer reading text"
       },
       "md": {
-        "$type": "typography",
-        "$description": "Most text: descriptions, fields, lists",
         "$value": {
           "fontFamily": "{font.body}",
           "fontSize": {
@@ -178,11 +168,10 @@
             "value": 0,
             "unit": "em"
           }
-        }
+        },
+        "$description": "Most text: descriptions, fields, lists"
       },
       "sm": {
-        "$type": "typography",
-        "$description": "Small print and tooltips",
         "$value": {
           "fontFamily": "{font.body}",
           "fontSize": {
@@ -195,13 +184,12 @@
             "value": 0,
             "unit": "em"
           }
-        }
+        },
+        "$description": "Small print and tooltips"
       }
     },
     "label": {
       "md": {
-        "$type": "typography",
-        "$description": "Buttons, tabs and field labels",
         "$value": {
           "fontFamily": "{font.label}",
           "fontSize": {
@@ -214,11 +202,10 @@
             "value": 0,
             "unit": "em"
           }
-        }
+        },
+        "$description": "Buttons, tabs and field labels"
       },
       "sm": {
-        "$type": "typography",
-        "$description": "Badges and small buttons",
         "$value": {
           "fontFamily": "{font.label}",
           "fontSize": {
@@ -231,13 +218,12 @@
             "value": 0,
             "unit": "em"
           }
-        }
+        },
+        "$description": "Badges and small buttons"
       }
     },
     "code": {
       "md": {
-        "$type": "typography",
-        "$description": "Code",
         "$value": {
           "fontFamily": "{font.code}",
           "fontSize": {
@@ -250,7 +236,8 @@
             "value": 0,
             "unit": "em"
           }
-        }
+        },
+        "$description": "Code"
       }
     }
   },
@@ -472,5 +459,28 @@
       "unit": "rem"
     },
     "$description": "Density: the step every padding, gap and margin is a multiple of (p-4 = 4 steps)."
+  },
+  "material": {
+    "$type": "color",
+    "$description": "Materials: surfaces with an effect. Glass is a recipe of parameters ($extensions.plinth.glass); Plinth writes the CSS (the material-glass utility) and checks its text over the darkest and the lightest backdrop.",
+    "glass": {
+      "$value": "{color.popover}",
+      "$description": "Glass: the color it tints what is behind it with, and shows solid where the browser cannot blur or the system asks for less transparency",
+      "$extensions": {
+        "plinth": {
+          "glass": {
+            "tintOpacity": 0.7,
+            "blur": 16,
+            "saturation": 1.6,
+            "highlight": 0.6,
+            "distortion": 0
+          }
+        }
+      }
+    },
+    "glass-foreground": {
+      "$value": "{color.popover-foreground}",
+      "$description": "Text on glass"
+    }
   }
 }

@@ -1,13 +1,13 @@
 {
-  "name": "Jewel Shop",
-  "context": "e-commerce",
+  "name": "Plinth Dashboard",
+  "context": "saas-dashboard",
   "naming": "shadcn",
   "componentBase": "radix",
   "defaultBrand": "jewel-shop",
   "brands": [
     {
       "id": "jewel-shop",
-      "name": "jewel-shop"
+      "name": "Plinth Dashboard"
     }
   ],
   "layers": [
@@ -45,25 +45,56 @@
     "allowFilesNote": "Vendored shadcn/ui sources are accepted as-is; generated components are checked."
   },
   "brief": {
-    "product": "A budgeting app for young professionals",
-    "feel": "Friendly, not preachy",
-    "kind": "mobile-app",
-    "palette": "blue-slate",
-    "corners": "pill",
-    "font": "Nunito",
+    "product": "A budgeting dashboard for households: income, bills, savings goals and spending limits in one place.",
+    "feel": "Clear and calm",
+    "kind": "saas-dashboard",
+    "palette": "site",
+    "corners": "site",
+    "font": "site",
+    "site": {
+      "url": "https://monzo.com/",
+      "name": "Monzo",
+      "picks": {
+        "main": {
+          "family": "gray",
+          "step": "900",
+          "color": "#091723"
+        },
+        "gray": "gray",
+        "background": null,
+        "corners": {
+          "preset": "pill",
+          "outer": "4xl"
+        },
+        "fonts": {
+          "font": "Inter",
+          "headingFont": "",
+          "labelFont": "body"
+        }
+      }
+    },
     "components": [
+      "textarea",
       "checkbox",
       "radio-group",
       "select",
+      "switch",
       "alert",
       "toast",
+      "tooltip",
       "tabs",
       "dialog",
       "separator",
-      "textarea",
-      "switch",
-      "tooltip"
+      "chart",
+      "progress",
+      "slider",
+      "input-group",
+      "button-group",
+      "alert-dialog",
+      "item",
+      "breadcrumb",
+      "empty"
     ],
-    "answeredAt": "2026-10-28T17:28:01.311Z"
+    "answeredAt": "2026-10-29T06:25:32.067Z"
   }
 }

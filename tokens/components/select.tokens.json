@@ -35,8 +35,8 @@
       },
       "font": {
         "$type": "typography",
-        "$description": "The chosen value",
-        "$value": "{typography.body.md}"
+        "$value": "{typography.body.md}",
+        "$description": "The chosen value"
       }
     },
     "content": {
@@ -51,8 +51,8 @@
       },
       "radius": {
         "$type": "dimension",
-        "$description": "The open list",
-        "$value": "{select.radius}"
+        "$value": "{select.radius}",
+        "$description": "The open list"
       }
     },
     "item": {
@@ -67,13 +67,13 @@
       },
       "font": {
         "$type": "typography",
-        "$description": "Options in the list",
-        "$value": "{typography.body.md}"
+        "$value": "{typography.body.md}",
+        "$description": "Options in the list"
       },
       "radius": {
         "$type": "dimension",
-        "$description": "Option corners: inside the list they fit its corners",
         "$value": "{radius.control}",
+        "$description": "Option corners: inside the list they fit its corners",
         "$extensions": {
           "plinth": {
             "fit": {
@@ -88,8 +88,8 @@
     "group-label": {
       "font": {
         "$type": "typography",
-        "$description": "Group names in the list",
-        "$value": "{typography.body.sm}"
+        "$value": "{typography.body.sm}",
+        "$description": "Group names in the list"
       }
     }
   }

@@ -7,8 +7,8 @@
       },
       "font": {
         "$type": "typography",
-        "$description": "Label text",
-        "$value": "{typography.label.md}"
+        "$value": "{typography.label.md}",
+        "$description": "Label text"
       }
     }
   }
