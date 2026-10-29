@@ -293,7 +293,7 @@ colors:
   black: "#000000"
   material-glass: "#ffffff"
   material-glass-foreground: "#030712"
-  gradient-brand-foreground: "#ffffff"
+  gradient-brand-foreground: "#030712"
   gradient-surface-foreground: "#030712"
   background: "#ffffff"
   foreground: "#030712"
