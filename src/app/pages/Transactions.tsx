@@ -11,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/table/table";
 import { Tabs, TabsList, TabsTrigger } from "@/components/tabs/tabs";
 import { ChevronDownIcon, InboxIcon, ReceiptIcon, SearchIcon } from "@/icons";
-import { Section, type PageProps } from "../Dashboard";
+import { Panel, Section, type PageProps } from "../Dashboard";
 import { categoryTone, money, shortDate, transactions, type Category } from "../data";
 
 const CATEGORIES = ["All", ...new Set(transactions.map((t) => t.category))] as const;
@@ -57,14 +57,16 @@ export function Transactions({ notify }: PageProps) {
       </div>
 
       {rows.length === 0 ? (
-        <Empty className="rounded-card ring-1 ring-border">
-          <EmptyHeader>
-            <EmptyMedia variant="icon"><InboxIcon /></EmptyMedia>
-            <EmptyTitle>Nothing matches</EmptyTitle>
-            <EmptyDescription>No transaction this month fits “{query || category}”. Try another word, or clear the filters.</EmptyDescription>
-          </EmptyHeader>
-          <Button variant="outline" onClick={reset}>Clear filters</Button>
-        </Empty>
+        <Panel>
+          <Empty>
+            <EmptyHeader>
+              <EmptyMedia variant="icon"><InboxIcon /></EmptyMedia>
+              <EmptyTitle>Nothing matches</EmptyTitle>
+              <EmptyDescription>No transaction this month fits “{query || category}”. Try another word, or clear the filters.</EmptyDescription>
+            </EmptyHeader>
+            <Button variant="outline" onClick={reset}>Clear filters</Button>
+          </Empty>
+        </Panel>
       ) : (
         <Section title={`${rows.length} transaction${rows.length === 1 ? "" : "s"}`} text={`${money(total, true)} in total${rows.some((t) => t.status === "pending") ? " · one still pending" : ""}`}>
           <div className="hidden md:block">

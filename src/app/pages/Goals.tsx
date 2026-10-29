@@ -11,7 +11,7 @@ import { Slider } from "@/components/slider/slider";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/tooltip/tooltip";
 import { InfoIcon, PlusIcon } from "@/icons";
 import * as icons from "@/icons";
-import { Section, type PageProps } from "../Dashboard";
+import { Panel, Section, type PageProps } from "../Dashboard";
 import { goals, money } from "../data";
 
 export function Goals({ notify }: PageProps) {
@@ -20,10 +20,12 @@ export function Goals({ notify }: PageProps) {
   const monthly = goals.reduce((s, g) => s + g.monthly, 0);
   return (
     <div className="flex flex-col gap-6">
-      <section aria-label="Saving in total" className="grid gap-3 rounded-card bg-gradient-surface p-5 ring-1 ring-border sm:grid-cols-3 sm:p-6">
-        <Figure label="Saved so far" value={money(total)} note={`${Math.round((total / target) * 100)}% of ${money(target)}`} />
-        <Figure label="Put aside each month" value={money(monthly)} note="Across three goals" />
-        <Figure label="Next to finish" value="New laptop" note="March 2027, on track" />
+      <section aria-label="Saving in total">
+        <Panel className="grid gap-3 p-5 sm:grid-cols-3 sm:p-6">
+          <Figure label="Saved so far" value={money(total)} note={`${Math.round((total / target) * 100)}% of ${money(target)}`} />
+          <Figure label="Put aside each month" value={money(monthly)} note="Across three goals" />
+          <Figure label="Next to finish" value="New laptop" note="March 2027, on track" />
+        </Panel>
       </section>
 
       <div className="flex flex-wrap items-center justify-between gap-3">
@@ -66,7 +68,7 @@ export function Goals({ notify }: PageProps) {
 
 function Figure({ label, value, note }: { label: string; value: string; note: string }) {
   return (
-    <div className="flex flex-col gap-1 text-gradient-surface-foreground">
+    <div className="flex flex-col gap-1">
       <span className="type-label-sm text-muted-foreground uppercase">{label}</span>
       <span className="type-heading-md tabular-nums">{value}</span>
       <span className="type-body-sm text-muted-foreground">{note}</span>

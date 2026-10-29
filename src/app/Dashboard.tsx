@@ -1,7 +1,9 @@
-// The dashboard: a shell (a sidebar from the large breakpoint up, a top bar with a slide-in menu below it) around four
-// pages picked by the URL hash. Everything on screen is one of this design system's components or a token utility.
+// The dashboard: the brand gradient is the page, and everything on it is glass (the sidebar, the top bar, every card)
+// with a shadow, so the whole look comes from four tokens: the gradient, the glass material, a shadow and a radius.
+// A sidebar from the large breakpoint up, a top bar with a slide-in menu below it, four pages picked by the URL hash.
 import { useEffect, useState, type ReactNode } from "react";
 import { Button } from "@/components/button/button";
+import { Glass } from "@/components/glass/glass";
 import { Item, ItemContent, ItemMedia, ItemTitle } from "@/components/item/item";
 import { Separator } from "@/components/separator/separator";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/sheet/sheet";
@@ -25,6 +27,16 @@ const fromHash = (): PageId => (PAGES.some((p) => p.id === location.hash.slice(2
 
 export type Notice = { title: string; text?: string };
 export type PageProps = { go: (p: PageId) => void; notify: (n: Notice) => void; dark: boolean; onDark: (on: boolean) => void };
+
+/** A glass panel with the shadow every floating surface here shares (the shadow sits on a wrapper, so it never
+ * competes with the glass's own edge light). */
+export function Panel({ className = "", children, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div className="h-full rounded-card shadow-lg" {...props}>
+      <Glass className={`h-full rounded-card ${className}`}>{children}</Glass>
+    </div>
+  );
+}
 
 export function Dashboard() {
   const [page, setPage] = useState<PageId>(fromHash);
@@ -69,46 +81,50 @@ export function Dashboard() {
   return (
     <TooltipProvider>
       <ToastProvider>
-        <div className="min-h-dvh bg-background text-foreground lg:grid lg:grid-cols-[15rem_minmax(0,1fr)]">
-          <aside className="sticky top-0 hidden h-dvh flex-col gap-4 border-r bg-card p-4 lg:flex">
-            <Brand />
-            {nav}
-            <div className="mt-auto flex flex-col gap-3">
-              <DarkSwitch id="dark-side" dark={dark} onDark={setDark} />
-              <Separator />
-              {account}
-            </div>
+        <div className="min-h-dvh bg-gradient-brand text-gradient-brand-foreground lg:grid lg:grid-cols-[16rem_minmax(0,1fr)]">
+          <aside className="sticky top-0 hidden h-dvh p-4 lg:block">
+            <Panel className="flex h-full flex-col gap-4 p-4">
+              <Brand />
+              {nav}
+              <div className="mt-auto flex flex-col gap-3">
+                <DarkSwitch id="dark-side" dark={dark} onDark={setDark} />
+                <Separator />
+                {account}
+              </div>
+            </Panel>
           </aside>
 
           <div className="flex min-w-0 flex-col">
-            <header className="sticky top-0 z-10 flex items-center gap-2 border-b bg-background/95 px-4 py-2 backdrop-blur-sm lg:hidden">
-              <Sheet open={menu} onOpenChange={setMenu}>
-                <SheetTrigger asChild>
-                  <Button variant="outline" size="icon-lg" aria-label="Open the menu"><MenuIcon /></Button>
-                </SheetTrigger>
-                <SheetContent side="left" className="flex w-72 flex-col gap-4">
-                  <SheetHeader>
-                    <SheetTitle>Plinth Dashboard</SheetTitle>
-                    <SheetDescription>Your money this month, in one place.</SheetDescription>
-                  </SheetHeader>
-                  {nav}
-                  <div className="mt-auto flex flex-col gap-3">
-                    <DarkSwitch id="dark-sheet" dark={dark} onDark={setDark} />
-                    <Separator />
-                    {account}
-                  </div>
-                </SheetContent>
-              </Sheet>
-              <Brand compact />
-              <span className="ml-auto flex items-center gap-1">
-                <Tooltip>
-                  <TooltipTrigger asChild><Button variant="ghost" size="icon-lg" aria-label="Notifications: 2 new"><BellIcon /></Button></TooltipTrigger>
-                  <TooltipContent>2 new: a bill is due, a goal is ahead</TooltipContent>
-                </Tooltip>
-              </span>
+            <header className="sticky top-0 z-10 p-3 lg:hidden">
+              <Panel className="flex items-center gap-2 px-3 py-2">
+                <Sheet open={menu} onOpenChange={setMenu}>
+                  <SheetTrigger asChild>
+                    <Button variant="outline" size="icon-lg" aria-label="Open the menu"><MenuIcon /></Button>
+                  </SheetTrigger>
+                  <SheetContent side="left" className="flex w-72 flex-col gap-4">
+                    <SheetHeader>
+                      <SheetTitle>Plinth Dashboard</SheetTitle>
+                      <SheetDescription>Your money this month, in one place.</SheetDescription>
+                    </SheetHeader>
+                    {nav}
+                    <div className="mt-auto flex flex-col gap-3">
+                      <DarkSwitch id="dark-sheet" dark={dark} onDark={setDark} />
+                      <Separator />
+                      {account}
+                    </div>
+                  </SheetContent>
+                </Sheet>
+                <Brand compact />
+                <span className="ml-auto flex items-center gap-1">
+                  <Tooltip>
+                    <TooltipTrigger asChild><Button variant="ghost" size="icon-lg" aria-label="Notifications: 2 new"><BellIcon /></Button></TooltipTrigger>
+                    <TooltipContent>2 new: a bill is due, a goal is ahead</TooltipContent>
+                  </Tooltip>
+                </span>
+              </Panel>
             </header>
 
-            <main className="flex min-w-0 flex-1 flex-col gap-6 p-4 pb-12 sm:p-6 lg:p-8">
+            <main className="flex min-w-0 flex-1 flex-col gap-6 p-4 pb-12 sm:p-6 lg:py-8 lg:pr-8 lg:pl-4">
               <PageHeader page={current.id} />
               {page === "overview" && <Overview {...props} />}
               {page === "transactions" && <Transactions {...props} />}
@@ -133,7 +149,7 @@ export function Dashboard() {
 function Brand({ compact = false }: { compact?: boolean }) {
   return (
     <a href="#/overview" className="flex items-center gap-2.5 rounded-item px-1 py-1 outline-none focus-visible:ring-3 focus-visible:ring-ring/50" aria-label="Plinth Dashboard, overview">
-      <span aria-hidden="true" className="grid size-8 place-items-center rounded-button bg-gradient-brand text-gradient-brand-foreground">
+      <span aria-hidden="true" className="grid size-8 place-items-center rounded-button bg-primary text-primary-foreground">
         <svg width="18" height="18" viewBox="0 0 28 28"><rect x="3" y="17" width="22" height="7" rx="2" fill="currentColor" /><rect x="8" y="5" width="12" height="10" rx="2" fill="none" stroke="currentColor" strokeWidth="2.5" /></svg>
       </span>
       {!compact && <span className="type-heading-xs">Plinth Dashboard</span>}
@@ -158,28 +174,31 @@ const TITLES: Record<PageId, [string, string]> = {
   settings: ["Settings", "Your profile, what we tell you about, and how the app looks."],
 };
 
+/** Page titles sit on the gradient itself, in the text color made for it. */
 function PageHeader({ page }: { page: PageId }) {
   const [title, text] = TITLES[page];
   return (
     <div className="flex flex-col gap-1">
       <h1 className="type-heading-lg">{title}</h1>
-      <p className="type-body-md text-muted-foreground">{text}</p>
+      <p className="type-body-md opacity-85">{text}</p>
     </div>
   );
 }
 
-/** A card-shaped section with a title row, shared by the pages. */
+/** A glass card with a title row, shared by the pages. */
 export function Section({ title, text, action, children, className = "" }: { title: string; text?: string; action?: ReactNode; children: ReactNode; className?: string }) {
   return (
-    <section aria-label={title} className={`flex min-w-0 flex-col gap-4 rounded-card bg-card p-5 ring-1 ring-border ${className}`}>
-      <div className="flex flex-wrap items-start justify-between gap-2">
-        <div className="flex min-w-0 flex-col gap-0.5">
-          <h2 className="type-heading-xs">{title}</h2>
-          {text && <p className="type-body-sm text-muted-foreground">{text}</p>}
+    <section aria-label={title} className={`h-full min-w-0 rounded-card shadow-lg ${className}`}>
+      <Glass className="flex h-full min-w-0 flex-col gap-4 rounded-card p-5">
+        <div className="flex flex-wrap items-start justify-between gap-2">
+          <div className="flex min-w-0 flex-col gap-0.5">
+            <h2 className="type-heading-xs">{title}</h2>
+            {text && <p className="type-body-sm text-muted-foreground">{text}</p>}
+          </div>
+          {action}
         </div>
-        {action}
-      </div>
-      {children}
+        {children}
+      </Glass>
     </section>
   );
 }

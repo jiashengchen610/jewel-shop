@@ -494,18 +494,30 @@
       "$description": "The brand gradient: its stops are color roles, so it follows the brand and the mode. Use it as bg-gradient-brand, with text-gradient-brand-foreground for text on it.",
       "$value": [
         {
-          "color": "{color.primary}",
+          "color": "{color.chart.1}",
           "position": 0
         },
         {
-          "color": "{color.chart.2}",
+          "color": "{color.chart.5}",
           "position": 1
         }
       ],
       "$extensions": {
         "plinth": {
           "gradient": {
-            "angle": 135
+            "angle": 160
+          },
+          "modes": {
+            "dark": [
+              {
+                "color": "{color.background}",
+                "position": 0
+              },
+              {
+                "color": "{color.chart.seq.1}",
+                "position": 1
+              }
+            ]
           }
         }
       }
@@ -513,7 +525,14 @@
     "brand-foreground": {
       "$type": "color",
       "$description": "Text on the brand gradient",
-      "$value": "{color.primary-foreground}"
+      "$value": "{color.primary-foreground}",
+      "$extensions": {
+        "plinth": {
+          "modes": {
+            "dark": "{color.foreground}"
+          }
+        }
+      }
     },
     "surface": {
       "$type": "gradient",

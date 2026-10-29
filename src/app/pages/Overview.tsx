@@ -1,25 +1,31 @@
-// Overview: the month at a glance. A band in the brand gradient carries the balance, with glass panels for the three
-// numbers that matter; below it, the spending history, where the money went, goals, recent transactions and bills.
+// Overview: the month at a glance. The balance sits straight on the gradient; the three numbers that matter are glass
+// panels; below them the spending history, where the money went, recent transactions, bills, goals and subscriptions.
+// Both charts draw from the same sequential chart colors: light for less, dark for more.
 import { Bar, BarChart, Cell, Pie, PieChart, XAxis } from "recharts";
 import { Badge } from "@/components/badge/badge";
 import { Button } from "@/components/button/button";
 import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from "@/components/chart/chart";
-import { Glass } from "@/components/glass/glass";
 import { Item, ItemActions, ItemContent, ItemDescription, ItemMedia, ItemTitle } from "@/components/item/item";
 import { Progress } from "@/components/progress/progress";
 import { ArrowRightIcon, CalendarClockIcon, ReceiptIcon, RepeatIcon, TrendingUpIcon } from "@/icons";
-import { Section, type PageProps } from "../Dashboard";
+import { Panel, Section, type PageProps } from "../Dashboard";
 import { balance, bills, goals, income, left, money, months, saved, shares, shortDate, spent, subscriptions, transactions } from "../data";
 
-const monthlyConfig = { total: { label: "Spent", color: "var(--chart-1)" } } satisfies ChartConfig;
-const slices = shares.filter((s) => s.value > 0).sort((a, b) => b.value - a.value);
+/** The sequential chart colors, lightest to darkest: one scale for every chart on the page. */
+const seq = (n: number) => `var(--chart-seq-${Math.min(7, Math.max(1, n))})`;
+const monthlyConfig = { total: { label: "Spent", color: seq(7) } } satisfies ChartConfig;
+// The four biggest categories, darkest first, and the long tail as "Other": five slices on the scale's five strongest
+// steps, so even the smallest reads against the glass in both modes.
+const ranked = shares.filter((s) => s.value > 0).sort((a, b) => b.value - a.value);
+const slices = [...ranked.slice(0, 4), ...(ranked.length > 4 ? [{ category: "Other", value: ranked.slice(4).reduce((s, x) => s + x.value, 0) }] : [])]
+  .map((s, i) => ({ ...s, fill: seq(7 - i) }));
 const shareConfig = Object.fromEntries(slices.map((s) => [s.category, { label: s.category, color: s.fill }])) satisfies ChartConfig;
 
 export function Overview({ go }: PageProps) {
   const recent = transactions.slice(0, 5);
   return (
     <div className="flex flex-col gap-6">
-      <section aria-label="Balance" className="flex flex-col gap-6 rounded-card bg-gradient-brand p-5 text-gradient-brand-foreground sm:p-6">
+      <section aria-label="Balance" className="flex flex-col gap-5">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="flex flex-col gap-1">
             <span className="type-label-sm uppercase opacity-80">Current balance</span>
@@ -28,13 +34,13 @@ export function Overview({ go }: PageProps) {
           </div>
           <div className="flex flex-wrap gap-2">
             <Button variant="secondary" onClick={() => go("transactions")}>See transactions<ArrowRightIcon /></Button>
-            <Button variant="outline" className="border-gradient-brand-foreground/40 bg-transparent text-gradient-brand-foreground hover:bg-gradient-brand-foreground/10 hover:text-gradient-brand-foreground" onClick={() => go("goals")}>Goals</Button>
+            <Button variant="secondary" onClick={() => go("goals")}>Goals</Button>
           </div>
         </div>
-        <div className="grid gap-3 sm:grid-cols-3">
-          <Glass className="flex flex-col gap-1 p-4"><span className="type-label-sm uppercase opacity-80">Income</span><span className="type-heading-md tabular-nums">{money(income)}</span><span className="type-body-sm opacity-80">Salary and one invoice</span></Glass>
-          <Glass className="flex flex-col gap-1 p-4"><span className="type-label-sm uppercase opacity-80">Spent</span><span className="type-heading-md tabular-nums">{money(spent)}</span><span className="type-body-sm opacity-80">{Math.round((spent / income) * 100)}% of income</span></Glass>
-          <Glass className="flex flex-col gap-1 p-4"><span className="type-label-sm uppercase opacity-80">Left to spend</span><span className="type-heading-md tabular-nums">{money(left)}</span><span className="type-body-sm opacity-80">{money(saved)} already saved</span></Glass>
+        <div className="grid gap-4 sm:grid-cols-3">
+          <Kpi label="Income" value={money(income)} note="Salary and one invoice" />
+          <Kpi label="Spent" value={money(spent)} note={`${Math.round((spent / income) * 100)}% of income`} />
+          <Kpi label="Left to spend" value={money(left)} note={`${money(saved)} already saved`} />
         </div>
       </section>
 
@@ -45,7 +51,7 @@ export function Overview({ go }: PageProps) {
               <XAxis dataKey="month" tickLine={false} axisLine={false} tickMargin={8} />
               <ChartTooltip cursor={false} content={<ChartTooltipContent hideIndicator />} />
               <Bar dataKey="total" radius={6}>
-                {months.map((m, i) => <Cell key={m.month} fill="var(--color-total)" fillOpacity={0.45 + (0.55 * i) / (months.length - 1)} />)}
+                {months.map((m, i) => <Cell key={m.month} fill={seq(i + 2)} />)}
               </Bar>
             </BarChart>
           </ChartContainer>
@@ -135,7 +141,7 @@ export function Overview({ go }: PageProps) {
                   <ItemDescription>{s.note} · {money(s.price)}</ItemDescription>
                 </ItemContent>
                 <ItemActions aria-label={`${s.name}, the last four months`} className="h-6 items-end gap-1">
-                  {s.months.map((m, i) => <span key={i} className="w-2 rounded-xs bg-chart-1" style={{ height: `${m}%`, opacity: 0.45 + (0.55 * i) / 3 }} />)}
+                  {s.months.map((m, i) => <span key={i} className="w-2 rounded-xs" style={{ height: `${m}%`, background: seq(i + 3) }} />)}
                 </ItemActions>
               </Item>
             ))}
@@ -144,6 +150,16 @@ export function Overview({ go }: PageProps) {
         </Section>
       </div>
     </div>
+  );
+}
+
+function Kpi({ label, value, note }: { label: string; value: string; note: string }) {
+  return (
+    <Panel className="flex flex-col gap-1 p-4">
+      <span className="type-label-sm text-muted-foreground uppercase">{label}</span>
+      <span className="type-heading-md tabular-nums">{value}</span>
+      <span className="type-body-sm text-muted-foreground">{note}</span>
+    </Panel>
   );
 }
 

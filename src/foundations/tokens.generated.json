@@ -8292,31 +8292,31 @@
             "light": {
               "raw": [
                 {
-                  "color": "{color.primary}",
+                  "color": "{color.chart.1}",
                   "position": 0
                 },
                 {
-                  "color": "{color.chart.2}",
+                  "color": "{color.chart.5}",
                   "position": 1
                 }
               ],
-              "css": "linear-gradient(135deg, var(--primary) 0%, var(--chart-2) 100%)",
-              "resolved": "linear-gradient(135deg, oklch(0.21 0.034 264.665) 0%, oklch(0.391 0.09 240.876) 100%)",
+              "css": "linear-gradient(160deg, var(--chart-1) 0%, var(--chart-5) 100%)",
+              "resolved": "linear-gradient(160deg, oklch(0.546 0.245 262.881) 0%, oklch(0.457 0.24 277.023) 100%)",
               "alpha": 1
             },
             "dark": {
               "raw": [
                 {
-                  "color": "{color.primary}",
+                  "color": "{color.background}",
                   "position": 0
                 },
                 {
-                  "color": "{color.chart.2}",
+                  "color": "{color.chart.seq.1}",
                   "position": 1
                 }
               ],
-              "css": "linear-gradient(135deg, var(--primary) 0%, var(--chart-2) 100%)",
-              "resolved": "linear-gradient(135deg, oklch(0.928 0.006 264.531) 0%, oklch(0.951 0.026 236.824) 100%)",
+              "css": "linear-gradient(160deg, var(--background) 0%, var(--chart-seq-1) 100%)",
+              "resolved": "linear-gradient(160deg, oklch(0.13 0.028 261.692) 0%, oklch(0.424 0.199 265.638) 100%)",
               "alpha": 1
             }
           }
@@ -8329,7 +8329,8 @@
           "description": "Text on the brand gradient",
           "layer": "semantic",
           "refs": [
-            "color/primary-foreground"
+            "color/primary-foreground",
+            "color/foreground"
           ],
           "values": {
             "light": {
@@ -8339,9 +8340,9 @@
               "alpha": 1
             },
             "dark": {
-              "raw": "{color.primary-foreground}",
-              "css": "var(--primary-foreground)",
-              "resolved": "oklch(0.21 0.034 264.665)",
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
               "alpha": 1
             }
           }
@@ -16838,7 +16839,7 @@
           "mode": "light",
           "bg": "gradient-brand at 0%",
           "fg": "gradient-brand-foreground",
-          "ratio": 17.75,
+          "ratio": 5.26,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -16847,7 +16848,7 @@
           "mode": "light",
           "bg": "gradient-brand at 100%",
           "fg": "gradient-brand-foreground",
-          "ratio": 9.47,
+          "ratio": 8.07,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -16856,7 +16857,7 @@
           "mode": "dark",
           "bg": "gradient-brand at 0%",
           "fg": "gradient-brand-foreground",
-          "ratio": 14.35,
+          "ratio": 19.28,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -16865,7 +16866,7 @@
           "mode": "dark",
           "bg": "gradient-brand at 100%",
           "fg": "gradient-brand-foreground",
-          "ratio": 15.45,
+          "ratio": 8.47,
           "min": 4.5,
           "pass": true,
           "accepted": false
