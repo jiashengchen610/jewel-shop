@@ -51,12 +51,16 @@ const preview: Preview = {
   },
   initialGlobals: { brand: defaultBrand, mode: "light" },
   parameters: {
+    // A component sits in the middle of its canvas and of its docs preview, not against the top left edge. Pages
+    // that fill the screen (All components) set "fullscreen" themselves.
+    layout: "centered",
     controls: { matchers: { color: /(background|color)$/i, date: /Date$/i } },
     // Accessibility findings are reported as warnings in Storybook and in the tests, not failures: design problems
     // are reminders in Plinth. Interaction tests still fail on errors.
     a11y: { test: "todo" },
     options: {
-      storySort: { order: ["Introduction", "All components", "Foundations", ["Palette", "Colors", "Typography", "Shape and elevation", "Icons", "Component tokens"], "Guidelines", ["Design", "Writing"], "Components", "Patterns"] },
+      // The site opens on the first entry: the example screen, then the introduction.
+      storySort: { order: ["Showcase", "Introduction", "All components", "Foundations", ["Palette", "Colors", "Typography", "Shape and elevation", "Icons", "Component tokens"], "Guidelines", ["Design", "Writing"], "Components", "Patterns"] },
     },
   },
 };

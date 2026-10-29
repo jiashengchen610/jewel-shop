@@ -1,61 +1,55 @@
-# Budgeting app
+# Jewel Shop
 
-A mobile budgeting app for young professionals. It should feel like a friend who is good with money: upbeat, easy to read at a glance, and never judging how you spend.
+An online shop for handmade jewelry. Each piece is made by hand, so the store should feel like a quiet, well-lit display case with a maker standing behind it: elegant, unhurried and personal.
 
 ## Overview
 
-- Friendly, not preachy: the app shows where money goes and what is left; it does not scold.
-- Glanceable: the most important number on each screen (left to spend, this month's total) is big and comes first.
-- Calm by default: color marks actions and real status, not every number.
-- Built for one hand on a phone: big tap targets, main actions within thumb reach.
+- The jewelry is the color. The interface stays calm and neutral so photos of the pieces carry the page.
+- Elegant means restraint: generous white space, few elements per view, one clear action.
+- Personal means warmth and detail: the maker's voice, the story of a piece, care in small moments (packaging notes, gift messages, order updates).
+- Never loud: no flashing sale banners, countdown timers, or crowded promo strips.
 
 ## Colors
 
-- primary (bright blue): the main action on a screen, such as Add expense or Save budget. One per screen. Also used for links, the selected tab and focus rings.
-- background, card: white in light mode, deep slate in dark mode. Cards group a budget, an account or a list of transactions.
-- muted / muted-foreground: secondary surfaces and supporting text such as dates, categories and notes.
-- secondary, accent: soft slate fills for secondary buttons, chips and selected filters.
-- destructive: deleting things for good and errors only. Never use it to show overspending or a negative balance.
-- warning: a gentle heads-up, such as a budget almost used up. Use it sparingly and always with words that say what to do.
-- success: goals reached and bills paid. Pair it with an icon and text.
-- info: neutral notices. Info is a blue close to the primary, so always pair it with an icon and text, and never use it for something tappable.
-- Charts use the chart colors in their order: blue first, then the other series colors. Spending over a limit is shown with a label or a marker, not by turning the chart red.
+- primary (deep emerald): the main action, such as Add to bag or Check out. One per view. Emerald also works as a quiet signature in links and focus rings.
+- background, card: white in light mode, near-black in dark mode. Product photos sit on these, never on tinted surfaces.
+- muted / muted-foreground: secondary surfaces and supporting text such as materials, sizes and shipping notes.
+- secondary, accent: soft neutral fills for secondary buttons, selected filters and hovered rows.
+- destructive: removing items for good, cancelling orders and errors only.
+- success, warning, info: status only (order confirmed, low stock, shipping notices), never for actions. Success is a green close to the emerald primary, so always pair it with an icon and text, and never place a success message next to a primary button.
 
 ## Typography
 
-- Nunito for everything. Its rounded shapes carry the friendly feel; hierarchy comes from size and weight.
-- Display style for the one big number on a screen (left to spend, balance) and for screen titles.
-- Heading styles for section and card titles; body styles for lists, descriptions and fields. On phones, prefer the larger body size for reading text.
-- Amounts use tabular figures so columns line up. Positive and negative amounts differ by sign and label, not only by color.
-- No all-caps headings.
+- Nunito for everything. Its soft, rounded shapes give the personal, handmade warmth; keep it elegant through weight and space, not decoration.
+- Display style (semibold, large, tight line height) for page titles and product names on the product page.
+- Body style for descriptions, prices in lists and form text. Product stories may use a slightly larger body size with comfortable line height.
+- Prices use the regular body weight; do not make them bold or colored.
+- No all-caps headings and no decorative letter-spacing.
 
 ## Shape and depth
 
-- Corners are pill-shaped for controls: buttons, inputs, chips and badges are fully rounded. This is a big part of the friendly feel.
-- Cards, sheets and dialogs use the large container radius, not full pills.
-- Parts inside a rounded container (tabs in a tab bar, options in a menu) follow the container's corners minus the gap.
-- Light shadows only: a faint one for cards, a stronger one for things that float (sheets, dialogs, toasts).
+- Corners are slight: controls and badges use the small radius, cards and dialogs the medium radius, small marks the smallest. Never pill-shaped buttons.
+- Product images are never rounded more than the card that holds them.
+- Prefer thin borders and space over shadows. Use a soft shadow only for things that float: dialogs, popovers, toasts.
 
 ## Layout
 
-- Mobile first: one column, generous spacing, a bottom tab bar for the main sections.
-- Tap targets at least 44 by 44 points; the main action sits low on the screen, in thumb reach.
-- Each screen opens with its key number, then the details (categories, transactions).
-- Keep forms short: adding an expense should take a few taps.
+- Product imagery leads: large, consistent aspect ratios, plenty of space around each piece.
+- Product grids stay airy: at most 4 columns on desktop, 2 on mobile.
+- On a product page: photos, name, price, one primary action, then the story, materials and care.
+- Keep checkout plain and focused: no promotions or distractions inside it.
 
 ## Components
 
-- Buttons: primary for the single main action; outline or ghost for the rest (Edit, See all).
-- Badges: categories and small facts (Recurring, Shared). Neutral by default; status colors only for real status (Paid, Almost used up).
-- Toasts: short confirmations with an undo where it helps (Expense added. Undo).
-- Alerts: inline, for things that need attention, written as a suggestion, not a warning.
-- Dialogs: only for decisions that need focus, such as deleting a budget.
-- Switches for settings that apply at once; checkboxes for choices in a form.
+- Buttons: primary for the single main action; outline or ghost for everything else (Save for later, View details).
+- Badges: for quiet facts such as Handmade, One of a kind or Made to order. Neutral by default; status colors only for real status (Low stock).
+- Toasts: short and warm confirmations (Added to your bag). No toasts for errors that need action; use an inline alert.
+- Dialogs: only for decisions that need focus, such as removing a saved address.
 
 ## Do's and Don'ts
 
-- Do celebrate progress in small ways: a goal reached, a month under budget.
-- Do make it easy to fix mistakes: undo, edit, move a transaction.
-- Don't paint overspending red or use alarm icons for normal spending.
-- Don't show more than one key number in display size per screen.
-- Don't hide important amounts behind color alone.
+- Do let photos and white space do the work.
+- Do show care in small details: gift options, packaging, a note from the maker.
+- Don't use urgency tricks (timers, "only 2 left!" in red, pop-ups on arrival).
+- Don't add gradients, glitter or gold-look effects to suggest luxury; restraint reads as quality.
+- Don't use emerald for decoration on every surface; keep it for actions and small signature touches.
