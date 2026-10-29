@@ -8281,6 +8281,138 @@
           }
         },
         {
+          "name": "gradient-brand",
+          "path": "gradient/brand",
+          "group": "gradient",
+          "type": "gradient",
+          "description": "The brand gradient: its stops are color roles, so it follows the brand and the mode. Use it as bg-gradient-brand, with text-gradient-brand-foreground for text on it.",
+          "layer": "semantic",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": [
+                {
+                  "color": "{color.primary}",
+                  "position": 0
+                },
+                {
+                  "color": "{color.chart.2}",
+                  "position": 1
+                }
+              ],
+              "css": "linear-gradient(135deg, var(--primary) 0%, var(--chart-2) 100%)",
+              "resolved": "linear-gradient(135deg, oklch(0.21 0.034 264.665) 0%, oklch(0.391 0.09 240.876) 100%)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": [
+                {
+                  "color": "{color.primary}",
+                  "position": 0
+                },
+                {
+                  "color": "{color.chart.2}",
+                  "position": 1
+                }
+              ],
+              "css": "linear-gradient(135deg, var(--primary) 0%, var(--chart-2) 100%)",
+              "resolved": "linear-gradient(135deg, oklch(0.928 0.006 264.531) 0%, oklch(0.951 0.026 236.824) 100%)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "gradient-brand-foreground",
+          "path": "gradient/brand-foreground",
+          "group": "gradient",
+          "type": "color",
+          "description": "Text on the brand gradient",
+          "layer": "semantic",
+          "refs": [
+            "color/primary-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.primary-foreground}",
+              "css": "var(--primary-foreground)",
+              "resolved": "oklch(1 0 0)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.primary-foreground}",
+              "css": "var(--primary-foreground)",
+              "resolved": "oklch(0.21 0.034 264.665)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "gradient-surface",
+          "path": "gradient/surface",
+          "group": "gradient",
+          "type": "gradient",
+          "description": "The surface gradient: its stops are color roles, so it follows the brand and the mode. Use it as bg-gradient-surface, with text-gradient-surface-foreground for text on it.",
+          "layer": "semantic",
+          "refs": [],
+          "values": {
+            "light": {
+              "raw": [
+                {
+                  "color": "{color.background}",
+                  "position": 0
+                },
+                {
+                  "color": "{color.muted}",
+                  "position": 1
+                }
+              ],
+              "css": "linear-gradient(180deg, var(--background) 0%, var(--muted) 100%)",
+              "resolved": "linear-gradient(180deg, oklch(1 0 0) 0%, oklch(0.967 0.003 264.542) 100%)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": [
+                {
+                  "color": "{color.background}",
+                  "position": 0
+                },
+                {
+                  "color": "{color.muted}",
+                  "position": 1
+                }
+              ],
+              "css": "linear-gradient(180deg, var(--background) 0%, var(--muted) 100%)",
+              "resolved": "linear-gradient(180deg, oklch(0.13 0.028 261.692) 0%, oklch(0.278 0.033 256.848) 100%)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "gradient-surface-foreground",
+          "path": "gradient/surface-foreground",
+          "group": "gradient",
+          "type": "color",
+          "description": "Text on the surface gradient",
+          "layer": "semantic",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
           "name": "background",
           "path": "color/background",
           "group": "color",
@@ -12850,6 +12982,81 @@
           }
         },
         {
+          "name": "glass-radius",
+          "path": "glass/radius",
+          "group": "glass",
+          "type": "dimension",
+          "description": "Glass panel corners",
+          "layer": "components",
+          "refs": [
+            "radius/container"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.container}",
+              "css": "var(--container-radius)",
+              "resolved": "2rem",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.container}",
+              "css": "var(--container-radius)",
+              "resolved": "2rem",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "glass-panel-foreground",
+          "path": "glass/panel/foreground",
+          "group": "glass",
+          "type": "color",
+          "description": "Text on the glass panel",
+          "layer": "components",
+          "refs": [
+            "material/glass-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{material.glass-foreground}",
+              "css": "var(--material-glass-foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{material.glass-foreground}",
+              "css": "var(--material-glass-foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "glass-text-font",
+          "path": "glass/text/font",
+          "group": "glass",
+          "type": "typography",
+          "description": "Text on the glass panel",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
           "name": "input-group-radius",
           "path": "input-group/radius",
           "group": "input-group",
@@ -14171,6 +14378,226 @@
           }
         },
         {
+          "name": "sheet-shadow",
+          "path": "sheet/shadow",
+          "group": "sheet",
+          "type": "shadow",
+          "layer": "components",
+          "refs": [
+            "shadow/overlay"
+          ],
+          "values": {
+            "light": {
+              "raw": "{shadow.overlay}",
+              "css": "var(--overlay-shadow)",
+              "resolved": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{shadow.overlay}",
+              "css": "var(--overlay-shadow)",
+              "resolved": "0px 10px 24px -4px oklch(0 0 0 / 0.6), 0px 4px 8px -4px oklch(0 0 0 / 0.5), inset 0px 1px 0px 0px oklch(1 0 0 / 0.08)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "sheet-overlay",
+          "path": "sheet/overlay",
+          "group": "sheet",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground",
+            "color/background"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "color-mix(in oklab, var(--foreground) 50%, transparent)",
+              "resolved": "oklch(0.13 0.028 261.7 / 0.5)",
+              "alpha": 0.5
+            },
+            "dark": {
+              "raw": "{color.background}",
+              "css": "color-mix(in oklab, var(--background) 80%, transparent)",
+              "resolved": "oklch(0.13 0.028 261.7 / 0.8)",
+              "alpha": 0.8
+            }
+          }
+        },
+        {
+          "name": "sheet-content-background",
+          "path": "sheet/content/background",
+          "group": "sheet",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/background"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.background}",
+              "css": "var(--background)",
+              "resolved": "oklch(1 0 0)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.background}",
+              "css": "var(--background)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "sheet-content-foreground",
+          "path": "sheet/content/foreground",
+          "group": "sheet",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "sheet-content-border",
+          "path": "sheet/content/border",
+          "group": "sheet",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/border"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(0.928 0.006 264.531)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(1 0 0 / 0.1)",
+              "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "sheet-description-foreground",
+          "path": "sheet/description/foreground",
+          "group": "sheet",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.446 0.03 256.802)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.707 0.022 261.325)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "sheet-description-font",
+          "path": "sheet/description/font",
+          "group": "sheet",
+          "type": "typography",
+          "description": "Sheet text",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "sheet-title-font",
+          "path": "sheet/title/font",
+          "group": "sheet",
+          "type": "typography",
+          "description": "Sheet title",
+          "layer": "components",
+          "refs": [
+            "typography/heading/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.heading.md}",
+              "css": "var(--heading-md-font)",
+              "resolved": "600 1.125rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.heading.md}",
+              "css": "var(--heading-md-font)",
+              "resolved": "600 1.125rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "sheet-close-radius",
+          "path": "sheet/close/radius",
+          "group": "sheet",
+          "type": "dimension",
+          "description": "The close button in the corner",
+          "layer": "components",
+          "refs": [
+            "radius/small"
+          ],
+          "values": {
+            "light": {
+              "raw": "{radius.small}",
+              "css": "var(--small-radius)",
+              "resolved": "0.375rem",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{radius.small}",
+              "css": "var(--small-radius)",
+              "resolved": "0.375rem",
+              "alpha": 1
+            }
+          }
+        },
+        {
           "name": "slider-radius",
           "path": "slider/radius",
           "group": "slider",
@@ -14408,6 +14835,300 @@
               "raw": "{color.foreground}",
               "css": "var(--foreground)",
               "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "table-border",
+          "path": "table/border",
+          "group": "table",
+          "type": "color",
+          "description": "Line under each row",
+          "layer": "components",
+          "refs": [
+            "color/border"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(0.928 0.006 264.531)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.border}",
+              "css": "var(--border)",
+              "resolved": "oklch(1 0 0 / 0.1)",
+              "alpha": 0.1
+            }
+          }
+        },
+        {
+          "name": "table-header-background",
+          "path": "table/header/background",
+          "group": "table",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.967 0.003 264.542)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted}",
+              "css": "var(--muted)",
+              "resolved": "oklch(0.278 0.033 256.848)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "table-header-foreground",
+          "path": "table/header/foreground",
+          "group": "table",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.446 0.03 256.802)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.707 0.022 261.325)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "table-row-foreground",
+          "path": "table/row/foreground",
+          "group": "table",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "table-row-background-hover",
+          "path": "table/row/background-hover",
+          "group": "table",
+          "type": "color",
+          "description": "A body row under the pointer, or selected",
+          "layer": "components",
+          "refs": [
+            "color/muted"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted}",
+              "css": "color-mix(in oklab, var(--muted) 50%, transparent)",
+              "resolved": "oklch(0.967 0.003 264.5 / 0.5)",
+              "alpha": 0.5
+            },
+            "dark": {
+              "raw": "{color.muted}",
+              "css": "color-mix(in oklab, var(--muted) 50%, transparent)",
+              "resolved": "oklch(0.278 0.033 256.8 / 0.5)",
+              "alpha": 0.5
+            }
+          }
+        },
+        {
+          "name": "table-footer-background",
+          "path": "table/footer/background",
+          "group": "table",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted}",
+              "css": "color-mix(in oklab, var(--muted) 50%, transparent)",
+              "resolved": "oklch(0.967 0.003 264.5 / 0.5)",
+              "alpha": 0.5
+            },
+            "dark": {
+              "raw": "{color.muted}",
+              "css": "color-mix(in oklab, var(--muted) 50%, transparent)",
+              "resolved": "oklch(0.278 0.033 256.8 / 0.5)",
+              "alpha": 0.5
+            }
+          }
+        },
+        {
+          "name": "table-footer-foreground",
+          "path": "table/footer/foreground",
+          "group": "table",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.985 0.002 247.839)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "table-footer-font",
+          "path": "table/footer/font",
+          "group": "table",
+          "type": "typography",
+          "description": "Totals in the footer",
+          "layer": "components",
+          "refs": [
+            "typography/label/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "table-head-font",
+          "path": "table/head/font",
+          "group": "table",
+          "type": "typography",
+          "description": "Column titles",
+          "layer": "components",
+          "refs": [
+            "typography/label/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.label.md}",
+              "css": "var(--label-md-font)",
+              "resolved": "500 0.875rem/1.25 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "table-cell-font",
+          "path": "table/cell/font",
+          "group": "table",
+          "type": "typography",
+          "description": "Cell text",
+          "layer": "components",
+          "refs": [
+            "typography/body/md"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.md}",
+              "css": "var(--body-md-font)",
+              "resolved": "400 0.875rem/1.5 Inter, sans-serif",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "table-caption-foreground",
+          "path": "table/caption/foreground",
+          "group": "table",
+          "type": "color",
+          "layer": "components",
+          "refs": [
+            "color/muted-foreground"
+          ],
+          "values": {
+            "light": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.446 0.03 256.802)",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{color.muted-foreground}",
+              "css": "var(--muted-foreground)",
+              "resolved": "oklch(0.707 0.022 261.325)",
+              "alpha": 1
+            }
+          }
+        },
+        {
+          "name": "table-caption-font",
+          "path": "table/caption/font",
+          "group": "table",
+          "type": "typography",
+          "description": "Caption under the table",
+          "layer": "components",
+          "refs": [
+            "typography/body/sm"
+          ],
+          "values": {
+            "light": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
+              "alpha": 1
+            },
+            "dark": {
+              "raw": "{typography.body.sm}",
+              "css": "var(--body-sm-font)",
+              "resolved": "400 0.75rem/1.35 Inter, sans-serif",
               "alpha": 1
             }
           }
@@ -15881,6 +16602,60 @@
         },
         {
           "mode": "light",
+          "bg": "sheet-content-background",
+          "fg": "sheet-content-foreground",
+          "ratio": 20.13,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "sheet-content-background",
+          "fg": "sheet-content-foreground",
+          "ratio": 19.28,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "table-header-background",
+          "fg": "table-header-foreground",
+          "ratio": 6.87,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "table-header-background",
+          "fg": "table-header-foreground",
+          "ratio": 5.64,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "table-footer-background",
+          "fg": "table-footer-foreground",
+          "ratio": 19.26,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "table-footer-background",
+          "fg": "table-footer-foreground",
+          "ratio": 17.06,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
           "bg": "tabs-list-background",
           "fg": "tabs-list-foreground",
           "ratio": 6.87,
@@ -16055,6 +16830,78 @@
           "bg": "material-glass over white",
           "fg": "material-glass-foreground",
           "ratio": 6.33,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "gradient-brand at 0%",
+          "fg": "gradient-brand-foreground",
+          "ratio": 17.75,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "gradient-brand at 100%",
+          "fg": "gradient-brand-foreground",
+          "ratio": 9.47,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "gradient-brand at 0%",
+          "fg": "gradient-brand-foreground",
+          "ratio": 14.35,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "gradient-brand at 100%",
+          "fg": "gradient-brand-foreground",
+          "ratio": 15.45,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "gradient-surface at 0%",
+          "fg": "gradient-surface-foreground",
+          "ratio": 20.13,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "light",
+          "bg": "gradient-surface at 100%",
+          "fg": "gradient-surface-foreground",
+          "ratio": 18.29,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "gradient-surface at 0%",
+          "fg": "gradient-surface-foreground",
+          "ratio": 19.28,
+          "min": 4.5,
+          "pass": true,
+          "accepted": false
+        },
+        {
+          "mode": "dark",
+          "bg": "gradient-surface at 100%",
+          "fg": "gradient-surface-foreground",
+          "ratio": 14.07,
           "min": 4.5,
           "pass": true,
           "accepted": false

@@ -487,5 +487,59 @@
       "$value": "{color.popover-foreground}",
       "$description": "Text on glass"
     }
+  },
+  "gradient": {
+    "brand": {
+      "$type": "gradient",
+      "$description": "The brand gradient: its stops are color roles, so it follows the brand and the mode. Use it as bg-gradient-brand, with text-gradient-brand-foreground for text on it.",
+      "$value": [
+        {
+          "color": "{color.primary}",
+          "position": 0
+        },
+        {
+          "color": "{color.chart.2}",
+          "position": 1
+        }
+      ],
+      "$extensions": {
+        "plinth": {
+          "gradient": {
+            "angle": 135
+          }
+        }
+      }
+    },
+    "brand-foreground": {
+      "$type": "color",
+      "$description": "Text on the brand gradient",
+      "$value": "{color.primary-foreground}"
+    },
+    "surface": {
+      "$type": "gradient",
+      "$description": "The surface gradient: its stops are color roles, so it follows the brand and the mode. Use it as bg-gradient-surface, with text-gradient-surface-foreground for text on it.",
+      "$value": [
+        {
+          "color": "{color.background}",
+          "position": 0
+        },
+        {
+          "color": "{color.muted}",
+          "position": 1
+        }
+      ],
+      "$extensions": {
+        "plinth": {
+          "gradient": {
+            "angle": 180
+          }
+        }
+      }
+    },
+    "surface-foreground": {
+      "$type": "color",
+      "$description": "Text on the surface gradient",
+      "$value": "{color.foreground}"
+    }
   }
 }

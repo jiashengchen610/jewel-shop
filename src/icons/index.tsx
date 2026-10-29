@@ -99,6 +99,10 @@ export function LockIcon(props: IconProps) {
   return <Svg {...props}><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></Svg>;
 }
 
+export function MenuIcon(props: IconProps) {
+  return <Svg {...props}><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></Svg>;
+}
+
 export function MessageCircleIcon(props: IconProps) {
   return <Svg {...props}><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" /></Svg>;
 }
@@ -196,6 +200,7 @@ export const icons = {
   "layout-dashboard": LayoutDashboardIcon,
   "loader-circle": LoaderCircleIcon,
   "lock": LockIcon,
+  "menu": MenuIcon,
   "message-circle": MessageCircleIcon,
   "minus": MinusIcon,
   "palette": PaletteIcon,

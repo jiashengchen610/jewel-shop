@@ -525,6 +525,13 @@
   --exit-ease: cubic-bezier(0.4, 0, 1, 1);
   --fit-inside-radius: 1;
   --foreground: var(--gray-950);
+  --glass-panel-foreground: var(--material-glass-foreground);
+  --glass-radius: var(--container-radius);
+  --glass-text-font: var(--body-md-font);
+  --gradient-brand-foreground: var(--primary-foreground);
+  --gradient-brand: linear-gradient(135deg, var(--primary) 0%, var(--chart-2) 100%);
+  --gradient-surface-foreground: var(--foreground);
+  --gradient-surface: linear-gradient(180deg, var(--background) 0%, var(--muted) 100%);
   --heading-font: var(--body-font);
   --heading-lg-font-family: var(--heading-font);
   --heading-lg-font-size: 1.5rem;
@@ -647,6 +654,15 @@
   --select-trigger-foreground: var(--foreground);
   --select-trigger-placeholder: var(--muted-foreground);
   --separator-line: var(--border);
+  --sheet-close-radius: var(--small-radius);
+  --sheet-content-background: var(--background);
+  --sheet-content-border: var(--border);
+  --sheet-content-foreground: var(--foreground);
+  --sheet-description-font: var(--body-md-font);
+  --sheet-description-foreground: var(--muted-foreground);
+  --sheet-overlay: color-mix(in oklab, var(--foreground) 50%, transparent);
+  --sheet-shadow: var(--overlay-shadow);
+  --sheet-title-font: var(--heading-md-font);
   --slider-radius: var(--pill-radius);
   --slider-range: var(--primary);
   --slider-thumb-background: var(--background);
@@ -662,6 +678,18 @@
   --switch-thumb-on: var(--primary-foreground);
   --switch-track-off: var(--input);
   --switch-track-on: var(--primary);
+  --table-border: var(--border);
+  --table-caption-font: var(--body-sm-font);
+  --table-caption-foreground: var(--muted-foreground);
+  --table-cell-font: var(--body-md-font);
+  --table-footer-background: color-mix(in oklab, var(--muted) 50%, transparent);
+  --table-footer-font: var(--label-md-font);
+  --table-footer-foreground: var(--foreground);
+  --table-head-font: var(--label-md-font);
+  --table-header-background: var(--muted);
+  --table-header-foreground: var(--muted-foreground);
+  --table-row-background-hover: color-mix(in oklab, var(--muted) 50%, transparent);
+  --table-row-foreground: var(--foreground);
   --tabs-list-background: var(--muted);
   --tabs-list-foreground: var(--muted-foreground);
   --tabs-radius: var(--control-radius);
@@ -911,6 +939,13 @@
   --exit-ease: cubic-bezier(0.4, 0, 1, 1);
   --fit-inside-radius: 1;
   --foreground: var(--gray-50);
+  --glass-panel-foreground: var(--material-glass-foreground);
+  --glass-radius: var(--container-radius);
+  --glass-text-font: var(--body-md-font);
+  --gradient-brand-foreground: var(--primary-foreground);
+  --gradient-brand: linear-gradient(135deg, var(--primary) 0%, var(--chart-2) 100%);
+  --gradient-surface-foreground: var(--foreground);
+  --gradient-surface: linear-gradient(180deg, var(--background) 0%, var(--muted) 100%);
   --heading-font: var(--body-font);
   --heading-lg-font-family: var(--heading-font);
   --heading-lg-font-size: 1.5rem;
@@ -1033,6 +1068,15 @@
   --select-trigger-foreground: var(--foreground);
   --select-trigger-placeholder: var(--muted-foreground);
   --separator-line: var(--border);
+  --sheet-close-radius: var(--small-radius);
+  --sheet-content-background: var(--background);
+  --sheet-content-border: var(--border);
+  --sheet-content-foreground: var(--foreground);
+  --sheet-description-font: var(--body-md-font);
+  --sheet-description-foreground: var(--muted-foreground);
+  --sheet-overlay: color-mix(in oklab, var(--background) 80%, transparent);
+  --sheet-shadow: var(--overlay-shadow);
+  --sheet-title-font: var(--heading-md-font);
   --slider-radius: var(--pill-radius);
   --slider-range: var(--primary);
   --slider-thumb-background: var(--background);
@@ -1048,6 +1092,18 @@
   --switch-thumb-on: var(--primary-foreground);
   --switch-track-off: color-mix(in oklab, var(--input) 80%, transparent);
   --switch-track-on: var(--primary);
+  --table-border: var(--border);
+  --table-caption-font: var(--body-sm-font);
+  --table-caption-foreground: var(--muted-foreground);
+  --table-cell-font: var(--body-md-font);
+  --table-footer-background: color-mix(in oklab, var(--muted) 50%, transparent);
+  --table-footer-font: var(--label-md-font);
+  --table-footer-foreground: var(--foreground);
+  --table-head-font: var(--label-md-font);
+  --table-header-background: var(--muted);
+  --table-header-foreground: var(--muted-foreground);
+  --table-row-background-hover: color-mix(in oklab, var(--muted) 50%, transparent);
+  --table-row-foreground: var(--foreground);
   --tabs-list-background: var(--muted);
   --tabs-list-foreground: var(--muted-foreground);
   --tabs-radius: var(--control-radius);
@@ -1273,6 +1329,9 @@
   --color-fuchsia-800: var(--fuchsia-800);
   --color-fuchsia-900: var(--fuchsia-900);
   --color-fuchsia-950: var(--fuchsia-950);
+  --color-glass-panel-foreground: var(--glass-panel-foreground);
+  --color-gradient-brand-foreground: var(--gradient-brand-foreground);
+  --color-gradient-surface-foreground: var(--gradient-surface-foreground);
   --color-gray-100: var(--gray-100);
   --color-gray-200: var(--gray-200);
   --color-gray-300: var(--gray-300);
@@ -1462,6 +1521,11 @@
   --color-select-trigger-foreground: var(--select-trigger-foreground);
   --color-select-trigger-placeholder: var(--select-trigger-placeholder);
   --color-separator-line: var(--separator-line);
+  --color-sheet-content-background: var(--sheet-content-background);
+  --color-sheet-content-border: var(--sheet-content-border);
+  --color-sheet-content-foreground: var(--sheet-content-foreground);
+  --color-sheet-description-foreground: var(--sheet-description-foreground);
+  --color-sheet-overlay: var(--sheet-overlay);
   --color-sky-100: var(--sky-100);
   --color-sky-200: var(--sky-200);
   --color-sky-300: var(--sky-300);
@@ -1505,6 +1569,14 @@
   --color-switch-thumb-on: var(--switch-thumb-on);
   --color-switch-track-off: var(--switch-track-off);
   --color-switch-track-on: var(--switch-track-on);
+  --color-table-border: var(--table-border);
+  --color-table-caption-foreground: var(--table-caption-foreground);
+  --color-table-footer-background: var(--table-footer-background);
+  --color-table-footer-foreground: var(--table-footer-foreground);
+  --color-table-header-background: var(--table-header-background);
+  --color-table-header-foreground: var(--table-header-foreground);
+  --color-table-row-background-hover: var(--table-row-background-hover);
+  --color-table-row-foreground: var(--table-row-foreground);
   --color-tabs-list-background: var(--tabs-list-background);
   --color-tabs-list-foreground: var(--tabs-list-foreground);
   --color-tabs-trigger-active-background: var(--tabs-trigger-active-background);
@@ -1614,6 +1686,7 @@
   --radius-empty-media: var(--empty-media-radius);
   --radius-empty: var(--empty-radius);
   --radius-full: var(--full-radius);
+  --radius-glass: var(--glass-radius);
   --radius-input-group-button: var(--input-group-button-radius);
   --radius-input-group-multiline: var(--input-group-multiline-radius);
   --radius-input-group: var(--input-group-radius);
@@ -1629,6 +1702,7 @@
   --radius-select-content: var(--select-content-radius);
   --radius-select-item: var(--select-item-radius);
   --radius-select: var(--select-radius);
+  --radius-sheet-close: var(--sheet-close-radius);
   --radius-slider-thumb: var(--slider-thumb-radius);
   --radius-slider: var(--slider-radius);
   --radius-sm: var(--sm-radius);
@@ -1651,6 +1725,7 @@
   --shadow-md: var(--md-shadow);
   --shadow-overlay: var(--overlay-shadow);
   --shadow-select: var(--select-shadow);
+  --shadow-sheet: var(--sheet-shadow);
   --shadow-sm: var(--sm-shadow);
   --shadow-toast: var(--toast-shadow);
   --shadow-xl: var(--xl-shadow);
@@ -1822,6 +1897,10 @@
   font: var(--empty-description-font);
   letter-spacing: var(--body-md-letter-spacing);
 }
+@utility type-glass-text {
+  font: var(--glass-text-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
 @utility type-input-group-addon {
   font: var(--input-group-addon-font);
   letter-spacing: var(--label-md-letter-spacing);
@@ -1870,6 +1949,30 @@
   font: var(--select-group-label-font);
   letter-spacing: var(--body-sm-letter-spacing);
 }
+@utility type-sheet-description {
+  font: var(--sheet-description-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
+@utility type-sheet-title {
+  font: var(--sheet-title-font);
+  letter-spacing: var(--heading-md-letter-spacing);
+}
+@utility type-table-footer {
+  font: var(--table-footer-font);
+  letter-spacing: var(--label-md-letter-spacing);
+}
+@utility type-table-head {
+  font: var(--table-head-font);
+  letter-spacing: var(--label-md-letter-spacing);
+}
+@utility type-table-cell {
+  font: var(--table-cell-font);
+  letter-spacing: var(--body-md-letter-spacing);
+}
+@utility type-table-caption {
+  font: var(--table-caption-font);
+  letter-spacing: var(--body-sm-letter-spacing);
+}
 @utility type-tabs-trigger {
   font: var(--tabs-trigger-font);
   letter-spacing: var(--label-md-letter-spacing);
@@ -1908,6 +2011,13 @@
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
+}
+
+@utility bg-gradient-brand {
+  background-image: var(--gradient-brand);
+}
+@utility bg-gradient-surface {
+  background-image: var(--gradient-surface);
 }
 
 @media (prefers-reduced-motion: reduce) {

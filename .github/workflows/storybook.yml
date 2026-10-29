@@ -30,7 +30,7 @@ jobs:
       # Plinth's checks, from the Plinth release that last updated this workflow: token references that resolve to
       # nothing, generated files that no longer match the tokens, and components without component tokens, a story,
       # or with hardcoded values stop the deploy. Design reminders are listed in the run summary.
-      - run: npx -y github:jiashengchen610/Plinth#v0.15.0 check
+      - run: npx -y github:jiashengchen610/Plinth#v0.19.0 check
       # Not `npm ci`: a lockfile written on Windows or macOS can miss Linux-only optional packages (npm/cli#4828),
       # which makes `npm ci` refuse to install. `npm install` keeps the locked versions and fills those in.
       - run: npm install --no-audit --no-fund
@@ -38,10 +38,18 @@ jobs:
       # Type errors or a failing interaction test stop the deploy; accessibility findings are reported, not blocking.
       - run: npm run typecheck
       - run: npm test
-      - run: npm run build-storybook
+      # A design system with an app (src/app) publishes it at the site's root and the component site under
+      # /storybook/; without one, the component site is the site. Relative URLs, so the Pages path does not matter.
+      - run: |
+          if [ -d src/app ]; then
+            npm run build -- --base=./ --outDir=site
+            npm run build-storybook -- -o site/storybook
+          else
+            npm run build-storybook -- -o site
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: storybook-static
+          path: site
       - id: deployment
         uses: actions/deploy-pages@v4
