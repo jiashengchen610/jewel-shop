@@ -528,8 +528,8 @@
   --glass-panel-foreground: var(--material-glass-foreground);
   --glass-radius: var(--container-radius);
   --glass-text-font: var(--body-md-font);
-  --gradient-brand-foreground: var(--primary-foreground);
-  --gradient-brand: linear-gradient(160deg, var(--chart-1) 0%, var(--chart-5) 100%);
+  --gradient-brand-foreground: var(--foreground);
+  --gradient-brand: linear-gradient(160deg, var(--background) 0%, var(--chart-seq-1) 100%);
   --gradient-surface-foreground: var(--foreground);
   --gradient-surface: linear-gradient(180deg, var(--background) 0%, var(--muted) 100%);
   --heading-font: var(--body-font);

@@ -8292,16 +8292,16 @@
             "light": {
               "raw": [
                 {
-                  "color": "{color.chart.1}",
+                  "color": "{color.background}",
                   "position": 0
                 },
                 {
-                  "color": "{color.chart.5}",
+                  "color": "{color.chart.seq.1}",
                   "position": 1
                 }
               ],
-              "css": "linear-gradient(160deg, var(--chart-1) 0%, var(--chart-5) 100%)",
-              "resolved": "linear-gradient(160deg, oklch(0.546 0.245 262.881) 0%, oklch(0.457 0.24 277.023) 100%)",
+              "css": "linear-gradient(160deg, var(--background) 0%, var(--chart-seq-1) 100%)",
+              "resolved": "linear-gradient(160deg, oklch(1 0 0) 0%, oklch(0.882 0.059 254.128) 100%)",
               "alpha": 1
             },
             "dark": {
@@ -8329,14 +8329,13 @@
           "description": "Text on the brand gradient",
           "layer": "semantic",
           "refs": [
-            "color/primary-foreground",
             "color/foreground"
           ],
           "values": {
             "light": {
-              "raw": "{color.primary-foreground}",
-              "css": "var(--primary-foreground)",
-              "resolved": "oklch(1 0 0)",
+              "raw": "{color.foreground}",
+              "css": "var(--foreground)",
+              "resolved": "oklch(0.13 0.028 261.692)",
               "alpha": 1
             },
             "dark": {
@@ -16839,7 +16838,7 @@
           "mode": "light",
           "bg": "gradient-brand at 0%",
           "fg": "gradient-brand-foreground",
-          "ratio": 5.26,
+          "ratio": 20.13,
           "min": 4.5,
           "pass": true,
           "accepted": false
@@ -16848,7 +16847,7 @@
           "mode": "light",
           "bg": "gradient-brand at 100%",
           "fg": "gradient-brand-foreground",
-          "ratio": 8.07,
+          "ratio": 14.15,
           "min": 4.5,
           "pass": true,
           "accepted": false
