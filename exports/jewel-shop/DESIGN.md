@@ -1,7 +1,7 @@
 ---
 version: "alpha"
-name: jewel-shop
-description: "A mobile budgeting app for young professionals. It should feel like a friend who is good with money: upbeat, easy to read at a glance, and never judging how you spend."
+name: Plinth Dashboard
+description: "A budgeting dashboard for households: income, bills, savings goals and spending limits in one place. It should feel clear and calm: a tidy kitchen table where the month's money is laid out plainly, so anyone in the household can see where things stand in a few seconds."
 colors:
   red-50: "#fef2f2"
   red-100: "#ffe2e2"
@@ -291,24 +291,26 @@ colors:
   taupe-950: "#0c0a09"
   white: "#ffffff"
   black: "#000000"
+  material-glass: "#ffffff"
+  material-glass-foreground: "#030712"
   background: "#ffffff"
-  foreground: "#020618"
+  foreground: "#030712"
   card: "#ffffff"
-  card-foreground: "#020618"
+  card-foreground: "#030712"
   popover: "#ffffff"
-  popover-foreground: "#020618"
-  primary: "#155dfc"
+  popover-foreground: "#030712"
+  primary: "#101828"
   primary-foreground: "#ffffff"
-  secondary: "#f1f5f9"
-  secondary-foreground: "#0f172b"
-  muted: "#f1f5f9"
-  muted-foreground: "#45556c"
-  accent: "#f1f5f9"
-  accent-foreground: "#0f172b"
+  secondary: "#f3f4f6"
+  secondary-foreground: "#101828"
+  muted: "#f3f4f6"
+  muted-foreground: "#4a5565"
+  accent: "#f3f4f6"
+  accent-foreground: "#101828"
   destructive: "#bf000f"
-  border: "#e2e8f0"
-  input: "#e2e8f0"
-  ring: "#3280ff"
+  border: "#e5e7eb"
+  input: "#e5e7eb"
+  ring: "#6a7282"
   success: "#00813a"
   success-foreground: "#ffffff"
   warning: "#fabc00"
@@ -333,39 +335,48 @@ colors:
   chart-div-1: "#a26200"
   chart-div-2: "#eab300"
   chart-div-3: "#ffe02f"
-  chart-div-4: "#e2e8f0"
+  chart-div-4: "#e5e7eb"
   chart-div-5: "#91c5ff"
   chart-div-6: "#3280ff"
   chart-div-7: "#1447e6"
+  alert-dialog-overlay: "oklch(0.13 0.028 261.7 / 0.5)"
+  alert-dialog-content-background: "#ffffff"
+  alert-dialog-content-foreground: "#030712"
+  alert-dialog-content-border: "oklch(0.13 0.028 261.7 / 0.1)"
+  alert-dialog-footer-background: "oklch(0.967 0.003 264.5 / 0.5)"
+  alert-dialog-footer-border: "#e5e7eb"
+  alert-dialog-description-foreground: "#4a5565"
+  alert-dialog-media-background: "#f3f4f6"
+  alert-dialog-media-foreground: "#030712"
   alert-default-background: "#ffffff"
-  alert-default-foreground: "#020618"
-  alert-default-border: "#e2e8f0"
-  alert-default-icon: "#020618"
-  alert-default-description: "#45556c"
+  alert-default-foreground: "#030712"
+  alert-default-border: "#e5e7eb"
+  alert-default-icon: "#030712"
+  alert-default-description: "#4a5565"
   alert-destructive-background: "#ffffff"
   alert-destructive-foreground: "#bf000f"
   alert-destructive-border: "#bf000f"
   alert-destructive-icon: "#bf000f"
   alert-destructive-description: "#bf000f"
   alert-success-background: "#ffffff"
-  alert-success-foreground: "#020618"
+  alert-success-foreground: "#030712"
   alert-success-border: "#00813a"
   alert-success-icon: "#00813a"
-  alert-success-description: "#45556c"
+  alert-success-description: "#4a5565"
   alert-warning-background: "#ffffff"
-  alert-warning-foreground: "#020618"
+  alert-warning-foreground: "#030712"
   alert-warning-border: "#fabc00"
   alert-warning-icon: "#fabc00"
-  alert-warning-description: "#45556c"
+  alert-warning-description: "#4a5565"
   alert-info-background: "#ffffff"
-  alert-info-foreground: "#020618"
+  alert-info-foreground: "#030712"
   alert-info-border: "#1447e6"
   alert-info-icon: "#1447e6"
-  alert-info-description: "#45556c"
-  badge-default-background: "#155dfc"
+  alert-info-description: "#4a5565"
+  badge-default-background: "#101828"
   badge-default-foreground: "#ffffff"
-  badge-secondary-background: "#f1f5f9"
-  badge-secondary-foreground: "#0f172b"
+  badge-secondary-background: "#f3f4f6"
+  badge-secondary-foreground: "#101828"
   badge-destructive-background: "oklch(0.505 0.206 27.5 / 0.1)"
   badge-destructive-foreground: "#bf000f"
   badge-success-background: "#00813a"
@@ -374,140 +385,177 @@ colors:
   badge-warning-foreground: "#461901"
   badge-info-background: "#1447e6"
   badge-info-foreground: "#ffffff"
-  badge-outline-foreground: "#020618"
-  badge-outline-border: "#e2e8f0"
-  badge-ghost-foreground: "#45556c"
-  badge-ghost-background-hover: "#f1f5f9"
-  badge-link-foreground: "#155dfc"
-  button-default-background: "#155dfc"
+  badge-outline-foreground: "#030712"
+  badge-outline-border: "#e5e7eb"
+  badge-ghost-foreground: "#4a5565"
+  badge-ghost-background-hover: "#f3f4f6"
+  badge-link-foreground: "#101828"
+  breadcrumb-list-foreground: "#4a5565"
+  breadcrumb-link-foreground-hover: "#030712"
+  breadcrumb-page-foreground: "#030712"
+  button-group-separator: "#e5e7eb"
+  button-group-text-background: "#f3f4f6"
+  button-group-text-foreground: "#030712"
+  button-group-text-border: "#e5e7eb"
+  button-default-background: "#101828"
   button-default-foreground: "#ffffff"
-  button-default-background-hover: "oklch(0.546 0.245 262.9 / 0.8)"
-  button-secondary-background: "#f1f5f9"
-  button-secondary-foreground: "#0f172b"
-  button-secondary-background-hover: "#f1f5f9"
+  button-default-background-hover: "oklch(0.21 0.034 264.7 / 0.8)"
+  button-secondary-background: "#f3f4f6"
+  button-secondary-foreground: "#101828"
+  button-secondary-background-hover: "#f3f4f6"
   button-outline-background: "#ffffff"
-  button-outline-foreground: "#020618"
-  button-outline-border: "#e2e8f0"
-  button-outline-background-hover: "#f1f5f9"
-  button-ghost-foreground: "#020618"
-  button-ghost-background-hover: "#f1f5f9"
+  button-outline-foreground: "#030712"
+  button-outline-border: "#e5e7eb"
+  button-outline-background-hover: "#f3f4f6"
+  button-ghost-foreground: "#030712"
+  button-ghost-background-hover: "#f3f4f6"
   button-destructive-background: "oklch(0.505 0.206 27.5 / 0.1)"
   button-destructive-foreground: "#bf000f"
   button-destructive-background-hover: "oklch(0.505 0.206 27.5 / 0.2)"
-  button-link-foreground: "#155dfc"
+  button-link-foreground: "#101828"
   card-container-background: "#ffffff"
-  card-container-foreground: "#020618"
-  card-container-border: "oklch(0.129 0.042 264.7 / 0.1)"
-  card-description-foreground: "#45556c"
-  card-footer-background: "oklch(0.968 0.007 247.9 / 0.5)"
+  card-container-foreground: "#030712"
+  card-container-border: "oklch(0.13 0.028 261.7 / 0.1)"
+  card-description-foreground: "#4a5565"
+  card-footer-background: "oklch(0.967 0.003 264.5 / 0.5)"
+  chart-grid: "#e5e7eb"
+  chart-surface: "#ffffff"
+  chart-cursor: "#f3f4f6"
+  chart-axis-foreground: "#4a5565"
+  chart-legend-foreground: "#030712"
+  chart-tooltip-background: "#ffffff"
+  chart-tooltip-foreground: "#030712"
+  chart-tooltip-border: "#e5e7eb"
+  chart-tooltip-label: "#4a5565"
   checkbox-box-background: "oklch(1 0 0 / 0)"
-  checkbox-box-border: "#e2e8f0"
-  checkbox-box-checked-background: "#155dfc"
+  checkbox-box-border: "#e5e7eb"
+  checkbox-box-checked-background: "#101828"
   checkbox-box-checked-foreground: "#ffffff"
-  checkbox-box-checked-border: "#155dfc"
-  dialog-overlay: "oklch(0.129 0.042 264.7 / 0.5)"
+  checkbox-box-checked-border: "#101828"
+  dialog-overlay: "oklch(0.13 0.028 261.7 / 0.5)"
   dialog-content-background: "#ffffff"
-  dialog-content-foreground: "#020618"
-  dialog-content-border: "#e2e8f0"
-  dialog-description-foreground: "#45556c"
+  dialog-content-foreground: "#030712"
+  dialog-content-border: "#e5e7eb"
+  dialog-description-foreground: "#4a5565"
+  empty-border: "#e5e7eb"
+  empty-media-background: "#f3f4f6"
+  empty-media-foreground: "#030712"
+  empty-description-foreground: "#4a5565"
+  input-group-field-background: "oklch(1 0 0 / 0)"
+  input-group-field-border: "#e5e7eb"
+  input-group-addon-foreground: "#4a5565"
+  input-group-control-foreground: "#030712"
+  input-group-control-placeholder: "#4a5565"
   input-field-background: "oklch(1 0 0 / 0)"
-  input-field-foreground: "#020618"
-  input-field-border: "#e2e8f0"
-  input-field-placeholder: "#45556c"
-  label-text-foreground: "#020618"
+  input-field-foreground: "#030712"
+  input-field-border: "#e5e7eb"
+  input-field-placeholder: "#4a5565"
+  item-border: "#e5e7eb"
+  item-muted-background: "oklch(0.967 0.003 264.5 / 0.5)"
+  item-hover-background: "#f3f4f6"
+  item-separator: "#e5e7eb"
+  item-description-foreground: "#4a5565"
+  label-text-foreground: "#030712"
+  progress-track: "#f3f4f6"
+  progress-indicator: "#101828"
   radio-group-item-background: "oklch(1 0 0 / 0)"
-  radio-group-item-border: "#e2e8f0"
-  radio-group-item-checked: "#155dfc"
+  radio-group-item-border: "#e5e7eb"
+  radio-group-item-checked: "#101828"
   select-trigger-background: "oklch(1 0 0 / 0)"
-  select-trigger-foreground: "#020618"
-  select-trigger-border: "#e2e8f0"
-  select-trigger-placeholder: "#45556c"
+  select-trigger-foreground: "#030712"
+  select-trigger-border: "#e5e7eb"
+  select-trigger-placeholder: "#4a5565"
   select-content-background: "#ffffff"
-  select-content-foreground: "#020618"
-  select-content-border: "#e2e8f0"
-  select-item-highlight-background: "#f1f5f9"
-  select-item-highlight-foreground: "#0f172b"
-  select-item-label: "#45556c"
-  separator-line: "#e2e8f0"
-  switch-track-on: "#155dfc"
-  switch-track-off: "#e2e8f0"
+  select-content-foreground: "#030712"
+  select-content-border: "#e5e7eb"
+  select-item-highlight-background: "#f3f4f6"
+  select-item-highlight-foreground: "#101828"
+  select-item-label: "#4a5565"
+  separator-line: "#e5e7eb"
+  slider-track: "#f3f4f6"
+  slider-range: "#101828"
+  slider-thumb-background: "#ffffff"
+  slider-thumb-border: "#6a7282"
+  switch-track-on: "#101828"
+  switch-track-off: "#e5e7eb"
   switch-thumb-on: "#ffffff"
   switch-thumb-off: "#ffffff"
-  tabs-list-background: "#f1f5f9"
-  tabs-list-foreground: "#45556c"
+  tabs-list-background: "#f3f4f6"
+  tabs-list-foreground: "#4a5565"
   tabs-trigger-active-background: "#ffffff"
-  tabs-trigger-active-foreground: "#020618"
+  tabs-trigger-active-foreground: "#030712"
   textarea-field-background: "oklch(1 0 0 / 0)"
-  textarea-field-foreground: "#020618"
-  textarea-field-border: "#e2e8f0"
-  textarea-field-placeholder: "#45556c"
+  textarea-field-foreground: "#030712"
+  textarea-field-border: "#e5e7eb"
+  textarea-field-placeholder: "#4a5565"
   toast-default-background: "#ffffff"
-  toast-default-foreground: "#020618"
-  toast-default-border: "#e2e8f0"
-  toast-default-description: "#45556c"
+  toast-default-foreground: "#030712"
+  toast-default-border: "#e5e7eb"
+  toast-default-description: "#4a5565"
   toast-destructive-background: "#bf000f"
   toast-destructive-foreground: "#ffffff"
   toast-destructive-border: "#bf000f"
   toast-destructive-description: "#ffffff"
-  tooltip-background: "#020618"
+  tooltip-background: "#030712"
   tooltip-foreground: "#ffffff"
+  material-glass-tint: "oklch(1 0 0 / 0.7)"
 typography:
   display:
-    fontFamily: Nunito
+    fontFamily: Inter
     fontSize: 2rem
     fontWeight: 600
     lineHeight: 1.15
     letterSpacing: -0.02em
   heading-lg:
-    fontFamily: Nunito
+    fontFamily: Inter
     fontSize: 1.5rem
     fontWeight: 600
     lineHeight: 1.25
     letterSpacing: -0.01em
   heading-md:
-    fontFamily: Nunito
+    fontFamily: Inter
     fontSize: 1.125rem
     fontWeight: 600
     lineHeight: 1.35
     letterSpacing: 0em
   heading-sm:
-    fontFamily: Nunito
+    fontFamily: Inter
     fontSize: 1rem
     fontWeight: 500
     lineHeight: 1.375
     letterSpacing: 0em
   heading-xs:
-    fontFamily: Nunito
+    fontFamily: Inter
     fontSize: 0.875rem
     fontWeight: 500
     lineHeight: 1.375
     letterSpacing: 0em
   body-lg:
-    fontFamily: Nunito
+    fontFamily: Inter
     fontSize: 1rem
     fontWeight: 400
     lineHeight: 1.5
     letterSpacing: 0em
   body-md:
-    fontFamily: Nunito
+    fontFamily: Inter
     fontSize: 0.875rem
     fontWeight: 400
     lineHeight: 1.5
     letterSpacing: 0em
   body-sm:
-    fontFamily: Nunito
+    fontFamily: Inter
     fontSize: 0.75rem
     fontWeight: 400
     lineHeight: 1.35
     letterSpacing: 0em
   label-md:
-    fontFamily: Nunito
+    fontFamily: Inter
     fontSize: 0.875rem
     fontWeight: 500
     lineHeight: 1.25
     letterSpacing: 0em
   label-sm:
-    fontFamily: Nunito
+    fontFamily: Inter
     fontSize: 0.75rem
     fontWeight: 500
     lineHeight: 1.35
@@ -530,73 +578,93 @@ rounded:
   4xl: 2rem
   full: 9999px
   control: 9999px
-  container: 1rem
+  container: 2rem
   pill: 9999px
   small: 0.375rem
-  alert: 1rem
+  multiline: 1rem
+  alert-dialog: 2rem
+  alert-dialog-media: 15px
+  alert: 2rem
   badge: 9999px
+  button-group: 9999px
   button: 9999px
-  card: 1rem
+  card: 2rem
+  chart-key: 0.375rem
+  chart-tooltip: 9999px
   checkbox: 0.375rem
-  dialog: 1rem
-  dialog-close: 6px
+  dialog: 2rem
+  dialog-close: 15px
+  empty: 2rem
+  empty-media: 9999px
+  input-group: 9999px
+  input-group-button: 9994px
+  input-group-multiline: 1rem
   input: 9999px
+  item: 9999px
+  item-media: 0.375rem
+  progress: 9999px
   select: 9999px
   select-content: 9999px
   select-item: 9994px
+  slider: 9999px
+  slider-thumb: 9999px
   tabs: 9999px
   tabs-trigger: 9995px
-  textarea: 9999px
-  toast: 1rem
+  textarea: 1rem
+  toast: 2rem
   toast-action: 9999px
-  toast-close: 7px
+  toast-close: 23px
   tooltip: 0.375rem
 ---
 
-# jewel-shop
+# Plinth Dashboard
 
 ## Overview
 
-- Friendly, not preachy: the app shows where money goes and what is left; it does not scold.
-- Glanceable: the most important number on each screen (left to spend, this month's total) is big and comes first.
-- Calm by default: color marks actions and real status, not every number.
-- Built for one hand on a phone: big tap targets, main actions within thumb reach.
+- Clear: every screen answers one question first (How much is left this month? What's due next?), in a big number or a short sentence.
+- Calm: a quiet, mostly ink-and-white look. Color appears only where it means something: an action, a status, a chart series.
+- Soft, friendly shapes: fully rounded buttons and fields, generously rounded cards. Nothing sharp or crowded.
+- Shared: written and laid out so every member of the household understands it, not only the person who set it up.
 
 ## Colors
 
-- primary (bright blue): the main action on a screen, such as Add expense or Save budget. One per screen. Also used for links, the selected tab and focus rings.
-- background, card: white in light mode, deep slate in dark mode. Cards group a budget, an account or a list of transactions.
-- muted / muted-foreground: secondary surfaces and supporting text such as dates, categories and notes.
-- secondary, accent: soft slate fills for secondary buttons, chips and selected filters.
-- destructive: deleting things for good and errors only. Never use it to show overspending or a negative balance.
-- warning: a gentle heads-up, such as a budget almost used up. Use it sparingly and always with words that say what to do.
-- success: goals reached and bills paid. Pair it with an icon and text.
-- info: neutral notices. Info is a blue close to the primary, so always pair it with an icon and text, and never use it for something tappable.
-- Charts use the chart colors in their order: blue first, then the other series colors. Spending over a limit is shown with a label or a marker, not by turning the chart red.
+- primary (deep ink, nearly black with a hint of navy; light gray in dark mode): the main action on a view, such as Add bill or Save goal. One per view. The look relies on this ink against white instead of a bright brand color.
+- background, card: white in light mode, near-black in dark mode. Cards hold one topic each: income, bills, a goal, a limit.
+- muted / muted-foreground: secondary surfaces and supporting text such as dates, categories and who paid.
+- secondary, accent: soft gray fills for secondary buttons, selected filters, hovered rows and tab bars.
+- destructive: deleting things for good and errors only. Never use it for being over a limit or a negative balance.
+- warning: a limit almost reached or a bill due soon. Always with words that say what to do.
+- success: a goal reached, a bill paid. Always with an icon or text.
+- info: neutral notices, such as a sync in progress.
+- Charts carry most of the color. Use the chart colors in order (blue first); keep the same category in the same color on every chart. Use the one-hue scale for low-to-high values and the two-sided scale for above or below a limit.
 
 ## Typography
 
-- Nunito for everything. Its rounded shapes carry the friendly feel; hierarchy comes from size and weight.
-- Display style for the one big number on a screen (left to spend, balance) and for screen titles.
-- Heading styles for section and card titles; body styles for lists, descriptions and fields. On phones, prefer the larger body size for reading text.
-- Amounts use tabular figures so columns line up. Positive and negative amounts differ by sign and label, not only by color.
+- Inter for everything: headings, text, buttons and labels. Hierarchy comes from size and weight, not from extra fonts or colors.
+- Display style for the one key number on a page (left to spend, total saved) and for page titles.
+- Heading styles for section, dialog and card titles; body styles for tables, lists, descriptions and fields; label styles for buttons, tabs and badges.
+- Amounts use tabular figures so columns line up, and are right-aligned in tables. Positive and negative amounts differ by sign and label, not only by color.
 - No all-caps headings.
 
 ## Layout
 
-- Mobile first: one column, generous spacing, a bottom tab bar for the main sections.
-- Tap targets at least 44 by 44 points; the main action sits low on the screen, in thumb reach.
-- Each screen opens with its key number, then the details (categories, transactions).
-- Keep forms short: adding an expense should take a few taps.
+- A dashboard grid of cards on wide screens; one column on narrow ones. The most important card (this month's summary) sits top left.
+- Generous spacing between cards; tighter, consistent spacing inside them.
+- Each card shows a headline number, then the detail, then at most one action.
+- Tables for transactions and bills: few columns, clear headers, amounts on the right.
+- Progress bars for limits and goals, always with the numbers next to them ("$320 of $500").
+- Body text stays under 75 characters per line.
 
 ## Components
 
-- Buttons: primary for the single main action; outline or ghost for the rest (Edit, See all).
-- Badges: categories and small facts (Recurring, Shared). Neutral by default; status colors only for real status (Paid, Almost used up).
-- Toasts: short confirmations with an undo where it helps (Expense added. Undo).
-- Alerts: inline, for things that need attention, written as a suggestion, not a warning.
-- Dialogs: only for decisions that need focus, such as deleting a budget.
-- Switches for settings that apply at once; checkboxes for choices in a form.
+- Buttons: primary for the single main action; outline or ghost for the rest (Edit, See all). Button groups for related choices such as a month switcher.
+- Badges: categories and small facts (Recurring, Shared, Paid). Neutral by default; status colors only for real status.
+- Progress: spending limits and savings goals. Pair with the amount and what's left.
+- Charts: one question per chart, with an accessible label and a legend or labeled series.
+- Empty states: say what will appear here and offer one action (Add your first bill).
+- Toasts: short confirmations, with undo where it helps (Bill deleted. Undo).
+- Alerts: inline, for things that need attention, written as helpful facts.
+- Dialogs and alert dialogs: only for decisions that need focus, such as deleting a goal.
 
 ## Do's and Don'ts
 
@@ -606,15 +674,18 @@ rounded:
 - Don't put an all-caps label above every heading.
 - Don't number sections (01, 02, 03) unless the content is a real sequence.
 - Don't accent a single word in a headline with a different color or weight.
-- Do celebrate progress in small ways: a goal reached, a month under budget.
-- Do make it easy to fix mistakes: undo, edit, move a transaction.
-- Don't paint overspending red or use alarm icons for normal spending.
-- Don't show more than one key number in display size per screen.
-- Don't hide important amounts behind color alone.
+- Do lead with the answer, then the detail.
+- Do keep the same category in the same color everywhere.
+- Do make mistakes easy to fix: undo, edit, move a transaction.
+- Don't paint over-limit spending red or use alarm icons for ordinary spending.
+- Don't add a bright brand color to decorate; ink, white and the chart colors are enough.
+- Don't show more than one display-size number per card.
+- Don't hide meaning in color alone.
 
 ## Shape and depth
 
-- Corners are pill-shaped for controls: buttons, inputs, chips and badges are fully rounded. This is a big part of the friendly feel.
-- Cards, sheets and dialogs use the large container radius, not full pills.
-- Parts inside a rounded container (tabs in a tab bar, options in a menu) follow the container's corners minus the gap.
-- Light shadows only: a faint one for cards, a stronger one for things that float (sheets, dialogs, toasts).
+- Controls are pill-shaped: buttons, fields, chips and badges are fully rounded.
+- Cards, panels and dialogs use the large container radius: soft, generous corners.
+- Small marks (checkboxes, tooltips) use the small radius.
+- Parts inside a rounded container (tabs in a tab bar, options in a menu) follow the container's corners minus the gap, so the space between stays even.
+- Depth is quiet: a faint shadow for cards, a stronger one only for things that float (menus, dialogs, toasts).
