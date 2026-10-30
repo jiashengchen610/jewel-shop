@@ -1,0 +1,13 @@
+{
+  "name": "Plinth Dashboard",
+  "plinth": "0.23.0",
+  "brands": {
+    "jewel-shop": {
+      "modes": {
+        "light": "jewel-shop.light.json",
+        "dark": "jewel-shop.dark.json"
+      }
+    }
+  },
+  "format": "Every token of a brand in one mode, references followed: colors as hex with alpha (and oklch), lengths in px (em kept), durations in ms, structured shadows, typography, gradients and transitions; glass keeps its recipe."
+}
