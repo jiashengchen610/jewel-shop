@@ -11,6 +11,7 @@ import { Switch } from "@/components/switch/switch";
 import { Toast, ToastClose, ToastDescription, ToastProvider, ToastTitle, ToastViewport } from "@/components/toast/toast";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/tooltip/tooltip";
 import { BellIcon, LayoutDashboardIcon, MenuIcon, ReceiptIcon, SettingsIcon, TargetIcon, UserIcon } from "@/icons";
+import { Backdrop } from "./Backdrop";
 import { Overview } from "./pages/Overview";
 import { Transactions } from "./pages/Transactions";
 import { Goals } from "./pages/Goals";
@@ -81,7 +82,8 @@ export function Dashboard() {
   return (
     <TooltipProvider>
       <ToastProvider>
-        <div className="min-h-dvh bg-gradient-brand text-gradient-brand-foreground lg:grid lg:grid-cols-[16rem_minmax(0,1fr)]">
+        <div className="relative isolate min-h-dvh bg-gradient-brand text-gradient-brand-foreground lg:grid lg:grid-cols-[16rem_minmax(0,1fr)]">
+          <Backdrop />
           <aside className="sticky top-0 hidden h-dvh p-4 lg:block">
             <Panel className="flex h-full flex-col gap-4 p-4">
               <Brand />

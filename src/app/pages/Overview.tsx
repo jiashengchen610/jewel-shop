@@ -1,7 +1,9 @@
 // Overview: the month at a glance. The balance sits straight on the gradient; the three numbers that matter are glass
 // panels; below them the spending history, where the money went, recent transactions, bills, goals and subscriptions.
-// Both charts draw from the same sequential chart colors: light for less, dark for more.
-import { Bar, BarChart, Cell, Pie, PieChart, XAxis } from "recharts";
+// Both charts draw from the same sequential chart colors. The donut steps through them, light for less, dark for
+// more; the bars share one vertical gradient from the darkest step at the top to a light one at the base.
+import { useState } from "react";
+import { Bar, BarChart, Cell, Pie, PieChart, Rectangle, XAxis, type BarShapeProps } from "recharts";
 import { Badge } from "@/components/badge/badge";
 import { Button } from "@/components/button/button";
 import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from "@/components/chart/chart";
@@ -13,6 +15,14 @@ import { balance, bills, goals, income, left, money, months, saved, shares, shor
 
 /** The sequential chart colors, lightest to darkest: one scale for every chart on the page. */
 const seq = (n: number) => `var(--chart-seq-${Math.min(7, Math.max(1, n))})`;
+/** A length token's value in pixels, read from the page's CSS variables (rem values scaled by the root font size). */
+function cssPx(name: string, fallback: number) {
+  if (typeof document === "undefined") return fallback;
+  const root = getComputedStyle(document.documentElement);
+  const m = /^(-?[\d.]+)(px|rem)?$/.exec(root.getPropertyValue(name).trim());
+  if (!m) return fallback;
+  return m[2] === "rem" ? parseFloat(m[1]) * parseFloat(root.fontSize) : parseFloat(m[1]);
+}
 const monthlyConfig = { total: { label: "Spent", color: seq(7) } } satisfies ChartConfig;
 // The four biggest categories, darkest first, and the long tail as "Other": five slices on the scale's five strongest
 // steps, so even the smallest reads against the glass in both modes.
@@ -23,6 +33,13 @@ const shareConfig = Object.fromEntries(slices.map((s) => [s.category, { label: s
 
 export function Overview({ go }: PageProps) {
   const recent = transactions.slice(0, 5);
+  // The bars' top corners follow the control corner role (buttons, items), capped at a quarter of the bar's width: the
+  // pill setting gives a soft top rather than a semicircle, and a squarer setting in Style gives squarer bars.
+  const [cornerRadius] = useState(() => cssPx("--control-radius", 6));
+  const barShape = (props: BarShapeProps) => {
+    const r = Math.min(cornerRadius, (props.width ?? 0) / 4);
+    return <Rectangle {...props} radius={[r, r, 0, 0]} />;
+  };
   return (
     <div className="flex flex-col gap-6">
       <section aria-label="Balance" className="flex flex-col gap-5">
@@ -48,11 +65,17 @@ export function Overview({ go }: PageProps) {
         <Section title="Spending history" text="The last six months, without savings." className="2xl:col-span-2">
           <ChartContainer config={monthlyConfig} className="aspect-auto h-56 w-full" aria-label="Spent per month">
             <BarChart accessibilityLayer data={months} margin={{ top: 4 }}>
+              <defs>
+                {/* One fill for every bar: the scale's darkest step at the top, fading to a light one at the base.
+                    The stops are chart roles, so the gradient follows the brand and flips with the scale in dark mode. */}
+                <linearGradient id="spent-bar" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" style={{ stopColor: seq(7) }} />
+                  <stop offset="100%" style={{ stopColor: seq(3) }} />
+                </linearGradient>
+              </defs>
               <XAxis dataKey="month" tickLine={false} axisLine={false} tickMargin={8} />
               <ChartTooltip cursor={false} content={<ChartTooltipContent hideIndicator />} />
-              <Bar dataKey="total" radius={6}>
-                {months.map((m, i) => <Cell key={m.month} fill={seq(i + 2)} />)}
-              </Bar>
+              <Bar dataKey="total" fill="url(#spent-bar)" shape={barShape} />
             </BarChart>
           </ChartContainer>
           <div className="grid grid-cols-2 gap-3">
